@@ -61,14 +61,28 @@ body {
 .navigation {
   grid-row: 3 / 4;
   margin: 0;
-  padding: 10px 0;
+  padding: 0;
   list-style: none;
   background-color: var(--lightslategray);
   display: flex;
   justify-content: space-around;
+  border: 12px black;
 }
 
-.active *,
-.nav-tile:hover * {
+.nav-tile {
+  display: flex;
+  justify-content: center;
+  width: 33%;
+  height: 100%;
+  padding: 10px;
+}
+
+.active path,
+.nav-tile:hover path {
   fill: var(--lightblue);
+}
+
+ul > .active,
+ul > .nav-tile:hover {
+  border-bottom: 2px solid var(--lightblue);
 }
