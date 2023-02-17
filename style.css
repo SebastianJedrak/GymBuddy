@@ -69,7 +69,7 @@ body {
   grid-row: 3 / 4;
   margin: 0;
   padding: 0;
-  height: 52px;
+  height: 50px;
   list-style: none;
   background-color: var(--lightslategray);
   display: flex;
@@ -79,8 +79,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 33%;
+  width: calc(100% / 3);
   height: 100%;
+  border-bottom: 2px solid var(--lightslategray);
 }
 
 .active path,
