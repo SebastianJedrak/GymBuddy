@@ -47,7 +47,14 @@ body {
 /*! HEADER */
 
 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-row: 1 / 2;
+  height: 52px;
+  background-color: var(--lightslategray);
+  color: var(--floralwhite);
+  font-size: 2rem;
 }
 
 /*! MAIN */
@@ -65,8 +72,6 @@ body {
   list-style: none;
   background-color: var(--lightslategray);
   display: flex;
-  justify-content: space-around;
-  border: 12px black;
 }
 
 .nav-tile {
