@@ -1,3 +1,5 @@
+/*! GLOBAL */
+
 :root {
   --floralwhite: #fcf8f3;
   --lightblue: #aedadd;
@@ -24,7 +26,8 @@ body {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 6fr 1fr;
+  grid-template-rows: 1fr 12fr 1fr;
+  align-items: center;
 }
 
 @media all and (min-width: 992px) {
@@ -35,22 +38,37 @@ body {
   }
 }
 
+/*! HELPERS */
+
+.img32 {
+  width: 32px;
+  height: 32px;
+}
+
+.hidden {
+  display: none;
+}
+
+/*! HEADER */
+
 .header {
   grid-row: 1 / 2;
 }
 
+/*! MAIN */
+
 .main-content {
   grid-row: 2 / 3;
 }
+
+/*! NAVIGATION */
+
 .navigation {
   grid-row: 3 / 4;
-  padding: 0;
+  margin: 0;
+  padding: 20px 0;
   list-style: none;
+  background-color: var(--lightslategray);
   display: flex;
   justify-content: space-around;
-}
-
-.nav-img {
-  width: 32px;
-  height: 32px;
 }
