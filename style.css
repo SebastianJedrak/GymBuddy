@@ -40,11 +40,6 @@ body {
 
 /*! HELPERS */
 
-.img32 {
-  width: 32px;
-  height: 32px;
-}
-
 .hidden {
   display: none;
 }
@@ -66,9 +61,14 @@ body {
 .navigation {
   grid-row: 3 / 4;
   margin: 0;
-  padding: 20px 0;
+  padding: 10px 0;
   list-style: none;
   background-color: var(--lightslategray);
   display: flex;
   justify-content: space-around;
+}
+
+.active *,
+.nav-tile:hover * {
+  fill: var(--lightblue);
 }
