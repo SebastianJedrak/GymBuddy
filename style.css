@@ -1,3 +1,6 @@
-/* body {
-  background: url(src/);
-} */
+body {
+  background-color: #db996c;
+  opacity: 0.9;
+  background-image: radial-gradient(#6e7da2 2px, #db996c 2px);
+  background-size: 40px 40px;
+}
