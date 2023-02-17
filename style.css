@@ -32,3 +32,16 @@ body {
     margin: 10vh auto;
   }
 }
+
+.navigation {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  justify-content: space-around;
+  align-content: flex-end;
+}
+
+.nav-img {
+  width: 32px;
+  height: 32px;
+}
