@@ -15,6 +15,7 @@ navTiles.forEach((tile) =>
     const hash = "#" + this.dataset.tile;
     window.history.pushState(null, "", hash);
     renderView(location.hash.slice(1));
+    toggleActiveNav(this);
   })
 );
 
@@ -22,4 +23,11 @@ function renderView(state) {
   if (state === "workout") workoutView.renderWorkout();
   if (state === "history") historyView.renderHistory();
   if (state === "user") userView.renderUser();
+}
+
+function toggleActiveNav(element) {
+  [...element.parentElement.children].forEach((tile) =>
+    tile.classList.remove("active")
+  );
+  element.classList.add("active");
 }
