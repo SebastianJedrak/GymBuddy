@@ -31,3 +31,5 @@ function toggleActiveNav(element) {
   );
   element.classList.add("active");
 }
+
+console.log(model.andrew);
