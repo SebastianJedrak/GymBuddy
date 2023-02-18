@@ -1,5 +1,10 @@
 /*! GLOBAL */
-
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
 :root {
   --floralwhite: #fcf8f3;
   --lightblue: #aedadd;
@@ -9,11 +14,6 @@
 }
 
 body {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-size: 16px;
-  color: var(--lightslategray);
   background-color: var(--darksalmon);
   opacity: 0.9;
   background-image: radial-gradient(
@@ -83,6 +83,7 @@ ul {
   margin: 1rem;
   border-radius: 5px;
   text-align: center;
+  cursor: pointer;
 }
 
 .btn-33 {
@@ -129,7 +130,6 @@ ul {
 /*! NAVIGATION */
 
 .navigation {
-  margin: 0 0 2px 0;
   height: 50px;
   background-color: var(--lightslategray);
   display: flex;
@@ -142,6 +142,7 @@ ul {
   width: calc(100% / 3);
   height: 100%;
   border-bottom: 2px solid var(--lightslategray);
+  cursor: pointer;
 }
 
 .active path,
@@ -151,6 +152,7 @@ ul {
 
 ul > .active,
 ul > .nav-tile:hover {
+  border-bottom: 0px;
   border-bottom: 2px solid var(--lightblue);
 }
 
@@ -162,6 +164,7 @@ ul > .nav-tile:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  overflow-x: auto;
 }
 
 /*! MAIN HOME*/
@@ -178,7 +181,7 @@ ul > .nav-tile:hover {
 
 .start-container {
   height: 33%;
-  min-height: 25vh;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
