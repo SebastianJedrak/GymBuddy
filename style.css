@@ -47,6 +47,7 @@ h3 {
 
 h2 {
   font-size: 2rem;
+  margin: 100%;
 }
 
 ul {
@@ -64,10 +65,11 @@ ul {
 /*! HEADER */
 
 .header {
+  height: 52px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 52px;
+
   background-color: var(--lightslategray);
   color: var(--floralwhite);
 }
@@ -127,6 +129,7 @@ ul > .nav-tile:hover {
 
 .start-container {
   height: 33%;
+  min-height: 25vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -134,11 +137,17 @@ ul > .nav-tile:hover {
 }
 
 .start-cloud {
-  aspect-ratio: 1/1;
-  height: 150px;
+  background-image: url(src/START.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  aspect-ratio: 2 /1;
+  height: 40%;
 }
 
 .start-button {
-  aspect-ratio: 1/1;
-  height: 150px;
+  background-image: url(src/Button\ start\ 3d.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  aspect-ratio: 1 /1;
+  height: 60%;
 }
