@@ -38,6 +38,23 @@ body {
   }
 }
 
+h1,
+h2,
+h3 {
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 /*! HELPERS */
 
 .hidden {
@@ -53,22 +70,13 @@ body {
   height: 52px;
   background-color: var(--lightslategray);
   color: var(--floralwhite);
-  font-size: 2rem;
-}
-
-/*! MAIN */
-
-.main-content {
-  height: 100%;
 }
 
 /*! NAVIGATION */
 
 .navigation {
   margin: 0 0 2px 0;
-  padding: 0;
   height: 50px;
-  list-style: none;
   background-color: var(--lightslategray);
   display: flex;
 }
@@ -90,4 +98,29 @@ body {
 ul > .active,
 ul > .nav-tile:hover {
   border-bottom: 2px solid var(--lightblue);
+}
+
+/*! MAIN */
+
+.main-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/*! MAIN HOME*/
+
+.workout-parameters-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.workout-parameters {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.workout-parameters li {
+  margin: 20px;
 }
