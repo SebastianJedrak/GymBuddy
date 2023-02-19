@@ -5,7 +5,7 @@ export default class View {
   renderHTML() {
     this._clear();
     this._backgroundRender();
-    this._navigatorRender();
+    // this._navigatorRender();
     this._parentElement.insertAdjacentHTML("afterbegin", this._renderHTML);
   }
 

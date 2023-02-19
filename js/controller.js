@@ -4,13 +4,13 @@ import historyView from "./views/historyView.js";
 import navigatorView from "./views/navigatorView.js";
 import * as model from "./model.js";
 
-const navTiles = document.querySelectorAll(".nav-tile");
-
 function init() {
   location.hash = "#";
   navigatorView.navigatorRender();
 }
 init();
+
+const navTiles = document.querySelectorAll(".nav-tile");
 
 navTiles.forEach((tile) =>
   tile.addEventListener("click", function () {
