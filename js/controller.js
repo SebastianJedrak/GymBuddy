@@ -2,6 +2,7 @@ import homeView from "./views/homeView.js";
 import userView from "./views/userView.js";
 import historyView from "./views/historyView.js";
 import navigatorView from "./views/navigatorView.js";
+import workoutView from "./views/workoutView.js";
 import * as model from "./model.js";
 
 function init() {
@@ -21,9 +22,10 @@ function renderView(state) {
     //! WORKOUT CONTROL
     [...document.querySelector(".start-container").children].forEach(
       (element) =>
-        element.addEventListener("click", function () {
-          console.log("object");
-        })
+        element.addEventListener(
+          "click",
+          workoutView.renderView.bind(workoutView)
+        )
     );
   }
   if (state === "history") {
