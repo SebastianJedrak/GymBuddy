@@ -51,17 +51,6 @@ h1,
 h2,
 h3 {
   margin: 0;
-  text-align: center;
-}
-
-h2 {
-  color: var(--floralwhite);
-  font-size: 2rem;
-  margin: 100%;
-}
-
-h3 {
-  color: var(--floralwhite);
 }
 
 ul {
@@ -137,6 +126,14 @@ ul {
   color: var(--floralwhite);
 }
 
+.header-text {
+  text-align: center;
+
+  color: var(--floralwhite);
+  font-size: 2rem;
+  margin: 100%;
+}
+
 /*! NAVIGATION */
 
 .navigation {
@@ -184,6 +181,12 @@ ul > .nav-tile:hover {
   flex-direction: column;
 }
 
+.workout-parameters-text {
+  text-align: center;
+
+  color: var(--floralwhite);
+}
+
 .workout-parameters {
   display: flex;
   justify-content: space-evenly;
@@ -217,3 +220,5 @@ ul > .nav-tile:hover {
   height: 60%;
   cursor: pointer;
 }
+
+/*! MAIN WORKOUT*/

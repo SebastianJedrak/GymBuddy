@@ -5,7 +5,7 @@ class HomeView extends View {
   _navigator = true;
   _backgroundType = "gradient";
   _renderHTML = `<div class="workout-parameters-container">
-  <h3>Body part</h3>
+  <h3 class="workout-parameters-text">Body part</h3>
   <ul class="workout-parameters">
     <li class="btn btn-33 btn-white"><span>Lower</span></li>
     <li class="btn btn-33 btn-orange"><span>Full</span></li>
@@ -13,7 +13,7 @@ class HomeView extends View {
   </ul>
   </div>
   <div class="workout-parameters-container">
-  <h3>Type</h3>
+  <h3 class="workout-parameters-text">Type</h3>
   <ul class="workout-parameters">
     <li class="btn btn-33 btn-white"><span>Endurance</span></li>
     <li class="btn btn-33 btn-white"><span>Balanced</span></li>
@@ -21,7 +21,7 @@ class HomeView extends View {
   </ul>
   </div>
   <div class="workout-parameters-container">
-  <h3>Duration</h3>
+  <h3 class="workout-parameters-text">Duration</h3>
   <ul class="workout-parameters">
     <li class="btn btn-33 btn-orange"><span>Short</span></li>
     <li class="btn btn-33 btn-white"><span>Medium</span></li>
