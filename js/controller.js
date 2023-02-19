@@ -1,12 +1,14 @@
 import homeView from "./views/homeView.js";
 import userView from "./views/userView.js";
 import historyView from "./views/historyView.js";
+import navigatorView from "./views/navigatorView.js";
 import * as model from "./model.js";
 
 const navTiles = document.querySelectorAll(".nav-tile");
 
 function init() {
   location.hash = "#";
+  navigatorView.navigatorRender();
 }
 init();
 

@@ -1,4 +1,4 @@
-import NavigatorView from "./navigatorView";
+import NavigatorView from "./navigatorView.js";
 
 export default class View {
   _globalContainer = document.querySelector(".global-container");
@@ -24,7 +24,7 @@ export default class View {
     }
   }
 
-  _navigatorRender() {
-    if (this._navigator === true) NavigatorView.navigatorRender();
-  }
+  //   _navigatorRender() {
+  //     if (this._navigator === true) NavigatorView.navigatorRender();
+  //   }
 }
