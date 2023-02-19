@@ -76,6 +76,16 @@ ul {
   display: none;
 }
 
+/*! ANIMATIONS */
+
+@keyframes translateY {
+  from {
+  }
+  to {
+    transform: translateY(25%);
+  }
+}
+
 /*! BUTTONS */
 
 .btn {
@@ -194,6 +204,9 @@ ul > .nav-tile:hover {
   background-position: center;
   aspect-ratio: 2 /1;
   height: 40%;
+  animation: translateY 2s cubic-bezier(0.29, 0.6, 0.54, 0.89) infinite
+    alternate;
+  cursor: pointer;
 }
 
 .start-button {
@@ -202,4 +215,5 @@ ul > .nav-tile:hover {
   background-position: center;
   aspect-ratio: 1 /1;
   height: 60%;
+  cursor: pointer;
 }
