@@ -22,15 +22,12 @@ navTiles.forEach((tile) =>
 function renderView(state) {
   if (state === "home") {
     homeView.renderHTML();
-    backgroundGradient();
   }
   if (state === "history") {
     historyView.renderHTML();
-    backgroundWhitish();
   }
   if (state === "user") {
     userView.renderHTML();
-    backgroundWhitish();
   }
 }
 
@@ -39,16 +36,6 @@ function toggleActiveNav(element) {
     tile.classList.remove("active")
   );
   element.classList.add("active");
-}
-const globalContainer = document.querySelector(".global-container");
-
-function backgroundGradient() {
-  globalContainer.classList.remove("BG-whitish");
-  globalContainer.classList.add("BG-gradient");
-}
-function backgroundWhitish() {
-  globalContainer.classList.remove("BG-gradient");
-  globalContainer.classList.add("BG-whitish");
 }
 
 console.log(model.andrew);
