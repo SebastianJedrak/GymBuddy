@@ -1,4 +1,4 @@
-import workoutView from "./views/workoutView.js";
+import homeView from "./views/homeView.js";
 import userView from "./views/userView.js";
 import historyView from "./views/historyView.js";
 import * as model from "./model.js";
@@ -20,7 +20,7 @@ navTiles.forEach((tile) =>
 );
 
 function renderView(state) {
-  if (state === "workout") workoutView.renderWorkout();
+  if (state === "workout") homeView.renderHome();
   if (state === "history") historyView.renderHistory();
   if (state === "user") userView.renderUser();
 }
