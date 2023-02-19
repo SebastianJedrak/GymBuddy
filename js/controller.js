@@ -6,9 +6,28 @@ import * as model from "./model.js";
 
 function init() {
   location.hash = "#";
+  // dopiero po loginie
   navigatorView.navigatorRender();
 }
 init();
+
+console.log(model.andrew);
+
+//! RENDER VIEW CONTROL
+
+function renderView(state) {
+  if (state === "home") {
+    homeView.renderView();
+  }
+  if (state === "history") {
+    historyView.renderView();
+  }
+  if (state === "user") {
+    userView.renderView();
+  }
+}
+
+//! NAVIGATION CONTROL
 
 const navTiles = document.querySelectorAll(".nav-tile");
 
@@ -21,23 +40,9 @@ navTiles.forEach((tile) =>
   })
 );
 
-function renderView(state) {
-  if (state === "home") {
-    homeView.renderHTML();
-  }
-  if (state === "history") {
-    historyView.renderHTML();
-  }
-  if (state === "user") {
-    userView.renderHTML();
-  }
-}
-
 function toggleActiveNav(element) {
   [...element.parentElement.children].forEach((tile) =>
     tile.classList.remove("active")
   );
   element.classList.add("active");
 }
-
-console.log(model.andrew);

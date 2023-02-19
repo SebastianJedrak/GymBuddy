@@ -73,7 +73,7 @@ ul {
 /*! HELPERS */
 
 .hidden {
-  display: none;
+  visibility: hidden;
 }
 
 /*! ANIMATIONS */
