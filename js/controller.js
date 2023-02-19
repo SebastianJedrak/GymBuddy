@@ -20,9 +20,9 @@ navTiles.forEach((tile) =>
 );
 
 function renderView(state) {
-  if (state === "workout") homeView.renderHome();
-  if (state === "history") historyView.renderHistory();
-  if (state === "user") userView.renderUser();
+  if (state === "workout") homeView.render();
+  if (state === "history") historyView.render();
+  if (state === "user") userView.render();
 }
 
 function toggleActiveNav(element) {

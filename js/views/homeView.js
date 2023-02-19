@@ -30,11 +30,6 @@ class HomeView extends View {
   <div class="start-cloud"></div>
   <div class="start-button"></div>
   </div>`;
-
-  renderHome() {
-    this._clear();
-    this._parentElement.insertAdjacentHTML("afterbegin", this._renderHTML);
-  }
 }
 
 export default new HomeView();

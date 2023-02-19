@@ -1,5 +1,8 @@
 export default class View {
-  _render() {}
+  render() {
+    this._clear();
+    this._parentElement.insertAdjacentHTML("afterbegin", this._renderHTML);
+  }
 
   _clear() {
     this._parentElement.textContent = "";
