@@ -19,7 +19,7 @@ console.log(model.andrew);
 function renderView(state) {
   if (state === "home") {
     homeView.renderView();
-    //! WORKOUT CONTROL
+    //! WORKOUT CONTROL TO REFACTOR (dodać zmienną śledzącą state)
     [...document.querySelector(".start-container").children].forEach(
       (element) =>
         element.addEventListener(
