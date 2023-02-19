@@ -2,6 +2,7 @@ import View from "./view.js";
 
 class HomeView extends View {
   _parentElement = document.querySelector(".main-content");
+  _navigator = true;
   _backgroundType = "gradient";
   _renderHTML = `<div class="workout-parameters-container">
   <h3>Body part</h3>
