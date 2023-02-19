@@ -6,7 +6,7 @@ import * as model from "./model.js";
 const navTiles = document.querySelectorAll(".nav-tile");
 
 function init() {
-  location.hash = "";
+  location.hash = "#";
 }
 init();
 
@@ -20,9 +20,18 @@ navTiles.forEach((tile) =>
 );
 
 function renderView(state) {
-  if (state === "workout") homeView.render();
-  if (state === "history") historyView.render();
-  if (state === "user") userView.render();
+  if (state === "home") {
+    homeView.renderHTML();
+    backgroundGradient();
+  }
+  if (state === "history") {
+    historyView.renderHTML();
+    backgroundWhitish();
+  }
+  if (state === "user") {
+    userView.renderHTML();
+    backgroundWhitish();
+  }
 }
 
 function toggleActiveNav(element) {
@@ -30,6 +39,16 @@ function toggleActiveNav(element) {
     tile.classList.remove("active")
   );
   element.classList.add("active");
+}
+const globalContainer = document.querySelector(".global-container");
+
+function backgroundGradient() {
+  globalContainer.classList.remove("BG-whitish");
+  globalContainer.classList.add("BG-gradient");
+}
+function backgroundWhitish() {
+  globalContainer.classList.remove("BG-gradient");
+  globalContainer.classList.add("BG-whitish");
 }
 
 console.log(model.andrew);
