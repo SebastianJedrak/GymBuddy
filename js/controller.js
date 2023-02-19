@@ -18,6 +18,13 @@ console.log(model.andrew);
 function renderView(state) {
   if (state === "home") {
     homeView.renderView();
+    //! WORKOUT CONTROL
+    [...document.querySelector(".start-container").children].forEach(
+      (element) =>
+        element.addEventListener("click", function () {
+          console.log("object");
+        })
+    );
   }
   if (state === "history") {
     historyView.renderView();
