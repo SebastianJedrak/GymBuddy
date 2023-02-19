@@ -1,6 +1,6 @@
-import { clear } from "../helpers.js";
+import View from "./view.js";
 
-class homeView {
+class HomeView extends View {
   _parentElement = document.querySelector(".main-content");
   _renderHTML = `<div class="workout-parameters-container">
   <h3>Body part</h3>
@@ -32,9 +32,9 @@ class homeView {
   </div>`;
 
   renderHome() {
-    clear(this._parentElement);
+    this._clear();
     this._parentElement.insertAdjacentHTML("afterbegin", this._renderHTML);
   }
 }
 
-export default new homeView();
+export default new HomeView();

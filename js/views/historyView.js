@@ -1,12 +1,15 @@
-import { clear } from "../helpers.js";
+import View from "./view.js";
 
-const main = document.querySelector(".main-content");
-
-class historyView {
+class HistoryView extends View {
+  _parentElement = document.querySelector(".main-content");
+  _renderHTML = `history`;
   renderHistory() {
-    clear(main);
-    main.insertAdjacentHTML("afterbegin", "<span>history</span>");
+    this._clear();
+    this._parentElement.insertAdjacentHTML(
+      "afterbegin",
+      "<span>history</span>"
+    );
   }
 }
 
-export default new historyView();
+export default new HistoryView();

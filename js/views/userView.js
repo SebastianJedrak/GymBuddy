@@ -1,12 +1,12 @@
-import { clear } from "../helpers.js";
+import View from "./view.js";
 
-const main = document.querySelector(".main-content");
-
-class userView {
+class UserView extends View {
+  _parentElement = document.querySelector(".main-content");
+  _renderHTML = `user`;
   renderUser() {
-    clear(main);
-    main.insertAdjacentHTML("afterbegin", "<span>user</span>");
+    this._clear();
+    this._parentElement.insertAdjacentHTML("afterbegin", "<span>user</span>");
   }
 }
 
-export default new userView();
+export default new UserView();
