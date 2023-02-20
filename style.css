@@ -167,6 +167,7 @@ ul {
   justify-self: start;
   display: flex;
   padding-left: 2rem;
+  cursor: pointer;
 }
 
 .back-button {
@@ -175,6 +176,7 @@ ul {
   background-repeat: no-repeat;
   aspect-ratio: 1 /1;
   height: 1.8rem;
+  cursor: pointer;
 }
 
 .tutorial-button {

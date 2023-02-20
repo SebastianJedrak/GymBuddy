@@ -5,8 +5,8 @@ class HeaderView {
   _renderTutorial = ``;
 
   headerRender(header, back, tutorial) {
-    if (!header) return;
-    this._parentElement.insertAdjacentHTML("afterbegin", this._renderNav);
+    if (header)
+      this._parentElement.insertAdjacentHTML("afterbegin", this._renderNav);
     if (back)
       this._parentElement.insertAdjacentHTML("afterbegin", this._renderBack);
     if (tutorial)
