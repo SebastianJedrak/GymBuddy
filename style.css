@@ -97,7 +97,7 @@ ul {
 
 .btn {
   padding: 1rem;
-  margin: 0 1vw;
+
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
@@ -105,17 +105,21 @@ ul {
 
 .btn-33 {
   width: 20vw;
+  margin: 0 1vw;
 }
 
 .btn-50 {
   width: 30vw;
+  margin: 2vh 0.5vw 0 0.5vw;
 }
 
 .btn-100 {
-  width: 40vw;
+  width: 61vw;
+  margin-top: 2vh;
 }
 
 .btn-white {
+  color: var(--lightslategray);
   border: 1px solid var(--lightslategray);
   background-color: var(--floralwhite);
 }
@@ -257,6 +261,7 @@ ul > .nav-tile:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* justify-content: space-around; */
 }
 
 .timer-text {
@@ -274,8 +279,9 @@ ul > .nav-tile:hover {
   padding: 2.5vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  /* justify-content: space-around;  */
   align-items: center;
+  overflow: auto;
 }
 
 .exercise-YT-container {
