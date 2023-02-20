@@ -10,7 +10,15 @@
   --lightblue: #aedadd;
   --darksalmon: #db996c;
   --lightslategray: #6e7da2;
+  --red: #d72626;
+  --green: #99c817;
   --gradient: linear-gradient(165deg, #6e7da2, #8badc2, #aedadd);
+  --radialGradient: radial-gradient(
+    circle at 50% 50%,
+    #95a2c4,
+    #818fb4,
+    #6e7da2
+  );
 }
 
 body {
@@ -51,6 +59,16 @@ h1,
 h2,
 h3 {
   margin: 0;
+  font-weight: 400;
+}
+
+h1 {
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.6rem;
 }
 
 ul {
@@ -114,6 +132,18 @@ ul {
   background-color: var(--lightslategray);
 }
 
+.btn-red {
+  color: var(--floralwhite);
+  border: 1px solid var(--floralwhite);
+  background-color: var(--red);
+}
+
+.btn-green {
+  color: var(--floralwhite);
+  border: 1px solid var(--floralwhite);
+  background-color: var(--green);
+}
+
 /*! HEADER */
 
 .header {
@@ -128,9 +158,7 @@ ul {
 
 .header-text {
   text-align: center;
-
   color: var(--floralwhite);
-  font-size: 2rem;
   margin: 100%;
 }
 
@@ -189,7 +217,6 @@ ul > .nav-tile:hover {
 
 .workout-parameters {
   display: flex;
-  justify-content: space-evenly;
 }
 
 .start-container {
@@ -222,3 +249,53 @@ ul > .nav-tile:hover {
 }
 
 /*! MAIN WORKOUT*/
+
+.workout-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer-text {
+  text-align: center;
+}
+
+.meter-container {
+}
+
+.workout-card-container {
+  color: var(--floralwhite);
+  background: var(--radialGradient);
+  padding: 2.5vw;
+}
+
+.exercise-YT-container {
+  display: flex;
+}
+
+.muscle-text {
+  text-align: center;
+}
+.set-text {
+  text-align: center;
+}
+
+.reps-weight-container {
+  display: flex;
+  justify-content: center;
+}
+
+.reps-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.weight-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.red-green-btn-container {
+  display: flex;
+}
