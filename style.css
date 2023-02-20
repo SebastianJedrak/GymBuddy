@@ -64,8 +64,6 @@ h4 {
   font-weight: 400;
 }
 
-h1 {
-}
 h2 {
   font-size: 2.2rem;
 }
@@ -313,6 +311,7 @@ ul > .nav-tile:hover {
 .exercise-YT-container {
   display: flex;
   justify-content: center;
+  margin-top: 3vh;
 }
 
 .exercise-name-text {
@@ -367,6 +366,10 @@ ul > .nav-tile:hover {
 .reps-weight-text {
   color: var(--transparent);
   margin-bottom: 0.5vh;
+}
+
+.btn-done {
+  margin-bottom: 3vh;
 }
 
 .red-green-btn-container {
