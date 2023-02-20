@@ -58,7 +58,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   margin: 0;
   font-weight: 400;
 }
@@ -70,6 +71,9 @@ h2 {
 }
 h3 {
   font-size: 1.6rem;
+}
+h4 {
+  font-size: 1.2rem;
 }
 
 ul {
@@ -269,7 +273,28 @@ ul > .nav-tile:hover {
   text-align: center;
 }
 
-.meter-container {
+.progress-bar {
+  width: 75%;
+  height: 32px;
+  border: 2px solid var(--lightslategray);
+  border-radius: 10px;
+  padding: 2px;
+  margin-bottom: 1vh;
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar::before {
+  content: "Progress";
+  display: flex;
+  align-items: center;
+  color: var(--floralwhite);
+  background: var(--gradient);
+  border-radius: 7px;
+  height: 1rem;
+  width: 25%;
+  padding: 3px;
+  padding-left: 1rem;
 }
 
 .workout-card-container {
