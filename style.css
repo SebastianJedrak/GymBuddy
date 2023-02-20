@@ -97,22 +97,22 @@ ul {
 
 .btn {
   padding: 1rem;
-  margin: 1rem;
+  margin: 0 1vw;
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
 }
 
 .btn-33 {
-  width: calc(100% / 3);
+  width: 20vw;
 }
 
 .btn-50 {
-  width: 50%;
+  width: 30vw;
 }
 
 .btn-100 {
-  width: 100%;
+  width: 40vw;
 }
 
 .btn-white {
@@ -217,6 +217,8 @@ ul > .nav-tile:hover {
 
 .workout-parameters {
   display: flex;
+  margin-top: 1rem;
+  justify-content: center;
 }
 
 .start-container {
@@ -267,11 +269,22 @@ ul > .nav-tile:hover {
 .workout-card-container {
   color: var(--floralwhite);
   background: var(--radialGradient);
+  width: 100%;
+  height: 40vh;
   padding: 2.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .exercise-YT-container {
   display: flex;
+  justify-content: center;
+}
+
+.exercise-name-text {
+  text-align: center;
 }
 
 .muscle-text {
