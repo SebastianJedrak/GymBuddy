@@ -5,7 +5,7 @@ export default class View {
   _globalContainer = document.querySelector(".global-container");
   renderView() {
     this._clear();
-    headerView.headerRender(...this._headerConfig);
+    // headerView.headerRender(...this._headerConfig);
     this._backgroundRender();
     this._navigatorRender();
     this._HTMLRender();
