@@ -7,25 +7,25 @@ class HomeView extends View {
   _renderHTML = `<div class="workout-parameters-container">
   <h3 class="workout-parameters-text">Body part</h3>
   <ul class="workout-parameters">
-    <li class="btn btn-33 btn-white"><span>Lower</span></li>
-    <li class="btn btn-33 btn-orange"><span>Full</span></li>
-    <li class="btn btn-33 btn-white"><span>Upper</span></li>
+    <li><button class="btn btn-33 btn-white">Lower</button></li>
+    <li><button class="btn btn-33 btn-orange">Full</button></li>
+    <li><button class="btn btn-33 btn-white">Upper</button></li>
   </ul>
   </div>
   <div class="workout-parameters-container">
   <h3 class="workout-parameters-text">Type</h3>
   <ul class="workout-parameters">
-    <li class="btn btn-33 btn-white"><span>Endurance</span></li>
-    <li class="btn btn-33 btn-white"><span>Balanced</span></li>
-    <li class="btn btn-33 btn-orange"><span>Strength</span></li>
+  <li><button class="btn btn-33 btn-white">Endurance</button></li>
+  <li><button class="btn btn-33 btn-white">Balanced</button></li>
+  <li><button class="btn btn-33 btn-orange">Lower</button></li>
   </ul>
   </div>
   <div class="workout-parameters-container">
   <h3 class="workout-parameters-text">Duration</h3>
   <ul class="workout-parameters">
-    <li class="btn btn-33 btn-orange"><span>Short</span></li>
-    <li class="btn btn-33 btn-white"><span>Medium</span></li>
-    <li class="btn btn-33 btn-white"><span>Long</span></li>
+  <li><button class="btn btn-33 btn-orange">Short</button></li>
+  <li><button class="btn btn-33 btn-white">Medium</button></li>
+  <li><button class="btn btn-33 btn-white">Long</button></li>
   </ul>
   </div>
   <div class="start-container">

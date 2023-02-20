@@ -12,6 +12,7 @@
   --lightslategray: #6e7da2;
   --red: #d72626;
   --green: #99c817;
+  --transparent: rgba(0, 0, 0, 0.5);
   --gradient: linear-gradient(165deg, #6e7da2, #8badc2, #aedadd);
   --radialGradient: radial-gradient(
     circle at 50% 50%,
@@ -65,7 +66,7 @@ h3 {
 h1 {
 }
 h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 h3 {
   font-size: 1.6rem;
@@ -96,8 +97,9 @@ ul {
 /*! BUTTONS */
 
 .btn {
-  padding: 1rem;
-
+  text-align: center;
+  vertical-align: center;
+  height: 48px;
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
@@ -110,12 +112,12 @@ ul {
 
 .btn-50 {
   width: 30vw;
-  margin: 2vh 0.5vw 0 0.5vw;
+  margin: 0.5vh 0.5vw 0 0.5vw;
 }
 
 .btn-100 {
   width: 61vw;
-  margin-top: 2vh;
+  margin-top: 0.5vh;
 }
 
 .btn-white {
@@ -261,10 +263,11 @@ ul > .nav-tile:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-around; */
+  justify-content: space-around;
 }
 
 .timer-text {
+  color: var(--lightslategray);
   text-align: center;
 }
 
@@ -276,12 +279,13 @@ ul > .nav-tile:hover {
   background: var(--radialGradient);
   width: 100%;
   height: 40vh;
-  padding: 2.5vw;
+  padding: 2vw;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around;  */
+  justify-content: space-around;
   align-items: center;
   overflow: auto;
+  margin-bottom: 2.5vh;
 }
 
 .exercise-YT-container {
@@ -290,29 +294,57 @@ ul > .nav-tile:hover {
 }
 
 .exercise-name-text {
+  margin-bottom: 1vh;
   text-align: center;
 }
 
+.YT-svg-container {
+  background-image: url(./src/youtube_activity_FILL0_wght400_GRAD0_opsz48.svg);
+  aspect-ratio: 1 /1;
+  height: 32px;
+  border: 1px solid #ff0000;
+  border-radius: 100%;
+  background-color: var(--floralwhite);
+  margin: 5px 0 0 5px;
+  cursor: pointer;
+}
+
 .muscle-text {
+  margin-bottom: 0.5vh;
   text-align: center;
+  color: var(--transparent);
 }
 .set-text {
+  margin-bottom: 0.5vh;
   text-align: center;
 }
 
 .reps-weight-container {
   display: flex;
+  width: 250px;
   justify-content: center;
+  margin: 2vh 0;
 }
 
 .reps-container {
+  width: 50%;
   display: flex;
   flex-direction: column;
+  border-right: 1px solid black;
+  align-items: center;
 }
 
 .weight-container {
+  width: 50%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  border-left: 1px solid var(--transparent);
+}
+
+.reps-weight-text {
+  color: var(--transparent);
+  margin-bottom: 0.5vh;
 }
 
 .red-green-btn-container {
