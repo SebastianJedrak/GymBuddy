@@ -307,6 +307,7 @@ ul > .nav-tile:hover {
   align-items: center;
   overflow: auto;
   margin-bottom: 2.5vh;
+  border-radius: 5px;
 }
 
 .exercise-YT-container {
