@@ -154,18 +154,43 @@ ul {
 
 .header {
   height: 52px;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 
   background-color: var(--lightslategray);
   color: var(--floralwhite);
 }
 
+.header-buttons {
+  grid-column: 1 /2;
+  justify-self: start;
+  display: flex;
+  padding-left: 2rem;
+}
+
+.back-button {
+  background-image: url(./src/abadonTraining.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1 /1;
+  height: 1.8rem;
+}
+
+.tutorial-button {
+  background-image: url(./src/help_FILL0_wght400_GRAD0_opsz48.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1 /1;
+  height: 1.8rem;
+  margin-left: 1rem;
+}
+
 .header-text {
-  text-align: center;
+  grid-column: 2/3;
+  justify-self: center;
   color: var(--floralwhite);
-  margin: 100%;
+  vertical-align: center;
 }
 
 /*! NAVIGATION */
