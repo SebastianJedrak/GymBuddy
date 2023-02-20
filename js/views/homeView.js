@@ -32,6 +32,7 @@ class HomeView extends View {
   <div class="start-cloud"></div>
   <div class="start-button"></div>
   </div>`;
+  _headerConfig = [true, false, false];
 }
 
 export default new HomeView();

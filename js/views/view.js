@@ -1,9 +1,11 @@
-import NavigatorView from "./navigatorView.js";
+import navigatorView from "./navigatorView.js";
+import headerView from "./headerView.js";
 
 export default class View {
   _globalContainer = document.querySelector(".global-container");
   renderView() {
     this._clear();
+    headerView.headerRender(...this._headerConfig);
     this._backgroundRender();
     this._navigatorRender();
     this._HTMLRender();
