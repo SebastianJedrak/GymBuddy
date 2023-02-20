@@ -117,7 +117,7 @@ ul {
 
 .btn-100 {
   width: 61vw;
-  margin-top: 0.5vh;
+  margin-top: 2.5vh;
 }
 
 .btn-white {
@@ -269,6 +269,7 @@ ul > .nav-tile:hover {
 .timer-text {
   color: var(--lightslategray);
   text-align: center;
+  margin-bottom: 1vh;
 }
 
 .progress-bar {
@@ -277,7 +278,7 @@ ul > .nav-tile:hover {
   border: 2px solid var(--lightslategray);
   border-radius: 10px;
   padding: 2px;
-  margin-bottom: 1vh;
+  margin-bottom: 2vh;
   display: flex;
   align-items: center;
 }
@@ -302,7 +303,7 @@ ul > .nav-tile:hover {
   height: 40vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   overflow: auto;
   margin-bottom: 2.5vh;
@@ -311,7 +312,6 @@ ul > .nav-tile:hover {
 .exercise-YT-container {
   display: flex;
   justify-content: center;
-  margin-top: 3vh;
 }
 
 .exercise-name-text {
@@ -366,10 +366,6 @@ ul > .nav-tile:hover {
 .reps-weight-text {
   color: var(--transparent);
   margin-bottom: 0.5vh;
-}
-
-.btn-done {
-  margin-bottom: 3vh;
 }
 
 .red-green-btn-container {
