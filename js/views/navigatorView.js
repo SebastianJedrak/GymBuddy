@@ -67,6 +67,8 @@ class NavigatorView {
       .querySelector(".nav-tile-history")
       .addEventListener("click", handler);
   }
+
+  activeSwap;
 }
 
 export default new NavigatorView();

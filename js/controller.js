@@ -7,24 +7,33 @@ import * as model from "./model.js";
 
 function init() {
   renderHome();
-  navStart();
 }
 init();
 
 function renderHome() {
+  // Render HTML
   homeView.renderView();
+  // Navigation bar
   navStart();
+  document.querySelector(".nav-tile-home").classList.add("active");
+  // Start button
   homeView.startListener(renderWorkout.bind(workoutView));
 }
 
 function renderUser() {
+  // Render HTML
   userView.renderView();
+  // Navigation bar
   navStart();
+  document.querySelector(".nav-tile-user").classList.add("active");
 }
 
 function renderHistory() {
+  // Render HTML
   historyView.renderView();
+  // Navigation bar
   navStart();
+  document.querySelector(".nav-tile-history").classList.add("active");
 }
 
 function renderWorkout() {
