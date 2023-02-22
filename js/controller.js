@@ -13,13 +13,17 @@ init();
 function renderHome() {
   // Render HTML
   homeView.renderView();
-  // Navigation bar
+  // Navigation bar init
   navStart();
   document.querySelector(".nav-tile-home").classList.add("active");
-  // Start button
+  // Start button listener
   homeView.startListener(renderWorkout.bind(workoutView));
-  // Parameters
+  // Parameters listeners
   parametersListeners();
+  // Reset workoutParametersObject
+  model.workoutParameters.bodyPart = "full";
+  model.workoutParameters.type = "balanced";
+  model.workoutParameters.duration = "medium";
 }
 
 function renderUser() {
@@ -66,15 +70,9 @@ function parameterListenerHandler() {
   this.children[0].classList.add("btn-orange");
   // get dataset
   if (this.dataset.part) {
-    workoutParameters.bodyPart = this.dataset.part;
-    console.log(workoutParameters);
+    model.workoutParameters.bodyPart = this.dataset.part;
   }
-  if (this.dataset.type) workoutParameters.type = this.dataset.type;
-  if (this.dataset.duration) workoutParameters.duration = this.dataset.duration;
+  if (this.dataset.type) model.workoutParameters.type = this.dataset.type;
+  if (this.dataset.duration)
+    model.workoutParameters.duration = this.dataset.duration;
 }
-
-const workoutParameters = {
-  bodyPart: "full",
-  type: "balanced",
-  duration: "medium",
-};
