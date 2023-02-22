@@ -1,3 +1,5 @@
+import { getMuscle } from "./config.js";
+
 export class User {
   constructor(login, password, height, weight, gender) {
     this.login = login;
@@ -15,3 +17,18 @@ export const workoutParameters = {
   type: "balanced",
   duration: "medium",
 };
+
+const muscles = {
+  chest: `pectoralis%20major`,
+  trapezius: `trapezius`,
+  shoulders: `deltoid`,
+  triceps: `triceps`,
+  biceps: `biceps`,
+  abdominal: `abdominal`,
+  oblique: `external oblique`,
+  quadriceps: `quadriceps`,
+  hamstrings: `hamstrings`,
+  gluteus: `gluteus%20maximus`,
+};
+
+getMuscle(muscles.chest);

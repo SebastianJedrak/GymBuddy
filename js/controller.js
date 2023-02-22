@@ -76,31 +76,3 @@ function parameterListenerHandler() {
   if (this.dataset.duration)
     model.workoutParameters.duration = this.dataset.duration;
 }
-
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "0adeb2f97amshd8f144b29750119p1c7540jsn752e8dc122da",
-    "X-RapidAPI-Host": "exerciseapi3.p.rapidapi.com",
-  },
-};
-
-const muscles = {
-  chest: `pectoralis%20major`,
-  trapezius: `trapezius`,
-  shoulders: `deltoid`,
-  triceps: `triceps`,
-  biceps: `biceps`,
-  abdominal: `abdominal`,
-  oblique: `external oblique`,
-  quadriceps: `quadriceps`,
-  hamstrings: `hamstrings`,
-  gluteus: `gluteus%20maximus`,
-};
-
-const API_URL = `https://exerciseapi3.p.rapidapi.com/search/?primaryMuscle=${muscles.gluteus}`;
-
-fetch(API_URL, options)
-  .then((response) => response.json())
-  .then((response) => console.log(response))
-  .catch((err) => console.error(err));
