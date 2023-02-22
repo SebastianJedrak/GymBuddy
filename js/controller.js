@@ -3,12 +3,14 @@ import userView from "./views/userView.js";
 import historyView from "./views/historyView.js";
 import navigatorView from "./views/navigatorView.js";
 import workoutView from "./views/workoutView.js";
+import headerView from "./views/headerView.js";
 import * as model from "./model.js";
 
 function init() {
   location.hash = "#";
   // dopiero po loginie
   navigatorView.navigatorRender();
+  headerView.headerRender("test", true, true);
 }
 init();
 
