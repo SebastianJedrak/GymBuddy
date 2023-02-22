@@ -5,7 +5,6 @@ import workoutView from "./views/workoutView.js";
 import * as model from "./model.js";
 
 function init() {
-  location.hash = "#";
   renderHome();
 }
 init();
@@ -15,38 +14,14 @@ function renderHome() {
   homeView.startListener(workoutView.renderView.bind(workoutView));
 }
 
-console.log(model.andrew);
-
-//! RENDER VIEW CONTROL
-
-function renderView(state) {
-  if (state === "home") {
-    renderHome();
-  }
-  if (state === "history") {
-    historyView.renderView();
-  }
-  if (state === "user") {
-    userView.renderView();
-  }
+function renderUser() {
+  userView.renderView();
 }
 
-//! NAVIGATION CONTROL
+function renderHistory() {
+  historyView.renderView();
+}
 
-const navTiles = document.querySelectorAll(".nav-tile");
-
-navTiles.forEach((tile) =>
-  tile.addEventListener("click", function () {
-    const hash = "#" + this.dataset.tile;
-    window.history.pushState(null, "", hash);
-    renderView(location.hash.slice(1));
-    toggleActiveNav(this);
-  })
-);
-
-function toggleActiveNav(element) {
-  [...element.parentElement.children].forEach((tile) =>
-    tile.classList.remove("active")
-  );
-  element.classList.add("active");
+function renderWorkout() {
+  workoutView.renderView();
 }
