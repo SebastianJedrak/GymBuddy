@@ -165,9 +165,11 @@ ul {
 .header-buttons {
   grid-column: 1 /2;
   justify-self: start;
+  align-self: start;
   display: flex;
   padding-left: 2rem;
   cursor: pointer;
+  margin-top: 11.5px;
 }
 
 .back-button {

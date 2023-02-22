@@ -9,9 +9,13 @@ class HeaderView {
       document
         .querySelector(".header-container")
         .insertAdjacentHTML("afterbegin", headerText);
-    if (back || tutorial)
+    if ((back || tutorial) && header)
       document
         .querySelector(".header")
+        .insertAdjacentHTML("afterbegin", containerButtons);
+    if ((back || tutorial) && !header)
+      document
+        .querySelector(".header-container")
         .insertAdjacentHTML("afterbegin", containerButtons);
     if (back)
       document
@@ -20,7 +24,7 @@ class HeaderView {
     if (tutorial)
       document
         .querySelector(".header-buttons")
-        .insertAdjacentHTML("afterbegin", tutorialBtn);
+        .insertAdjacentHTML("beforeend", tutorialBtn);
   }
 }
 

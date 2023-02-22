@@ -10,7 +10,7 @@ function init() {
   location.hash = "#";
   // dopiero po loginie
   navigatorView.navigatorRender();
-  headerView.headerRender("test", true, true);
+  headerView.headerRender(false, true, false);
 }
 init();
 
