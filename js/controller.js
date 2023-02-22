@@ -67,13 +67,14 @@ function parameterListenerHandler() {
   // get dataset
   if (this.dataset.part) {
     workoutParameters.bodyPart = this.dataset.part;
+    console.log(workoutParameters);
   }
   if (this.dataset.type) workoutParameters.type = this.dataset.type;
   if (this.dataset.duration) workoutParameters.duration = this.dataset.duration;
 }
 
 const workoutParameters = {
-  bodyPart: "",
-  type: "",
-  duration: "",
+  bodyPart: "full",
+  type: "balanced",
+  duration: "medium",
 };
