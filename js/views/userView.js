@@ -5,6 +5,7 @@ class UserView extends View {
   _navigator = true;
   _backgroundType = "whitish";
   _renderHTML = `user`;
+  _headerConfig = [`User`, false, false];
 }
 
 export default new UserView();

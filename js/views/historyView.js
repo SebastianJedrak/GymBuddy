@@ -5,6 +5,7 @@ class HistoryView extends View {
   _navigator = true;
   _backgroundType = "whitish";
   _renderHTML = `history`;
+  _headerConfig = [`History`, false, false];
 }
 
 export default new HistoryView();

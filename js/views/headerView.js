@@ -5,6 +5,7 @@ class HeaderView {
     const containerButtons = `<div class="header-buttons"> </div>`;
     const backBtn = `<div class="back-button"></div>`;
     const tutorialBtn = `   <div class="tutorial-button"></div>`;
+    document.querySelector(".header-container").textContent = "";
     if (header)
       document
         .querySelector(".header-container")

@@ -37,6 +37,7 @@ class WorkoutView extends View {
     <span>Skip to: Bicep Curl</span>
   </button>
 </div>`;
+  _headerConfig = [`Workout`, true, true];
 }
 
 export default new WorkoutView();
