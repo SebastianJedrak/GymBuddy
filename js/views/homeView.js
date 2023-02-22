@@ -16,15 +16,15 @@ class HomeView extends View {
   <h3 class="workout-parameters-text">Type</h3>
   <ul class="workout-parameters type-parameters">
   <li data-type="endurance"><button class="btn btn-33 btn-white" >Endurance</button></li>
-  <li data-type="balanced"><button class="btn btn-33 btn-white" >Balanced</button></li>
-  <li data-type="strength"><button class="btn btn-33 btn-orange" >Strength</button></li>
+  <li data-type="balanced"><button class="btn btn-33 btn-orange" >Balanced</button></li>
+  <li data-type="strength"><button class="btn btn-33 btn-white" >Strength</button></li>
   </ul>
   </div>
   <div class="workout-parameters-container">
   <h3 class="workout-parameters-text">Duration</h3>
   <ul class="workout-parameters duration-parameters">
-  <li data-duration="short"><button class="btn btn-33 btn-orange" >Short</button></li>
-  <li data-duration="medium"><button class="btn btn-33 btn-white" >Medium</button></li>
+  <li data-duration="short"><button class="btn btn-33 btn-white" >Short</button></li>
+  <li data-duration="medium"><button class="btn btn-33 btn-orange" >Medium</button></li>
   <li data-duration="long"><button class="btn btn-33 btn-white" >Long</button></li>
   </ul>
   </div>
