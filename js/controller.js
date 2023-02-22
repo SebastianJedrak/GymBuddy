@@ -7,10 +7,15 @@ import * as model from "./model.js";
 
 function init() {
   location.hash = "#";
-  // dopiero po loginie
   navigatorView.navigatorRender();
+  renderHome();
 }
 init();
+
+function renderHome() {
+  homeView.renderView();
+  homeView.startListener(workoutView.renderView.bind(workoutView));
+}
 
 console.log(model.andrew);
 
@@ -18,15 +23,7 @@ console.log(model.andrew);
 
 function renderView(state) {
   if (state === "home") {
-    homeView.renderView();
-    //! WORKOUT CONTROL TO REFACTOR (dodać zmienną śledzącą state)
-    [...document.querySelector(".start-container").children].forEach(
-      (element) =>
-        element.addEventListener(
-          "click",
-          workoutView.renderView.bind(workoutView)
-        )
-    );
+    renderHome();
   }
   if (state === "history") {
     historyView.renderView();

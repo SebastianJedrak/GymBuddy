@@ -33,6 +33,12 @@ class HomeView extends View {
   <div class="start-button"></div>
   </div>`;
   _headerConfig = [false, false, true];
+
+  startListener(handler) {
+    [...document.querySelector(".start-container").children].forEach(
+      (element) => element.addEventListener("click", handler)
+    );
+  }
 }
 
 export default new HomeView();
