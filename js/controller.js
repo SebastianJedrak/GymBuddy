@@ -18,6 +18,8 @@ function renderHome() {
   document.querySelector(".nav-tile-home").classList.add("active");
   // Start button
   homeView.startListener(renderWorkout.bind(workoutView));
+  // Parameters
+  parametersListeners();
 }
 
 function renderUser() {
@@ -47,4 +49,23 @@ function navStart() {
   navigatorView.userListener(renderUser);
   navigatorView.homeListener(renderHome);
   navigatorView.historyListener(renderHistory);
+}
+
+function parametersListeners() {
+  homeView.partParameterListener(parameterListenerHandler);
+  homeView.typeParameterListener(parameterListenerHandler);
+  homeView.durationParameterListener(parameterListenerHandler);
+}
+
+function parameterListenerHandler() {
+  // change active button
+  [...this.parentElement.children].forEach((e) => {
+    e.children[0].classList.remove("btn-orange");
+    e.children[0].classList.add("btn-white");
+  });
+  this.children[0].classList.add("btn-orange");
+  // get dataset
+  if (this.dataset.part) console.log(this.dataset.part);
+  if (this.dataset.type) console.log(this.dataset.type);
+  if (this.dataset.duration) console.log(this.dataset.duration);
 }
