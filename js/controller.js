@@ -47,6 +47,8 @@ function renderWorkout() {
   workoutView.renderView();
   // Back button
   workoutView.backListener(renderHome);
+  // Generator
+  model.getMuscle(model.muscles.chest);
 }
 
 function navStart() {

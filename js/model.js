@@ -1,4 +1,5 @@
-import { getMuscle } from "./config.js";
+import { options } from "./config.js";
+import { API_URL } from "./config.js";
 
 export class User {
   constructor(login, password, height, weight, gender) {
@@ -18,7 +19,7 @@ export const workoutParameters = {
   duration: "medium",
 };
 
-const muscles = {
+export const muscles = {
   chest: `pectoralis%20major`,
   trapezius: `trapezius`,
   shoulders: `deltoid`,
@@ -31,4 +32,10 @@ const muscles = {
   gluteus: `gluteus%20maximus`,
 };
 
-getMuscle(muscles.chest);
+export function getMuscle(muscle) {
+  const url = `${API_URL}=${muscle}`;
+  fetch(url, options)
+    .then((response) => response.json())
+    .then((response) => console.log(response))
+    .catch((err) => console.error(err));
+}
