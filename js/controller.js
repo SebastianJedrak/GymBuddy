@@ -43,9 +43,12 @@ function renderHistory() {
 }
 
 function renderWorkout() {
-  // Generator
+  // Generator data
   model.getMuscle(model.muscles.chest);
   console.log(model.andrew);
+  console.log(model.workoutParameters);
+  // Generator
+
   //
   // Render HTML
   workoutView.renderView();
