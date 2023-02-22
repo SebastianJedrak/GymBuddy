@@ -38,6 +38,10 @@ class WorkoutView extends View {
   </button>
 </div>`;
   _headerConfig = [`Workout`, true, true];
+
+  backListener(handler) {
+    document.querySelector(".back-button").addEventListener("click", handler);
+  }
 }
 
 export default new WorkoutView();

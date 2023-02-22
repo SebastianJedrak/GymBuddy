@@ -37,7 +37,10 @@ function renderHistory() {
 }
 
 function renderWorkout() {
+  // Render HTML
   workoutView.renderView();
+  // Back button
+  workoutView.backListener(renderHome);
 }
 
 function navStart() {
