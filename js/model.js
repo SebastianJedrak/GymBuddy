@@ -8,6 +8,7 @@ export class User {
     this.height = height;
     this.weight = weight;
     this.gender = gender;
+    this.BMI = (weight / (height / 100) ** 2).toFixed(2);
   }
 }
 

@@ -43,12 +43,14 @@ function renderHistory() {
 }
 
 function renderWorkout() {
+  // Generator
+  model.getMuscle(model.muscles.chest);
+  console.log(model.andrew);
+  //
   // Render HTML
   workoutView.renderView();
   // Back button
   workoutView.backListener(renderHome);
-  // Generator
-  model.getMuscle(model.muscles.chest);
 }
 
 function navStart() {
