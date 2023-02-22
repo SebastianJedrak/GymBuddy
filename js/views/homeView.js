@@ -7,25 +7,25 @@ class HomeView extends View {
   _renderHTML = `<div class="workout-parameters-container">
   <h3 class="workout-parameters-text">Body part</h3>
   <ul class="workout-parameters">
-    <li><button class="btn btn-33 btn-white">Lower</button></li>
-    <li><button class="btn btn-33 btn-orange">Full</button></li>
-    <li><button class="btn btn-33 btn-white">Upper</button></li>
+    <li><button class="btn btn-33 btn-white" dataset-part="lower">Lower</button></li>
+    <li><button class="btn btn-33 btn-orange" dataset-part="full">Full</button></li>
+    <li><button class="btn btn-33 btn-white" dataset-part="upper">Upper</button></li>
   </ul>
   </div>
   <div class="workout-parameters-container">
   <h3 class="workout-parameters-text">Type</h3>
   <ul class="workout-parameters">
-  <li><button class="btn btn-33 btn-white">Endurance</button></li>
-  <li><button class="btn btn-33 btn-white">Balanced</button></li>
-  <li><button class="btn btn-33 btn-orange">Lower</button></li>
+  <li><button class="btn btn-33 btn-white" dataset-type="endurance">Endurance</button></li>
+  <li><button class="btn btn-33 btn-white" dataset-type="balanced">Balanced</button></li>
+  <li><button class="btn btn-33 btn-orange" dataset-type="strength">Strength</button></li>
   </ul>
   </div>
   <div class="workout-parameters-container">
   <h3 class="workout-parameters-text">Duration</h3>
   <ul class="workout-parameters">
-  <li><button class="btn btn-33 btn-orange">Short</button></li>
-  <li><button class="btn btn-33 btn-white">Medium</button></li>
-  <li><button class="btn btn-33 btn-white">Long</button></li>
+  <li><button class="btn btn-33 btn-orange" dataset-duration="short">Short</button></li>
+  <li><button class="btn btn-33 btn-white" dataset-duration="medium">Medium</button></li>
+  <li><button class="btn btn-33 btn-white" dataset-duration="long">Long</button></li>
   </ul>
   </div>
   <div class="start-container">
