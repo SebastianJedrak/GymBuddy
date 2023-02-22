@@ -1,3 +1,5 @@
+// import { workoutParameters } from "./controller.js";
+
 class User {
   constructor(login, password, height, weight, gender) {
     this.login = login;
@@ -9,3 +11,5 @@ class User {
 }
 
 export const andrew = new User("andrew", "1111", "180", "80", "man");
+
+// console.log(workoutParameters);

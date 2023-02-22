@@ -65,7 +65,15 @@ function parameterListenerHandler() {
   });
   this.children[0].classList.add("btn-orange");
   // get dataset
-  if (this.dataset.part) console.log(this.dataset.part);
-  if (this.dataset.type) console.log(this.dataset.type);
-  if (this.dataset.duration) console.log(this.dataset.duration);
+  if (this.dataset.part) {
+    workoutParameters.bodyPart = this.dataset.part;
+  }
+  if (this.dataset.type) workoutParameters.type = this.dataset.type;
+  if (this.dataset.duration) workoutParameters.duration = this.dataset.duration;
 }
+
+const workoutParameters = {
+  bodyPart: "",
+  type: "",
+  duration: "",
+};
