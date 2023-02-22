@@ -31,9 +31,7 @@ export default class View {
   }
 
   _navigatorRender() {
-    if (this._navigator === true)
-      document.querySelector("nav").classList.remove("hidden");
-    if (this._navigator === false)
-      document.querySelector("nav").classList.add("hidden");
+    this._clear.call(navigatorView);
+    if (this._navigator === true) navigatorView.navigatorRender();
   }
 }

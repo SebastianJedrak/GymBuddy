@@ -1,13 +1,11 @@
 import homeView from "./views/homeView.js";
 import userView from "./views/userView.js";
 import historyView from "./views/historyView.js";
-import navigatorView from "./views/navigatorView.js";
 import workoutView from "./views/workoutView.js";
 import * as model from "./model.js";
 
 function init() {
   location.hash = "#";
-  navigatorView.navigatorRender();
   renderHome();
 }
 init();
