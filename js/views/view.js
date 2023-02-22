@@ -7,8 +7,8 @@ export default class View {
     this._clear();
     headerView.headerRender(...this._headerConfig);
     this._backgroundRender();
-    this._navigatorRender();
     this._HTMLRender();
+    this._navigatorRender();
   }
 
   _clear() {

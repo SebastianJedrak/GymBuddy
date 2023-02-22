@@ -1,6 +1,6 @@
 class NavigatorView {
   _renderHTML = `        <ul class="navigation">
-  <li class="nav-tile" data-tile="user">
+  <li class="nav-tile nav-tile-user">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="32"
@@ -19,7 +19,7 @@ class NavigatorView {
       </g>
     </svg>
   </li>
-  <li class="nav-tile" data-tile="home">
+  <li class="nav-tile nav-tile-home" >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="32"
@@ -34,7 +34,7 @@ class NavigatorView {
       </g>
     </svg>
   </li>
-  <li class="nav-tile" data-tile="history">
+  <li class="nav-tile nav-tile-history" >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="32"
@@ -54,6 +54,18 @@ class NavigatorView {
 
   navigatorRender() {
     this._parentElement.insertAdjacentHTML("afterbegin", this._renderHTML);
+  }
+
+  userListener(handler) {
+    document.querySelector(".nav-tile-user").addEventListener("click", handler);
+  }
+  homeListener(handler) {
+    document.querySelector(".nav-tile-home").addEventListener("click", handler);
+  }
+  historyListener(handler) {
+    document
+      .querySelector(".nav-tile-history")
+      .addEventListener("click", handler);
   }
 }
 
