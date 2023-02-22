@@ -1,18 +1,19 @@
 class HeaderView {
-  _renderNav = ``;
-  _renderContainer = ``;
-  _renderBack = ``;
-  _renderTutorial = ``;
+  _renderHeader = `<header class="header">           <h2 class="header-text">header</h2>
+  </header>`;
+  _renderContainer = `<div class="header-buttons"> </div>`;
+  _renderBack = `<div class="back-button"></div>`;
+  _renderTutorial = `   <div class="tutorial-button"></div>`;
 
   headerRender(header, back, tutorial) {
     if (header)
       document
         .querySelector(".header-container")
-        .insertAdjacentHTML("afterbegin", this._renderNav);
+        .insertAdjacentHTML("afterbegin", this._renderHeader);
     if (back || tutorial)
       document
         .querySelector(".header-container")
-        .insertAdjacentHTML("afterbegin", this._renderNav);
+        .insertAdjacentHTML("afterbegin", this._renderContainer);
     if (back)
       document
         .querySelector(".header-buttons")
