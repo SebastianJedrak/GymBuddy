@@ -45,8 +45,8 @@ export const muscles = {
 
 async function getMuscle(muscle, number) {
   // const url = `${API_URL}=${muscle}`;
-  // GET DATA
   const url = API_URL_markup;
+  // GET DATA
   try {
     const fetchJson = await fetch(url, options);
     if (!fetchJson.ok)
@@ -65,11 +65,13 @@ async function getMuscle(muscle, number) {
 }
 
 // PUSH TO WORKOUT ARRAY
-async function pushExercise(muscle, number) {
+async function pushExercise(muscle, number = 1) {
   workout.exercises.push(await getMuscle(muscle, number));
 }
 
-await pushExercise(0, 5);
+await pushExercise(1);
+
+console.log(workout.exercises);
 
 function generateExercises() {
   if (activeUser.gender === "man") {
