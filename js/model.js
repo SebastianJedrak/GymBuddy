@@ -45,22 +45,26 @@ export const muscles = {
 
 async function getMuscle(muscle, number) {
   // const url = `${API_URL}=${muscle}`;
+  // GET DATA
   const url = API_URL_markup;
   try {
     const fetchJson = await fetch(url, options);
     if (!fetchJson.ok)
       throw new Error(`Something goes wrong ${fetchJson.statusText}`);
     const data = await fetchJson.json();
+    // CONSUME
     const exercises = new Set();
     while (exercises.size < number) {
       exercises.add(data[randomize(data.length)]);
     }
     return [...exercises];
   } catch (error) {
+    // ERROR HANDLING
     console.error(error);
   }
 }
 
+// PUSH TO WORKOUT ARRAY
 async function pushExercise(muscle, number) {
   workout.exercises.push(await getMuscle(muscle, number));
 }
