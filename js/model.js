@@ -50,18 +50,72 @@ async function getMuscle(muscle) {
 function generateExercises() {
   if (activeUser.gender === "man") {
     if (workoutParameters.bodyPart === "full") {
+      {
+      }
+      if (
+        workoutParameters.duration === "medium" ||
+        workoutParameters.duration === "long"
+      ) {
+      }
+      if (workoutParameters.duration === "long") {
+      }
     }
     if (workoutParameters.bodyPart === "upper") {
+      {
+      }
+      if (
+        workoutParameters.duration === "medium" ||
+        workoutParameters.duration === "long"
+      ) {
+      }
+      if (workoutParameters.duration === "long") {
+      }
     }
     if (workoutParameters.bodyPart === "lower") {
+      {
+      }
+      if (
+        workoutParameters.duration === "medium" ||
+        workoutParameters.duration === "long"
+      ) {
+      }
+      if (workoutParameters.duration === "long") {
+      }
     }
   }
   if (activeUser.gender === "woman") {
     if (workoutParameters.bodyPart === "full") {
+      {
+      }
+      if (
+        workoutParameters.duration === "medium" ||
+        workoutParameters.duration === "long"
+      ) {
+      }
+      if (workoutParameters.duration === "long") {
+      }
     }
     if (workoutParameters.bodyPart === "upper") {
+      {
+      }
+      if (
+        workoutParameters.duration === "medium" ||
+        workoutParameters.duration === "long"
+      ) {
+      }
+      if (workoutParameters.duration === "long") {
+      }
     }
     if (workoutParameters.bodyPart === "lower") {
+      {
+      }
+      if (
+        workoutParameters.duration === "medium" ||
+        workoutParameters.duration === "long"
+      ) {
+      }
+      if (workoutParameters.duration === "long") {
+      }
     }
   }
 }
