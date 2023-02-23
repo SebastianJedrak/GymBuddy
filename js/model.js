@@ -12,7 +12,9 @@ export class User {
   }
 }
 
-export const andrew = new User("andrew", "1111", "180", "80", "man");
+const andrew = new User("andrew", "1111", "180", "80", "man");
+
+const activeUser = andrew;
 
 export const workoutParameters = {
   bodyPart: "full",
@@ -33,14 +35,33 @@ export const muscles = {
   gluteus: `gluteus%20maximus`,
 };
 
-export async function getMuscle(muscle) {
+async function getMuscle(muscle) {
   const url = `${API_URL}=${muscle}`;
   try {
     const fetchJson = await fetch(url, options);
     const data = await fetchJson.json();
-    console.log(data);
+    return data;
   } catch (error) {
     throw new Error(error);
+  }
+}
+
+function generateExercises() {
+  if (activeUser.gender === "man") {
+    if (workoutParameters.bodyPart === "full") {
+    }
+    if (workoutParameters.bodyPart === "upper") {
+    }
+    if (workoutParameters.bodyPart === "lower") {
+    }
+  }
+  if (activeUser.gender === "woman") {
+    if (workoutParameters.bodyPart === "full") {
+    }
+    if (workoutParameters.bodyPart === "upper") {
+    }
+    if (workoutParameters.bodyPart === "lower") {
+    }
   }
 }
 
