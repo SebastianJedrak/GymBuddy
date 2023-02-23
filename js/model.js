@@ -33,8 +33,11 @@ export const workoutParameters = {
 
 export const muscles = {
   abdominals: `abdominals`,
+  abductors: "abductors",
+  adductors: `adductors`,
   biceps: `biceps`,
-  back: `middle_back`,
+  middleBack: `middle_back`,
+  lats: "lats",
   calves: `calves`,
   chest: `chest`,
   glutes: `glutes`,
@@ -43,7 +46,7 @@ export const muscles = {
   quadriceps: `quadriceps`,
 };
 
-async function getMuscle(muscle, number) {
+async function getMuscle(muscle) {
   const url = `${API_URL}${muscle}&difficulty=${activeUser.experience}&type=strength`;
   // const url = API_URL_markup;
   // GET DATA
@@ -51,12 +54,7 @@ async function getMuscle(muscle, number) {
     const fetchJson = await fetch(url, options);
     if (!fetchJson.ok) throw new Error(`Something goes wrong`);
     const data = await fetchJson.json();
-    // CONSUME
-    const exercises = new Set();
-    while (exercises.size < number) {
-      exercises.add(data[randomize(data.length)]);
-    }
-    return [...exercises];
+    return data[randomize(data.length)];
   } catch (error) {
     // ERROR HANDLING
     console.error(error);
@@ -64,83 +62,37 @@ async function getMuscle(muscle, number) {
 }
 
 // PUSH TO WORKOUT ARRAY
-async function pushExercise(muscle, number = 1) {
-  workout.exercises.push(await getMuscle(muscle, number));
+async function pushExercise(muscle) {
+  workout.exercises.push(await getMuscle(muscle));
 }
 
-await pushExercise(`middle_back`, 10);
+await pushExercise(`middle_back`);
 
 console.log(workout.exercises);
 
 function generateExercises() {
-  if (activeUser.gender === "man") {
-    if (workoutParameters.bodyPart === "full") {
-      {
-      }
-      if (
-        workoutParameters.duration === "medium" ||
-        workoutParameters.duration === "long"
-      ) {
-      }
-      if (workoutParameters.duration === "long") {
-      }
+  if (workoutParameters.bodyPart === "full") {
+    {
     }
-    if (workoutParameters.bodyPart === "upper") {
-      {
-      }
-      if (
-        workoutParameters.duration === "medium" ||
-        workoutParameters.duration === "long"
-      ) {
-      }
-      if (workoutParameters.duration === "long") {
-      }
+    if (workoutParameters.duration === "medium") {
     }
-    if (workoutParameters.bodyPart === "lower") {
-      {
-      }
-      if (
-        workoutParameters.duration === "medium" ||
-        workoutParameters.duration === "long"
-      ) {
-      }
-      if (workoutParameters.duration === "long") {
-      }
+    if (workoutParameters.duration === "long") {
     }
   }
-  if (activeUser.gender === "woman") {
-    if (workoutParameters.bodyPart === "full") {
-      {
-      }
-      if (
-        workoutParameters.duration === "medium" ||
-        workoutParameters.duration === "long"
-      ) {
-      }
-      if (workoutParameters.duration === "long") {
-      }
+  if (workoutParameters.bodyPart === "upper") {
+    {
     }
-    if (workoutParameters.bodyPart === "upper") {
-      {
-      }
-      if (
-        workoutParameters.duration === "medium" ||
-        workoutParameters.duration === "long"
-      ) {
-      }
-      if (workoutParameters.duration === "long") {
-      }
+    if (workoutParameters.duration === "medium") {
     }
-    if (workoutParameters.bodyPart === "lower") {
-      {
-      }
-      if (
-        workoutParameters.duration === "medium" ||
-        workoutParameters.duration === "long"
-      ) {
-      }
-      if (workoutParameters.duration === "long") {
-      }
+    if (workoutParameters.duration === "long") {
+    }
+  }
+  if (workoutParameters.bodyPart === "lower") {
+    {
+    }
+    if (workoutParameters.duration === "medium") {
+    }
+    if (workoutParameters.duration === "long") {
     }
   }
 }
