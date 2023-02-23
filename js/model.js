@@ -43,7 +43,7 @@ export const muscles = {
   gluteus: `gluteus%20maximus`,
 };
 
-async function getMuscle(muscle) {
+async function getMuscle(muscle, number) {
   // const url = `${API_URL}=${muscle}`;
   const url = API_URL_markup;
   try {
@@ -51,13 +51,17 @@ async function getMuscle(muscle) {
     if (!fetchJson.ok)
       throw new Error(`Something goes wrong ${fetchJson.statusText}`);
     const data = await fetchJson.json();
-    console.log(data);
+    const exercises = [];
+    for (let i = 0; i < number; i++) {
+      exercises.push(data[randomize(data.length)]);
+    }
+    return exercises;
   } catch (error) {
     console.error(error);
   }
 }
 
-getMuscle();
+console.log(await getMuscle(0, 5));
 
 function generateExercises() {
   if (activeUser.gender === "man") {
