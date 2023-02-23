@@ -61,9 +61,11 @@ async function getMuscle(muscle, number) {
   }
 }
 
-workout.exercises.push(await getMuscle(0, 5));
+async function pushExercise(muscle, number) {
+  workout.exercises.push(await getMuscle(muscle, number));
+}
 
-console.log(workout.exercises.flat());
+await pushExercise(0, 5);
 
 function generateExercises() {
   if (activeUser.gender === "man") {
