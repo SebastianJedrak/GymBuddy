@@ -4,17 +4,18 @@ import { API_URL_markup } from "./config.js";
 import { randomize } from "./helpers.js";
 
 export class User {
-  constructor(login, password, height, weight, gender) {
+  constructor(login, password, height, weight, gender, experience) {
     this.login = login;
     this.password = password;
     this.height = height;
     this.weight = weight;
     this.gender = gender;
+    this.experience = experience;
     this.BMI = (weight / (height / 100) ** 2).toFixed(2);
   }
 }
 
-const andrew = new User("andrew", "1111", "180", "80", "man");
+const andrew = new User("andrew", "1111", "180", "80", "man", "intermediate");
 
 const activeUser = andrew;
 
@@ -44,7 +45,7 @@ export const muscles = {
 };
 
 async function getMuscle(muscle, number) {
-  // const url = `${API_URL}=${muscle}`;
+  // const url = `${API_URL}${muscle}&difficulty=${activeUser.experience}`;
   const url = API_URL_markup;
   // GET DATA
   try {
