@@ -1,5 +1,6 @@
 import { options } from "./config.js";
 import { API_URL } from "./config.js";
+import { API_URL_markup } from "./config.js";
 import { randomize } from "./helpers.js";
 
 export class User {
@@ -43,12 +44,14 @@ export const muscles = {
 };
 
 async function getMuscle(muscle) {
-  const url = `${API_URL}=${muscle}`;
+  // const url = `${API_URL}=${muscle}`;
+  const url = API_URL_markup;
   try {
     const fetchJson = await fetch(url, options);
     if (!fetchJson.ok)
       throw new Error(`Something goes wrong ${fetchJson.statusText}`);
     const data = await fetchJson.json();
+    console.log(data);
   } catch (error) {
     console.error(error);
   }
