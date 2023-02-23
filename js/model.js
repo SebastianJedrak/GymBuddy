@@ -57,6 +57,8 @@ async function getMuscle(muscle) {
   }
 }
 
+getMuscle();
+
 function generateExercises() {
   if (activeUser.gender === "man") {
     if (workoutParameters.bodyPart === "full") {

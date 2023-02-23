@@ -7,4 +7,4 @@ export const options = {
 };
 
 export const API_URL = `https://exerciseapi3.p.rapidapi.com/search/?primaryMuscle`;
-export const API_URL_markup = `https://jsonplaceholder.typicode.com/todos/1`;
+export const API_URL_markup = `https://jsonplaceholder.typicode.com/users`;
