@@ -55,14 +55,15 @@ async function getMuscle(muscle, number) {
     while (exercises.size < number) {
       exercises.add(data[randomize(data.length)]);
     }
-
     return [...exercises];
   } catch (error) {
     console.error(error);
   }
 }
 
-console.log(await getMuscle(0, 5));
+workout.exercises.push(await getMuscle(0, 5));
+
+console.log(workout.exercises.flat());
 
 function generateExercises() {
   if (activeUser.gender === "man") {
