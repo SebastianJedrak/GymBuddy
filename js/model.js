@@ -17,6 +17,12 @@ const andrew = new User("andrew", "1111", "180", "80", "man");
 
 const activeUser = andrew;
 
+const workout = {
+  exercises: [],
+  sets: [],
+  reps: [],
+};
+
 export const workoutParameters = {
   bodyPart: "full",
   type: "balanced",
@@ -40,10 +46,11 @@ async function getMuscle(muscle) {
   const url = `${API_URL}=${muscle}`;
   try {
     const fetchJson = await fetch(url, options);
+    if (!fetchJson.ok)
+      throw new Error(`Something goes wrong ${fetchJson.statusText}`);
     const data = await fetchJson.json();
-    return data;
   } catch (error) {
-    throw new Error(error);
+    console.error(error);
   }
 }
 
@@ -119,13 +126,3 @@ function generateExercises() {
     }
   }
 }
-
-console.log(randomize(3));
-
-getMuscle(muscles.chest);
-
-const workout = {
-  exercises: [],
-  sets: [],
-  reps: [],
-};
