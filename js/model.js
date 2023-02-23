@@ -51,11 +51,12 @@ async function getMuscle(muscle, number) {
     if (!fetchJson.ok)
       throw new Error(`Something goes wrong ${fetchJson.statusText}`);
     const data = await fetchJson.json();
-    const exercises = [];
-    for (let i = 0; i < number; i++) {
-      exercises.push(data[randomize(data.length)]);
+    const exercises = new Set();
+    while (exercises.size < number) {
+      exercises.add(data[randomize(data.length)]);
     }
-    return exercises;
+
+    return [...exercises];
   } catch (error) {
     console.error(error);
   }
