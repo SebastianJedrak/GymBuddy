@@ -50,7 +50,7 @@ async function getMuscle(muscle, number) {
   try {
     const fetchJson = await fetch(url, options);
     if (!fetchJson.ok)
-      throw new Error(`Something goes wrong ${fetchJson.statusText}`);
+      throw new Error(`Something goes wrong ${fetchJson.message}`);
     const data = await fetchJson.json();
     // CONSUME
     const exercises = new Set();
