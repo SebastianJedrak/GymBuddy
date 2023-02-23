@@ -66,15 +66,21 @@ async function pushExercise(muscle) {
   workout.exercises.push(await getMuscle(muscle));
 }
 
-await pushExercise(`middle_back`);
-
+await generateExercises();
 console.log(workout.exercises);
 
-function generateExercises() {
+async function generateExercises() {
   if (workoutParameters.bodyPart === "full") {
     {
+      await pushExercise(muscles.biceps);
+      await pushExercise(muscles.triceps);
+      await pushExercise(muscles.biceps);
+      await pushExercise(muscles.triceps);
+      await pushExercise(muscles.biceps);
+      await pushExercise(muscles.triceps);
     }
     if (workoutParameters.duration === "medium") {
+      await pushExercise(muscles.abductors);
     }
     if (workoutParameters.duration === "long") {
     }
