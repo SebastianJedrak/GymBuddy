@@ -33,10 +33,21 @@ export const muscles = {
   gluteus: `gluteus%20maximus`,
 };
 
-export function getMuscle(muscle) {
+export async function getMuscle(muscle) {
   const url = `${API_URL}=${muscle}`;
-  fetch(url, options)
-    .then((response) => response.json())
-    .then((response) => console.log(response))
-    .catch((err) => console.error(err));
+  try {
+    const fetchJson = await fetch(url, options);
+    const data = await fetchJson.json();
+    console.log(data);
+  } catch (error) {
+    throw new Error(error);
+  }
 }
+
+getMuscle(muscles.chest);
+
+const workout = {
+  exercises: [],
+  sets: [],
+  reps: [],
+};
