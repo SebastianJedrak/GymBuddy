@@ -1,5 +1,6 @@
 import { options } from "./config.js";
 import { API_URL } from "./config.js";
+import { randomize } from "./helpers.js";
 
 export class User {
   constructor(login, password, height, weight, gender) {
@@ -64,6 +65,8 @@ function generateExercises() {
     }
   }
 }
+
+console.log(randomize(3));
 
 getMuscle(muscles.chest);
 
