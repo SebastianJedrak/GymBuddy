@@ -32,26 +32,24 @@ export const workoutParameters = {
 };
 
 export const muscles = {
-  chest: `pectoralis%20major`,
-  trapezius: `trapezius`,
-  shoulders: `deltoid`,
-  triceps: `triceps`,
+  abdominals: `abdominals`,
   biceps: `biceps`,
-  abdominal: `abdominal`,
-  oblique: `external oblique`,
-  quadriceps: `quadriceps`,
+  back: `middle_back`,
+  calves: `calves`,
+  chest: `chest`,
+  glutes: `glutes`,
   hamstrings: `hamstrings`,
-  gluteus: `gluteus%20maximus`,
+  triceps: `triceps`,
+  quadriceps: `quadriceps`,
 };
 
 async function getMuscle(muscle, number) {
-  // const url = `${API_URL}${muscle}&difficulty=${activeUser.experience}`;
-  const url = API_URL_markup;
+  const url = `${API_URL}${muscle}&difficulty=${activeUser.experience}&type=strength`;
+  // const url = API_URL_markup;
   // GET DATA
   try {
     const fetchJson = await fetch(url, options);
-    if (!fetchJson.ok)
-      throw new Error(`Something goes wrong ${fetchJson.message}`);
+    if (!fetchJson.ok) throw new Error(`Something goes wrong`);
     const data = await fetchJson.json();
     // CONSUME
     const exercises = new Set();
@@ -70,7 +68,7 @@ async function pushExercise(muscle, number = 1) {
   workout.exercises.push(await getMuscle(muscle, number));
 }
 
-await pushExercise(1);
+await pushExercise(`middle_back`, 10);
 
 console.log(workout.exercises);
 
