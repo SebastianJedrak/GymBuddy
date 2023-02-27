@@ -86,13 +86,13 @@ function getSetsReps(reps) {
 function compoundExercise() {
   switch (workoutParameters.type) {
     case "balanced":
-      getSetsReps("high");
+      getSetsReps(randomize(2) === 2 ? "medium" : "low");
       break;
     case "strength":
-      getSetsReps("medium");
+      getSetsReps("low");
       break;
     case "endurance":
-      getSetsReps("high");
+      getSetsReps("medium");
       break;
   }
 }
@@ -100,13 +100,13 @@ function compoundExercise() {
 function accessoryExercise() {
   switch (workoutParameters.type) {
     case "balanced":
-      getSetsReps("medium");
+      getSetsReps(randomize(2) === 2 ? "medium" : "high");
       break;
     case "strength":
-      getSetsReps("low");
+      getSetsReps("medium");
       break;
     case "endurance":
-      getSetsReps("medium");
+      getSetsReps("high");
       break;
   }
 }
@@ -120,7 +120,9 @@ export async function generateExercises() {
       await pushExercise(muscles.quadriceps);
       compoundExercise();
       // await pushExercise(muscles.chest);
+      compoundExercise();
       // await pushExercise(muscles.lats);
+      compoundExercise();
       // await pushExercise(muscles.hamstrings);
       // await pushExercise(muscles.triceps);
     }

@@ -50,6 +50,7 @@ async function renderWorkout() {
   workoutView.renderView();
   // Back button
   workoutView.backListener(renderHome);
+  console.log(model.workout);
 }
 
 function navStart() {
