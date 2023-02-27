@@ -44,13 +44,12 @@ function renderHistory() {
 
 async function renderWorkout() {
   // Generator
-  await model.generateExercises();
+  // await model.generateExercises();
   //
   // Render HTML
   workoutView.renderView();
   // Back button
   workoutView.backListener(renderHome);
-  console.log(model.workout.exercises);
 }
 
 function navStart() {
