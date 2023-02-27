@@ -44,8 +44,9 @@ function renderHistory() {
 
 async function renderWorkout() {
   // Generator
-  // await model.generateExercises();
-  //
+  await model.generateExercises();
+  // Send workout data to render view
+  await workoutView.getDataToRender(model.workout);
   // Render HTML
   workoutView.renderView();
   // Back button

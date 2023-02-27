@@ -2,6 +2,7 @@ import navigatorView from "./navigatorView.js";
 import headerView from "./headerView.js";
 
 export default class View {
+  _data;
   _globalContainer = document.querySelector(".global-container");
   renderView() {
     this._clear();
@@ -17,6 +18,10 @@ export default class View {
 
   _HTMLRender() {
     this._parentElement.insertAdjacentHTML("afterbegin", this._renderHTML);
+  }
+
+  async getDataToRender(data) {
+    this._data = data;
   }
 
   _backgroundRender() {
