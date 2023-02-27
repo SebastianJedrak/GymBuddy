@@ -62,8 +62,37 @@ async function getMuscle(muscle) {
 }
 
 // PUSH TO WORKOUT ARRAY
-async function pushExercise(muscle) {
+async function pushExercise(muscle, type) {
+  // PUSH EXERCISE
   workout.exercises.push(await getMuscle(muscle));
+
+  // PUSH SETS AND REPS
+  if (type === "compound") {
+    switch (workoutParameters.type) {
+      case "balanced":
+        getSetsReps(randomize(2) + 1 === 2 ? "medium" : "low");
+        break;
+      case "strength":
+        getSetsReps("low");
+        break;
+      case "endurance":
+        getSetsReps("medium");
+        break;
+    }
+  }
+  if (type === "accessory") {
+    switch (workoutParameters.type) {
+      case "balanced":
+        getSetsReps(randomize(2) + 1 === 2 ? "medium" : "high");
+        break;
+      case "strength":
+        getSetsReps("medium");
+        break;
+      case "endurance":
+        getSetsReps("high");
+        break;
+    }
+  }
 }
 
 // SETS AND REPS
@@ -83,46 +112,17 @@ function getSetsReps(reps) {
   }
 }
 
-function compoundExercise() {
-  switch (workoutParameters.type) {
-    case "balanced":
-      getSetsReps(randomize(2) === 2 ? "medium" : "low");
-      break;
-    case "strength":
-      getSetsReps("low");
-      break;
-    case "endurance":
-      getSetsReps("medium");
-      break;
-  }
-}
-
-function accessoryExercise() {
-  switch (workoutParameters.type) {
-    case "balanced":
-      getSetsReps(randomize(2) === 2 ? "medium" : "high");
-      break;
-    case "strength":
-      getSetsReps("medium");
-      break;
-    case "endurance":
-      getSetsReps("high");
-      break;
-  }
-}
-
 // EXERCISES GENERATOR
 
 export async function generateExercises() {
   workout.exercises = [];
+  workout.reps = [];
+  workout.sets = [];
   if (workoutParameters.bodyPart === "full") {
     {
-      await pushExercise(muscles.quadriceps);
-      compoundExercise();
+      await pushExercise(muscles.quadriceps, "accessory");
       // await pushExercise(muscles.chest);
-      compoundExercise();
       // await pushExercise(muscles.lats);
-      compoundExercise();
       // await pushExercise(muscles.hamstrings);
       // await pushExercise(muscles.triceps);
     }
@@ -130,8 +130,7 @@ export async function generateExercises() {
       workoutParameters.duration === "medium" ||
       workoutParameters.duration === "long"
     ) {
-      await pushExercise(muscles.abdominals);
-      accessoryExercise();
+      await pushExercise(muscles.abdominals, "compound");
     }
     if (workoutParameters.duration === "long") {
       await pushExercise(muscles.biceps);
