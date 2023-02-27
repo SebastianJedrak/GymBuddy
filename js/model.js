@@ -19,7 +19,7 @@ const andrew = new User("andrew", "1111", "180", "80", "man", "intermediate");
 
 const activeUser = andrew;
 
-const workout = {
+export const workout = {
   exercises: [],
   sets: [],
   reps: [],
@@ -66,17 +66,17 @@ async function pushExercise(muscle) {
   workout.exercises.push(await getMuscle(muscle));
 }
 
-// await generateExercises();
-console.log(workout.exercises);
+//
 
-async function generateExercises() {
+export async function generateExercises() {
+  workout.exercises = [];
   if (workoutParameters.bodyPart === "full") {
     {
       await pushExercise(muscles.quadriceps);
-      await pushExercise(muscles.chest);
-      await pushExercise(muscles.lats);
-      await pushExercise(muscles.hamstrings);
-      await pushExercise(muscles.triceps);
+      // await pushExercise(muscles.chest);
+      // await pushExercise(muscles.lats);
+      // await pushExercise(muscles.hamstrings);
+      // await pushExercise(muscles.triceps);
     }
     if (
       workoutParameters.duration === "medium" ||
@@ -91,10 +91,10 @@ async function generateExercises() {
   if (workoutParameters.bodyPart === "upper") {
     {
       await pushExercise(muscles.chest);
-      await pushExercise(muscles.lats);
-      await pushExercise(muscles.triceps);
-      await pushExercise(muscles.biceps);
-      await pushExercise(muscles.abdominals);
+      // await pushExercise(muscles.lats);
+      // await pushExercise(muscles.triceps);
+      // await pushExercise(muscles.biceps);
+      // await pushExercise(muscles.abdominals);
     }
     if (
       workoutParameters.duration === "medium" ||
@@ -109,10 +109,10 @@ async function generateExercises() {
   if (workoutParameters.bodyPart === "lower") {
     {
       await pushExercise(muscles.quadriceps);
-      await pushExercise(muscles.hamstrings);
-      await pushExercise(muscles.glutes);
-      await pushExercise(muscles.abductors);
-      await pushExercise(muscles.abdominals);
+      // await pushExercise(muscles.hamstrings);
+      // await pushExercise(muscles.glutes);
+      // await pushExercise(muscles.abductors);
+      // await pushExercise(muscles.abdominals);
     }
     if (
       workoutParameters.duration === "medium" ||

@@ -34,7 +34,7 @@ class HomeView extends View {
   </div>`;
   _headerConfig = [false, false, true];
 
-  startListener(handler) {
+  startWorkoutListener(handler) {
     [...document.querySelector(".start-container").children].forEach(
       (element) => element.addEventListener("click", handler)
     );

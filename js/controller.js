@@ -17,7 +17,7 @@ function renderHome() {
   navStart();
   document.querySelector(".nav-tile-home").classList.add("active");
   // Start button listener
-  homeView.startListener(renderWorkout.bind(workoutView));
+  homeView.startWorkoutListener(renderWorkout.bind(workoutView));
   // Parameters listeners
   parametersListeners();
   // Reset workoutParametersObject
@@ -44,12 +44,13 @@ function renderHistory() {
 
 function renderWorkout() {
   // Generator
-
+  model.generateExercises();
   //
   // Render HTML
   workoutView.renderView();
   // Back button
   workoutView.backListener(renderHome);
+  console.log(model.workout.exercises);
 }
 
 function navStart() {
@@ -57,6 +58,8 @@ function navStart() {
   navigatorView.homeListener(renderHome);
   navigatorView.historyListener(renderHistory);
 }
+
+//! LISTENERS
 
 function parametersListeners() {
   homeView.partParameterListener(parameterListenerHandler);
