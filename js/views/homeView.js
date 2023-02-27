@@ -4,7 +4,10 @@ class HomeView extends View {
   _parentElement = document.querySelector(".main-content");
   _navigator = true;
   _backgroundType = "gradient";
-  _renderHTML = `<div class="workout-parameters-container">
+  _headerConfig = [false, false, true];
+
+  _renderHTML() {
+    return `<div class="workout-parameters-container">
   <h3 class="workout-parameters-text">Body part</h3>
   <ul class="workout-parameters part-parameters">
     <li data-part="lower"><button class="btn btn-33 btn-white" >Lower</button></li>
@@ -32,7 +35,7 @@ class HomeView extends View {
   <div class="start-cloud"></div>
   <div class="start-button"></div>
   </div>`;
-  _headerConfig = [false, false, true];
+  }
 
   startWorkoutListener(handler) {
     [...document.querySelector(".start-container").children].forEach(

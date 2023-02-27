@@ -4,12 +4,15 @@ class WorkoutView extends View {
   _parentElement = document.querySelector(".main-content");
   _navigator = false;
   _backgroundType = "whitish";
-  _renderHTML = `        <div class="workout-wrapper">
+  _headerConfig = [`Workout`, true, true];
+
+  _renderHTML() {
+    return `        <div class="workout-wrapper">
   <h3 class="timer-text">Time: 00:16:32</h3>
   <div class="progress-bar"></div>
   <div class="workout-card-container">
     <div class="exercise-YT-container">
-      <h2 class="exercise-name-text">Bench press</h2>
+      <h2 class="exercise-name-text">${this._data?.exercises[0].name}</h2>
       <div class="YT-svg-container"></div>
     </div>
     <p class="muscle-text">biceps</p>
@@ -37,7 +40,7 @@ class WorkoutView extends View {
     <span>Skip to: Bicep Curl</span>
   </button>
 </div>`;
-  _headerConfig = [`Workout`, true, true];
+  }
 
   backListener(handler) {
     document.querySelector(".back-button").addEventListener("click", handler);

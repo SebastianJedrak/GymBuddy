@@ -1,5 +1,8 @@
 class NavigatorView {
-  _renderHTML = `        <ul class="navigation">
+  _parentElement = document.querySelector("nav");
+
+  _HTML() {
+    return `        <ul class="navigation">
   <li class="nav-tile nav-tile-user">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -50,10 +53,10 @@ class NavigatorView {
     </svg>
   </li>
 </ul>`;
-  _parentElement = document.querySelector("nav");
+  }
 
   navigatorRender() {
-    this._parentElement.insertAdjacentHTML("afterbegin", this._renderHTML);
+    this._parentElement.insertAdjacentHTML("afterbegin", this._HTML());
   }
 
   userListener(handler) {

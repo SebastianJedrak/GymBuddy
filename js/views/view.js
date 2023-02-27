@@ -17,10 +17,10 @@ export default class View {
   }
 
   _HTMLRender() {
-    this._parentElement.insertAdjacentHTML("afterbegin", this._renderHTML);
+    this._parentElement.insertAdjacentHTML("afterbegin", this._renderHTML());
   }
 
-  async getDataToRender(data) {
+  getDataToRender(data) {
     this._data = data;
   }
 
