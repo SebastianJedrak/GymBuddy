@@ -120,56 +120,56 @@ export async function generateExercises() {
   workout.sets = [];
   if (workoutParameters.bodyPart === "full") {
     {
-      await pushExercise(muscles.quadriceps, "accessory");
-      // await pushExercise(muscles.chest);
-      // await pushExercise(muscles.lats);
-      // await pushExercise(muscles.hamstrings);
-      // await pushExercise(muscles.triceps);
+      await pushExercise(muscles.quadriceps, "compound");
+      // await pushExercise(muscles.chest, "compound");
+      // await pushExercise(muscles.lats, "compound");
+      // await pushExercise(muscles.hamstrings, "accessory");
+      // await pushExercise(muscles.triceps, "accessory");
     }
     if (
       workoutParameters.duration === "medium" ||
       workoutParameters.duration === "long"
     ) {
-      await pushExercise(muscles.abdominals, "compound");
+      await pushExercise(muscles.abdominals, "accessory");
     }
     if (workoutParameters.duration === "long") {
-      await pushExercise(muscles.biceps);
+      await pushExercise(muscles.biceps, "accessory");
     }
   }
   if (workoutParameters.bodyPart === "upper") {
     {
-      await pushExercise(muscles.chest);
-      // await pushExercise(muscles.lats);
-      // await pushExercise(muscles.triceps);
-      // await pushExercise(muscles.biceps);
-      // await pushExercise(muscles.abdominals);
+      await pushExercise(muscles.chest, "compound");
+      // await pushExercise(muscles.lats, "compound");
+      // await pushExercise(muscles.triceps, "accessory");
+      // await pushExercise(muscles.biceps, "accessory");
+      // await pushExercise(muscles.abdominals, "accessory");
     }
     if (
       workoutParameters.duration === "medium" ||
       workoutParameters.duration === "long"
     ) {
-      await pushExercise(muscles.chest);
+      await pushExercise(muscles.chest, "compound");
     }
     if (workoutParameters.duration === "long") {
-      await pushExercise(muscles.middleBack);
+      await pushExercise(muscles.middleBack, "accessory");
     }
   }
   if (workoutParameters.bodyPart === "lower") {
     {
-      await pushExercise(muscles.quadriceps);
-      // await pushExercise(muscles.hamstrings);
-      // await pushExercise(muscles.glutes);
-      // await pushExercise(muscles.abductors);
-      // await pushExercise(muscles.abdominals);
+      await pushExercise(muscles.quadriceps, "compound");
+      // await pushExercise(muscles.hamstrings, "compound");
+      // await pushExercise(muscles.glutes, "compound")
+      // await pushExercise(muscles.abductors, "accessory");
+      // await pushExercise(muscles.abdominals, "accessory");
     }
     if (
       workoutParameters.duration === "medium" ||
       workoutParameters.duration === "long"
     ) {
-      await pushExercise(muscles.calves);
+      await pushExercise(muscles.calves, "accessory");
     }
     if (workoutParameters.duration === "long") {
-      await pushExercise(muscles.adductors);
+      await pushExercise(muscles.adductors, "accessory");
     }
   }
 }
