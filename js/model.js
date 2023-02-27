@@ -66,13 +66,59 @@ async function pushExercise(muscle) {
   workout.exercises.push(await getMuscle(muscle));
 }
 
-//
+// SETS AND REPS
+
+function getSetsReps(reps) {
+  if (reps === "medium") {
+    workout.sets.push(4);
+    workout.reps.push(8);
+  }
+  if (reps === "low") {
+    workout.sets.push(5);
+    workout.reps.push(5);
+  }
+  if (reps === "high") {
+    workout.sets.push(3);
+    workout.reps.push(12);
+  }
+}
+
+function compoundExercise() {
+  switch (workoutParameters.type) {
+    case "balanced":
+      getSetsReps("high");
+      break;
+    case "strength":
+      getSetsReps("medium");
+      break;
+    case "endurance":
+      getSetsReps("high");
+      break;
+  }
+}
+
+function accessoryExercise() {
+  switch (workoutParameters.type) {
+    case "balanced":
+      getSetsReps("medium");
+      break;
+    case "strength":
+      getSetsReps("low");
+      break;
+    case "endurance":
+      getSetsReps("medium");
+      break;
+  }
+}
+
+// EXERCISES GENERATOR
 
 export async function generateExercises() {
   workout.exercises = [];
   if (workoutParameters.bodyPart === "full") {
     {
       await pushExercise(muscles.quadriceps);
+      compoundExercise();
       // await pushExercise(muscles.chest);
       // await pushExercise(muscles.lats);
       // await pushExercise(muscles.hamstrings);
@@ -83,6 +129,7 @@ export async function generateExercises() {
       workoutParameters.duration === "long"
     ) {
       await pushExercise(muscles.abdominals);
+      accessoryExercise();
     }
     if (workoutParameters.duration === "long") {
       await pushExercise(muscles.biceps);
