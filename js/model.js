@@ -66,39 +66,62 @@ async function pushExercise(muscle) {
   workout.exercises.push(await getMuscle(muscle));
 }
 
-await generateExercises();
+// await generateExercises();
 console.log(workout.exercises);
 
 async function generateExercises() {
   if (workoutParameters.bodyPart === "full") {
     {
-      await pushExercise(muscles.biceps);
-      await pushExercise(muscles.triceps);
-      await pushExercise(muscles.biceps);
-      await pushExercise(muscles.triceps);
-      await pushExercise(muscles.biceps);
+      await pushExercise(muscles.quadriceps);
+      await pushExercise(muscles.chest);
+      await pushExercise(muscles.lats);
+      await pushExercise(muscles.hamstrings);
       await pushExercise(muscles.triceps);
     }
-    if (workoutParameters.duration === "medium") {
-      await pushExercise(muscles.abductors);
+    if (
+      workoutParameters.duration === "medium" ||
+      workoutParameters.duration === "long"
+    ) {
+      await pushExercise(muscles.abdominals);
     }
     if (workoutParameters.duration === "long") {
+      await pushExercise(muscles.biceps);
     }
   }
   if (workoutParameters.bodyPart === "upper") {
     {
+      await pushExercise(muscles.chest);
+      await pushExercise(muscles.lats);
+      await pushExercise(muscles.triceps);
+      await pushExercise(muscles.biceps);
+      await pushExercise(muscles.abdominals);
     }
-    if (workoutParameters.duration === "medium") {
+    if (
+      workoutParameters.duration === "medium" ||
+      workoutParameters.duration === "long"
+    ) {
+      await pushExercise(muscles.chest);
     }
     if (workoutParameters.duration === "long") {
+      await pushExercise(muscles.middleBack);
     }
   }
   if (workoutParameters.bodyPart === "lower") {
     {
+      await pushExercise(muscles.quadriceps);
+      await pushExercise(muscles.hamstrings);
+      await pushExercise(muscles.glutes);
+      await pushExercise(muscles.abductors);
+      await pushExercise(muscles.abdominals);
     }
-    if (workoutParameters.duration === "medium") {
+    if (
+      workoutParameters.duration === "medium" ||
+      workoutParameters.duration === "long"
+    ) {
+      await pushExercise(muscles.calves);
     }
     if (workoutParameters.duration === "long") {
+      await pushExercise(muscles.adductors);
     }
   }
 }
