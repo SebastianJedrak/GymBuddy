@@ -42,9 +42,9 @@ function renderHistory() {
   document.querySelector(".nav-tile-history").classList.add("active");
 }
 
-function renderWorkout() {
+async function renderWorkout() {
   // Generator
-  model.generateExercises();
+  await model.generateExercises();
   //
   // Render HTML
   workoutView.renderView();
