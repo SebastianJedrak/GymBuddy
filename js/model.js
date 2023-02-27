@@ -28,7 +28,7 @@ export const workout = {
 export const workoutParameters = {
   bodyPart: "full",
   type: "balanced",
-  duration: "medium",
+  duration: "short", //change to default medium
 };
 
 export const muscles = {
