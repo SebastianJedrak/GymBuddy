@@ -6,7 +6,7 @@ class HomeView extends View {
   _backgroundType = "gradient";
   _headerConfig = [false, false, true];
 
-  _renderHTML() {
+  _HTML() {
     return `<div class="workout-parameters-container">
   <h3 class="workout-parameters-text">Body part</h3>
   <ul class="workout-parameters part-parameters">

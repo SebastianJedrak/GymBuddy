@@ -17,7 +17,7 @@ export default class View {
   }
 
   _HTMLRender() {
-    this._parentElement.insertAdjacentHTML("afterbegin", this._renderHTML());
+    this._parentElement.insertAdjacentHTML("afterbegin", this._HTML());
   }
 
   getDataToRender(data) {

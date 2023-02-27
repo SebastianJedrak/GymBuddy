@@ -6,7 +6,7 @@ class UserView extends View {
   _backgroundType = "whitish";
   _headerConfig = [`User`, false, false];
 
-  _renderHTML() {
+  _HTML() {
     return `user`;
   }
 }

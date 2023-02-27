@@ -6,7 +6,7 @@ class WorkoutView extends View {
   _backgroundType = "whitish";
   _headerConfig = [`Workout`, true, true];
 
-  _renderHTML() {
+  _HTML() {
     return `        <div class="workout-wrapper">
   <h3 class="timer-text">Time: 00:16:32</h3>
   <div class="progress-bar"></div>

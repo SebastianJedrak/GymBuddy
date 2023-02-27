@@ -6,7 +6,7 @@ class HistoryView extends View {
   _backgroundType = "whitish";
   _headerConfig = [`History`, false, false];
 
-  _renderHTML() {
+  _HTML() {
     return `history`;
   }
 }
