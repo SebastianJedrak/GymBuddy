@@ -6,6 +6,7 @@ class WorkoutView extends View {
   _backgroundType = "whitish";
   _headerConfig = [`Workout`, true, true];
   currentExercise = 0;
+  currentSet = 1;
 
   _HTML() {
     return `        <div class="workout-wrapper">
@@ -14,15 +15,16 @@ class WorkoutView extends View {
   <div class="workout-card-container">
     <div class="exercise-YT-container">
       <h2 class="exercise-name-text">
-      ${
-        "bench press"
-        // this._data.exercises[this.currentExercise]?.name
-      }
+      ${this._data.exercises[this.currentExercise].name}
       </h2>
       <div class="instruct-svg-container"></div>
     </div>
-    <p class="muscle-text">biceps</p>
-    <h4 class="set-text">set 1/5</h4>
+    <p class="muscle-text">${
+      this._data.exercises[this.currentExercise].muscle
+    }</p>
+    <h4 class="set-text">set ${this.currentSet}/${
+      this._data.sets[this.currentExercise]
+    }</h4>
     <div class="reps-weight-container">
       <div class="reps-container">
         <h3 class="reps-weight-text">reps</h3>

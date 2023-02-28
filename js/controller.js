@@ -6,8 +6,7 @@ import navigatorView from "./views/navigatorView.js";
 import * as model from "./model.js";
 
 function init() {
-  renderWorkoutView();
-  // renderHome();
+  renderHome();
 }
 init();
 
@@ -48,6 +47,7 @@ async function renderWorkout() {
   await model.generateExercises();
   // Send workout data to render view
   workoutView.getDataToRender(model.workout);
+  console.log(model.workout);
   // Render View
   renderWorkoutView();
 }
@@ -92,11 +92,17 @@ function parameterListenerHandler() {
 }
 
 function doneHandler() {
+  if (
+    workoutView.currentSet < model.workout.sets[workoutView.currentExercise]
+  ) {
+    workoutView.currentSet += 1;
+    return renderWorkoutView();
+  }
   if (workoutView.currentExercise === model.workout.exercises.length - 1) {
     workoutView.currentExercise = 0;
     return renderHome();
-  } else {
-    workoutView.currentExercise += 1;
-    renderWorkoutView();
   }
+  workoutView.currentSet = 1;
+  workoutView.currentExercise += 1;
+  renderWorkoutView();
 }
