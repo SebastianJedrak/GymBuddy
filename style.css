@@ -401,3 +401,22 @@ ul > .nav-tile:hover {
 .red-green-btn-container {
   display: flex;
 }
+
+/*! MAIN SPINNER*/
+
+.spinner-wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.spinner-logo {
+  background-image: url(src/buddyLogoFlat.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  aspect-ratio: 1/1;
+  width: 40vh;
+}
+
+.spinner-circle {
+}
