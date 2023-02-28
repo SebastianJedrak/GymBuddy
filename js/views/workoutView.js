@@ -41,8 +41,8 @@ class WorkoutView extends View {
     <button class="btn btn-50 btn-red"><span>Too heavy...</span></button>
     <button class="btn btn-50 btn-green"><span>Too light!</span></button>
   </div>
-  <button class="btn btn-100 btn-white">
-    <span>Skip to: Bicep Curl</span>
+  <button class="btn btn-100 btn-white btn-skip">
+    Skip to: Bicep Curl
   </button>
 </div>`;
   }
@@ -53,6 +53,10 @@ class WorkoutView extends View {
 
   doneListener(handler) {
     document.querySelector(".btn-done").addEventListener("click", handler);
+  }
+
+  skipToListener(handler) {
+    document.querySelector(".btn-skip").addEventListener("click", handler);
   }
 }
 
