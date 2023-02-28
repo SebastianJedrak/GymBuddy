@@ -13,9 +13,12 @@ class WorkoutView extends View {
   <div class="progress-bar"></div>
   <div class="workout-card-container">
     <div class="exercise-YT-container">
-      <h2 class="exercise-name-text">${
-        this._data.exercises[this.currentExercise]?.name
-      }</h2>
+      <h2 class="exercise-name-text">
+      ${
+        "bench press"
+        // this._data.exercises[this.currentExercise]?.name
+      }
+      </h2>
       <div class="YT-svg-container"></div>
     </div>
     <p class="muscle-text">biceps</p>

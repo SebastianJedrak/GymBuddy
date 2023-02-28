@@ -6,7 +6,8 @@ import navigatorView from "./views/navigatorView.js";
 import * as model from "./model.js";
 
 function init() {
-  renderHome();
+  renderWorkoutView();
+  // renderHome();
 }
 init();
 
