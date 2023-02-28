@@ -47,12 +47,17 @@ async function renderWorkout() {
   await model.generateExercises();
   // Send workout data to render view
   workoutView.getDataToRender(model.workout);
-  console.log(workoutView._data.exercises[0].name);
+  // Render View
+  renderWorkoutView();
+}
+
+function renderWorkoutView() {
   // Render HTML
   workoutView.renderView();
   // Back button
   workoutView.backListener(renderHome);
-  // console.log(model.workout);
+  // Done button
+  workoutView.doneListener(doneHandler);
 }
 
 function navStart() {
@@ -83,4 +88,14 @@ function parameterListenerHandler() {
   if (this.dataset.type) model.workoutParameters.type = this.dataset.type;
   if (this.dataset.duration)
     model.workoutParameters.duration = this.dataset.duration;
+}
+
+function doneHandler() {
+  if (workoutView.currentExercise === model.workout.exercises.length - 1) {
+    workoutView.currentExercise = 0;
+    return renderHome();
+  } else {
+    workoutView.currentExercise += 1;
+    renderWorkoutView();
+  }
 }

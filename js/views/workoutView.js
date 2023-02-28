@@ -5,6 +5,7 @@ class WorkoutView extends View {
   _navigator = false;
   _backgroundType = "whitish";
   _headerConfig = [`Workout`, true, true];
+  currentExercise = 0;
 
   _HTML() {
     return `        <div class="workout-wrapper">
@@ -12,7 +13,9 @@ class WorkoutView extends View {
   <div class="progress-bar"></div>
   <div class="workout-card-container">
     <div class="exercise-YT-container">
-      <h2 class="exercise-name-text">${this._data?.exercises[0].name}</h2>
+      <h2 class="exercise-name-text">${
+        this._data.exercises[this.currentExercise]?.name
+      }</h2>
       <div class="YT-svg-container"></div>
     </div>
     <p class="muscle-text">biceps</p>
@@ -44,6 +47,10 @@ class WorkoutView extends View {
 
   backListener(handler) {
     document.querySelector(".back-button").addEventListener("click", handler);
+  }
+
+  doneListener(handler) {
+    document.querySelector(".btn-done").addEventListener("click", handler);
   }
 }
 
