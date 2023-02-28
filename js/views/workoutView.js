@@ -19,7 +19,7 @@ class WorkoutView extends View {
         // this._data.exercises[this.currentExercise]?.name
       }
       </h2>
-      <div class="YT-svg-container"></div>
+      <div class="instruct-svg-container"></div>
     </div>
     <p class="muscle-text">biceps</p>
     <h4 class="set-text">set 1/5</h4>
@@ -36,12 +36,9 @@ class WorkoutView extends View {
     <button class="btn btn-100 btn-orange btn-done">Done</button>
   </div>
   <div class="red-green-btn-container">
-    <button class="btn btn-50 btn-red"><span>Too hard...</span></button>
-    <button class="btn btn-50 btn-green"><span>Too easy!</span></button>
+    <button class="btn btn-50 btn-red"><span>Too heavy...</span></button>
+    <button class="btn btn-50 btn-green"><span>Too light!</span></button>
   </div>
-  <button class="btn btn-100 btn-white">
-    <span>Replace with: Chest flyes</span>
-  </button>
   <button class="btn btn-100 btn-white">
     <span>Skip to: Bicep Curl</span>
   </button>
