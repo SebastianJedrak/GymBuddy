@@ -23,6 +23,7 @@ export const workout = {
   exercises: [],
   sets: [],
   reps: [],
+  weight: [],
 };
 
 export const workoutParameters = {
@@ -68,6 +69,7 @@ async function pushExercise(muscle, type) {
 
   // PUSH SETS AND REPS
   if (type === "compound") {
+    workout.weight.push(20);
     switch (workoutParameters.type) {
       case "balanced":
         getSetsReps(randomize(2) + 1 === 2 ? "medium" : "low");
@@ -81,6 +83,7 @@ async function pushExercise(muscle, type) {
     }
   }
   if (type === "accessory") {
+    workout.weight.push(4);
     switch (workoutParameters.type) {
       case "balanced":
         getSetsReps(randomize(2) + 1 === 2 ? "medium" : "high");
@@ -118,6 +121,7 @@ export async function generateExercises() {
   workout.exercises = [];
   workout.reps = [];
   workout.sets = [];
+  workout.weight = [];
   if (workoutParameters.bodyPart === "full") {
     {
       await pushExercise(muscles.quadriceps, "compound");
