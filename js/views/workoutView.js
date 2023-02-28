@@ -43,7 +43,7 @@ class WorkoutView extends View {
     <button class="btn btn-50 btn-green"><span>Too light!</span></button>
   </div>
   <button class="btn btn-100 btn-white btn-skip">
-    Skip to: Bicep Curl
+    Skip to: ${this._data.exercises[this.currentExercise + 1]?.name || "End"}
   </button>
 </div>`;
   }
