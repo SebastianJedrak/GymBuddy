@@ -115,7 +115,12 @@ function skipToHandler() {
     resetWorkoutView();
     return renderHome();
   }
-  for (let i = -1; i < workoutView.currentSet; i++) {
+  for (
+    let i = 0;
+    i <
+    model.workout.sets[workoutView.currentExercise] - workoutView.currentSet;
+    i++
+  ) {
     workoutView.progressBar();
   }
   workoutView.currentSet = 1;
