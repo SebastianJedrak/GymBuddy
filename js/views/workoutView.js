@@ -28,7 +28,7 @@ class WorkoutView extends View {
     <div class="reps-weight-container">
       <div class="reps-container">
         <h3 class="reps-weight-text">reps</h3>
-        <h2>5</h2>
+        <h2>${this._data.reps[this.currentExercise]}</h2>
       </div>
       <div class="weight-container">
         <h3 class="reps-weight-text">weight</h3>

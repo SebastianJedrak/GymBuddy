@@ -100,6 +100,7 @@ function doneHandler() {
   }
   if (workoutView.currentExercise === model.workout.exercises.length - 1) {
     workoutView.currentExercise = 0;
+    workoutView.currentSet = 1;
     return renderHome();
   }
   workoutView.currentSet = 1;
