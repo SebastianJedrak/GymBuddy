@@ -7,6 +7,7 @@ class WorkoutView extends View {
   _headerConfig = [`Workout`, true, true];
   currentExercise = 0;
   currentSet = 1;
+  progress = 0;
 
   _HTML() {
     return `        <div class="workout-wrapper">
@@ -45,6 +46,15 @@ class WorkoutView extends View {
     Skip to: Bicep Curl
   </button>
 </div>`;
+  }
+
+  progressBar() {
+    const sumSets = this._data.sets.reduce((acc, element) => {
+      return (acc += element);
+    }, 0);
+    this.progress += (1 / sumSets) * 100;
+    let bar = String(this.progress + "%");
+    document.documentElement.style.setProperty("--barWidth", bar);
   }
 
   backListener(handler) {

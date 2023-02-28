@@ -47,7 +47,6 @@ async function renderWorkout() {
   await model.generateExercises();
   // Send workout data to render view
   workoutView.getDataToRender(model.workout);
-  console.log(model.workout);
   // Render View
   renderWorkoutView();
 }
@@ -61,6 +60,8 @@ function renderWorkoutView() {
   workoutView.doneListener(doneHandler);
   // Skip button
   workoutView.skipToListener(skipToHandler);
+  // Update progress bar
+  workoutView.progressBar();
 }
 
 function navStart() {
@@ -101,8 +102,7 @@ function doneHandler() {
     return renderWorkoutView();
   }
   if (workoutView.currentExercise === model.workout.exercises.length - 1) {
-    workoutView.currentExercise = 0;
-    workoutView.currentSet = 1;
+    resetWorkoutView();
     return renderHome();
   }
   workoutView.currentSet = 1;
@@ -112,8 +112,7 @@ function doneHandler() {
 
 function skipToHandler() {
   if (workoutView.currentExercise === model.workout.exercises.length - 1) {
-    workoutView.currentExercise = 0;
-    workoutView.currentSet = 1;
+    resetWorkoutView();
     return renderHome();
   }
   workoutView.currentSet = 1;
@@ -122,7 +121,12 @@ function skipToHandler() {
 }
 
 function backHomeHandler() {
+  resetWorkoutView();
+  return renderHome();
+}
+
+function resetWorkoutView() {
   workoutView.currentExercise = 0;
   workoutView.currentSet = 1;
-  return renderHome();
+  workoutView.progress = 0;
 }
