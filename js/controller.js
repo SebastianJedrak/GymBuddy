@@ -56,7 +56,7 @@ function renderWorkoutView() {
   // Render HTML
   workoutView.renderView();
   // Back button
-  workoutView.backListener(renderHome);
+  workoutView.backListener(backHomeHandler);
   // Done button
   workoutView.doneListener(doneHandler);
   // Skip button
@@ -119,4 +119,10 @@ function skipToHandler() {
   workoutView.currentSet = 1;
   workoutView.currentExercise += 1;
   renderWorkoutView();
+}
+
+function backHomeHandler() {
+  workoutView.currentExercise = 0;
+  workoutView.currentSet = 1;
+  return renderHome();
 }
