@@ -115,6 +115,9 @@ function skipToHandler() {
     resetWorkoutView();
     return renderHome();
   }
+  for (let i = -1; i < workoutView.currentSet; i++) {
+    workoutView.progressBar();
+  }
   workoutView.currentSet = 1;
   workoutView.currentExercise += 1;
   renderWorkoutView();
