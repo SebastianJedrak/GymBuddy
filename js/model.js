@@ -69,7 +69,14 @@ async function pushExercise(muscle, type) {
 
   // PUSH SETS AND REPS
   if (type === "compound") {
-    workout.weight.push(20);
+    if (
+      workout.exercises.at(-1).equipment === "body_only" ||
+      workout.exercises.at(-1).equipment === "other"
+    ) {
+      workout.weight.push("-");
+    } else {
+      workout.weight.push(20);
+    }
     switch (workoutParameters.type) {
       case "balanced":
         getSetsReps(randomize(2) + 1 === 2 ? "medium" : "low");
@@ -83,7 +90,14 @@ async function pushExercise(muscle, type) {
     }
   }
   if (type === "accessory") {
-    workout.weight.push(4);
+    if (
+      workout.exercises.at(-1).equipment === "body_only" ||
+      workout.exercises.at(-1).equipment === "other"
+    ) {
+      workout.weight.push("-");
+    } else {
+      workout.weight.push(4);
+    }
     switch (workoutParameters.type) {
       case "balanced":
         getSetsReps(randomize(2) + 1 === 2 ? "medium" : "high");

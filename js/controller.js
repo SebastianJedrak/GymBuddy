@@ -51,6 +51,7 @@ async function renderWorkout() {
   // Generator
   await model.generateExercises();
   console.log(model.workout);
+  console.log(model.workout.exercises.at(-1).equipment);
   // Send workout data to render view
   workoutView.getDataToRender(model.workout);
   // Render View
@@ -153,12 +154,21 @@ function resetWorkoutView() {
 }
 
 function heavyHandler() {
-  console.log(model.workout);
-  model.workout.weight[workoutView.currentExercise] -= 2;
+  if (!Number.isFinite(model.workout.weight[workoutView.currentExercise])) {
+    if (model.workout.reps[workoutView.currentExercise] === 2) return;
+    model.workout.reps[workoutView.currentExercise] -= 1;
+  } else {
+    if (model.workout.weight[workoutView.currentExercise] === 2) return;
+    model.workout.weight[workoutView.currentExercise] -= 2;
+  }
   doneHandler();
 }
 
 function lightHandler() {
-  model.workout.weight[workoutView.currentExercise] += 2;
+  if (!Number.isFinite(model.workout.weight[workoutView.currentExercise])) {
+    model.workout.reps[workoutView.currentExercise] += 1;
+  } else {
+    model.workout.weight[workoutView.currentExercise] += 2;
+  }
   doneHandler();
 }
