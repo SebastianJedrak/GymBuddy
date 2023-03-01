@@ -6,6 +6,8 @@ import navigatorView from "./views/navigatorView.js";
 import spinnerView from "./views/spinnerView.js";
 import * as model from "./model.js";
 
+//! RENDER CONTROL
+
 function init() {
   renderHome();
 }
@@ -48,6 +50,7 @@ async function renderWorkout() {
   spinnerView.renderView();
   // Generator
   await model.generateExercises();
+  console.log(model.workout);
   // Send workout data to render view
   workoutView.getDataToRender(model.workout);
   // Render View
@@ -65,6 +68,9 @@ function renderWorkoutView() {
   workoutView.skipToListener(skipToHandler);
   // Update progress bar
   workoutView.progressBar();
+  // Light and Heavy listeners
+  workoutView.heavyListener(heavyHandler);
+  workoutView.lightListener(lightHandler);
 }
 
 function navStart() {
@@ -74,6 +80,8 @@ function navStart() {
 }
 
 //! LISTENERS
+
+// HOME LISTENERS
 
 function parametersListeners() {
   homeView.partParameterListener(parameterListenerHandler);
@@ -96,6 +104,8 @@ function parameterListenerHandler() {
   if (this.dataset.duration)
     model.workoutParameters.duration = this.dataset.duration;
 }
+
+// WORKOUT LISTENERS
 
 function doneHandler() {
   if (
@@ -140,4 +150,15 @@ function resetWorkoutView() {
   workoutView.currentExercise = 0;
   workoutView.currentSet = 1;
   workoutView.progress = 0;
+}
+
+function heavyHandler() {
+  console.log(model.workout);
+  model.workout.weight[workoutView.currentExercise] -= 2;
+  doneHandler();
+}
+
+function lightHandler() {
+  model.workout.weight[workoutView.currentExercise] += 2;
+  doneHandler();
 }

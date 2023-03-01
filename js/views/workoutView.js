@@ -39,8 +39,8 @@ class WorkoutView extends View {
     <button class="btn btn-100 btn-orange btn-done">Done</button>
   </div>
   <div class="red-green-btn-container">
-    <button class="btn btn-50 btn-red"><span>Too heavy...</span></button>
-    <button class="btn btn-50 btn-green"><span>Too light!</span></button>
+    <button class="btn btn-50 btn-red btn-heavy"><span>Too heavy...</span></button>
+    <button class="btn btn-50 btn-green btn-light"><span>Too light!</span></button>
   </div>
   <button class="btn btn-100 btn-white btn-skip">
     Skip to: ${this._data.exercises[this.currentExercise + 1]?.name || "End"}
@@ -68,6 +68,15 @@ class WorkoutView extends View {
   skipToListener(handler) {
     document.querySelector(".btn-skip").addEventListener("click", handler);
   }
+
+  heavyListener(handler) {
+    document.querySelector(".btn-heavy").addEventListener("click", handler);
+  }
+
+  lightListener(handler) {
+    document.querySelector(".btn-light").addEventListener("click", handler);
+  }
+  
 }
 
 export default new WorkoutView();
