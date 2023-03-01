@@ -97,6 +97,15 @@ ul {
   }
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) scale(1.2, 1.2);
+  }
+  to {
+    transform: rotate(360deg) scale(1.2, 1.2);
+  }
+}
+
 /*! BUTTONS */
 
 .btn {
@@ -272,8 +281,7 @@ ul > .nav-tile:hover {
   background-position: center;
   aspect-ratio: 2 /1;
   height: 40%;
-  animation: translateY 2s cubic-bezier(0.29, 0.6, 0.54, 0.89) infinite
-    alternate;
+  animation: translateY 2s cubic-bezier(0.47, 1.19, 1, 0.43) infinite alternate;
   cursor: pointer;
 }
 
@@ -428,8 +436,9 @@ ul > .nav-tile:hover {
   background-repeat: no-repeat;
   background-position: center;
   aspect-ratio: 1/1;
-  transform: scale(1.2, 1.2) rotate(30deg);
   width: 40vh;
   z-index: 1;
   overflow: hidden;
+  animation: rotate 2s cubic-bezier(0.29, 0.6, 0.54, 0.89) infinite
+    alternate-reverse;
 }
