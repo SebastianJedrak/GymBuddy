@@ -47,6 +47,7 @@ async function renderWorkout() {
   await model.generateExercises();
   // Send workout data to render view
   workoutView.getDataToRender(model.workout);
+  console.log(model.workout);
   // Render View
   renderWorkoutView();
 }

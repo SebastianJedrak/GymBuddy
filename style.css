@@ -406,22 +406,30 @@ ul > .nav-tile:hover {
 
 .spinner-wrapper {
   display: flex;
+  aspect-ratio: 1 / 1;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
 .spinner-logo {
+  position: absolute;
   background-image: url(src/buddyLogoFlat.svg);
   background-repeat: no-repeat;
   background-position: center;
   aspect-ratio: 1/1;
   width: 40vh;
+  z-index: 2;
 }
 
 .spinner-circle {
+  position: absolute;
+  border-radius: 100%;
   background-image: url(src/loader.svg);
   background-repeat: no-repeat;
   background-position: center;
   aspect-ratio: 1/1;
+  transform: scale(1.2, 1.2) rotate(30deg);
   width: 40vh;
+  z-index: 1;
+  overflow: hidden;
 }
