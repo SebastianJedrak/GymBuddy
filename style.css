@@ -178,7 +178,7 @@ ul {
   align-self: start;
   display: flex;
   padding-left: 2rem;
-  cursor: pointer;
+
   margin-top: 11.5px;
 }
 
@@ -196,6 +196,7 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   aspect-ratio: 1 /1;
+  cursor: pointer;
   height: 1.8rem;
   margin-left: 1rem;
 }
