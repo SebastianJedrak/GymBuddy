@@ -7,7 +7,10 @@ class SpinnerView extends View {
   _headerConfig = [false, false, false];
 
   _HTML() {
-    return ``;
+    return `        <div class="spinner-wrapper">
+    <div class="spinner-logo"></div>
+    <div class="spinner-circle"></div>
+  </div>`;
   }
 }
 

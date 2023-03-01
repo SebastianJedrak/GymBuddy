@@ -3,12 +3,13 @@ import userView from "./views/userView.js";
 import historyView from "./views/historyView.js";
 import workoutView from "./views/workoutView.js";
 import navigatorView from "./views/navigatorView.js";
+import spinnerView from "./views/spinnerView.js";
 import * as model from "./model.js";
 
 function init() {
   renderHome();
 }
-// init();
+init();
 
 function renderHome() {
   // Render HTML
@@ -43,6 +44,8 @@ function renderHistory() {
 }
 
 async function renderWorkout() {
+  // Loading
+  spinnerView.renderView();
   // Generator
   await model.generateExercises();
   // Send workout data to render view
