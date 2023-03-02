@@ -43,7 +43,7 @@ body {
 
 @media all and (min-width: 992px) {
   .global-container {
-    width: 80vw;
+    width: 50vw;
     height: 90vh;
     margin: 5vh auto;
   }
@@ -115,18 +115,28 @@ ul {
   cursor: pointer;
 }
 
+.btn:focus {
+  outline: none;
+  border: 2px solid var(--lightslategray);
+}
+
+.btn:active {
+  outline: none;
+  border: 2px solid var(--lightslategray);
+}
+
 .btn-33 {
-  width: 20vw;
+  width: 10vw;
   margin: 0 1vw;
 }
 
 .btn-50 {
-  width: 30vw;
+  width: 15vw;
   margin: 0.5vh 0.5vw 0 0.5vw;
 }
 
 .btn-100 {
-  width: 61vw;
+  width: 31vw;
   margin-top: 2.5vh;
 }
 
@@ -344,7 +354,7 @@ ul > .nav-tile:hover {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  overflow: auto;
+  overflow: hidden;
   margin-bottom: 2.5vh;
   border-radius: 5px;
   padding: 5vh 0;
@@ -447,13 +457,30 @@ ul > .nav-tile:hover {
 /*! MODAL WINDOW*/
 
 .modal {
-  /* display: flex; */
+  background-color: white;
+  color: var(--lightslategray);
+  padding: 1.5rem;
+  max-width: 40vw;
+  height: 60vh;
+  margin: auto;
+  overflow: auto;
+}
+
+.modal::backdrop {
+  background: linear-gradient(165deg, #6e7da2, #8badc2, #aedadd);
+  opacity: 0.3;
+}
+
+.modal-content-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  flex-direction: column;
-  padding: 2rem;
-  max-width: 60vw;
-  height: 40vh;
+}
+
+.instruction-content {
+  overflow-y: scroll;
 }
 
 .eq-img {
