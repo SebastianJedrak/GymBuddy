@@ -20,7 +20,7 @@ class WorkoutView extends View {
   <p class="instruction-content">
   ${this._data.exercises[this.currentExercise].instructions}
   </p>
-  <h3>Equipment</h3>
+  <h3 class="Eq-header">Equipment</h3>
   <img src="" class="eq-img"></img>
   <button class="btn btn-33 btn-orange btn-close-modal">Got it!</button>
   </div>
@@ -107,29 +107,48 @@ class WorkoutView extends View {
     document.querySelector(".eq-img").setAttribute("src", `src/eq/${eq}.jpg`);
   }
 
+  _insertNoEq() {
+    document
+      .querySelector(".Eq-header")
+      .insertAdjacentHTML("afterend", "<span>None</span>");
+  }
+
   _generateImgEq() {
     switch (this._data.exercises[this.currentExercise].equipment) {
       case "body_only":
-        this._selectEqIMG("band");
+        this._insertNoEq();
         break;
       case "cable":
+        this._selectEqIMG("cable");
         break;
       case "bands":
+        this._selectEqIMG("bands");
         break;
       case "machine":
+        this._selectEqIMG("machine");
         break;
       case "other":
+        this._insertNoEq();
         break;
       case "dumbbell":
+        this._selectEqIMG("dumbbell");
         break;
       case "barbell":
+        this._selectEqIMG("barbell");
         break;
       case "e-z_curl_bar":
+        this._selectEqIMG("e-z_curl_bar");
         break;
       case "None":
+        this._insertNoEq();
         break;
       case "kettlebells":
+        this._selectEqIMG("kettlebells");
         break;
+        case "exercise_ball":
+          this._selectEqIMG("exercise_ball");
+          break;
+        
     }
   }
 }
