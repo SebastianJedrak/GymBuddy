@@ -1,6 +1,5 @@
 import { options } from "./config.js";
 import { API_URL } from "./config.js";
-import { API_URL_markup } from "./config.js";
 import { randomize } from "./helpers.js";
 
 export class User {
@@ -49,7 +48,6 @@ export const muscles = {
 
 async function getMuscle(muscle) {
   const url = `${API_URL}${muscle}&difficulty=${activeUser.experience}&type=strength`;
-  // const url = API_URL_markup;
   // GET DATA
   try {
     const fetchJson = await fetch(url, options);

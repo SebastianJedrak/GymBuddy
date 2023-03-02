@@ -129,17 +129,17 @@ ul {
 }
 
 .btn-33 {
-  width: 10vw;
+  width: 100%;
   margin: 0 1vw;
 }
 
 .btn-50 {
-  width: 15vw;
-  margin: 0.5vh 0.5vw 0 0.5vw;
+  width: 45%;
+  margin: 0.5vh 0.5% 0 0.5%;
 }
 
 .btn-100 {
-  width: 31vw;
+  width: 91%;
   margin-top: 2.5vh;
 }
 
@@ -266,6 +266,12 @@ ul > .nav-tile:hover {
 .workout-parameters-container {
   display: flex;
   flex-direction: column;
+}
+
+.workout-parameters-container li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .workout-parameters-text {
@@ -414,7 +420,9 @@ ul > .nav-tile:hover {
 }
 
 .red-green-btn-container {
+  width: 100%;
   display: flex;
+  justify-content: center;
 }
 
 /*! MAIN SPINNER*/
@@ -493,9 +501,9 @@ ul > .nav-tile:hover {
 .modal-trophy {
   background-color: var(--lightslategray);
   color: var(--floralwhite);
-  padding: 1.5rem;
+  padding: 2rem;
   width: 60vw;
-  min-height: 80vh;
+  /* min-height: 80vh; */
   margin: auto;
   overflow: auto;
 }
