@@ -37,7 +37,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 2px solid var(--lightslategray);
+  border-left: 2px solid var(--lightslategray);
+  border-right: 2px solid var(--lightslategray);
 }
 
 @media all and (min-width: 992px) {
@@ -76,7 +77,6 @@ h4 {
 
 p {
   text-align: justify;
-
 }
 
 ul {

@@ -21,7 +21,7 @@ class WorkoutView extends View {
   ${this._data.exercises[this.currentExercise].instructions}
   </p>
   <h3>Equipment</h3>
-  <img src="src/eq/band.jpg" class="eq-img"></img>
+  <img src="" class="eq-img"></img>
   <button class="btn btn-33 btn-orange btn-close-modal">Got it!</button>
   </div>
 </dialog>
@@ -59,10 +59,6 @@ class WorkoutView extends View {
     Skip to: ${this._data.exercises[this.currentExercise + 1]?.name || "End"}
   </button>
 </div>`;
-  }
-
-  _infoModalHTML() {
-    return ``;
   }
 
   progressBar() {
@@ -105,6 +101,36 @@ class WorkoutView extends View {
       .addEventListener("click", function () {
         document.querySelector(".modal").close();
       });
+  }
+
+  _selectEqIMG(eq) {
+    document.querySelector(".eq-img").setAttribute("src", `src/eq/${eq}.jpg`);
+  }
+
+  _generateImgEq() {
+    switch (this._data.exercises[this.currentExercise].equipment) {
+      case "body_only":
+        this._selectEqIMG("band");
+        break;
+      case "cable":
+        break;
+      case "bands":
+        break;
+      case "machine":
+        break;
+      case "other":
+        break;
+      case "dumbbell":
+        break;
+      case "barbell":
+        break;
+      case "e-z_curl_bar":
+        break;
+      case "None":
+        break;
+      case "kettlebells":
+        break;
+    }
   }
 }
 

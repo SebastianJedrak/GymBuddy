@@ -73,6 +73,8 @@ function renderWorkoutView() {
   workoutView.lightListener(lightHandler);
   // Info Modal window listener
   workoutView.openInfoModalListener();
+  // Render equipment img
+  workoutView._generateImgEq();
 }
 
 function navStart() {
