@@ -20,7 +20,6 @@ class WorkoutView extends View {
   ${this._data.exercises[this.currentExercise].instructions}
   </p>
   <h3 class="Eq-header">Equipment</h3>
-  <img src="" class="eq-img"></img>
   <button class="btn btn-33 btn-orange btn-close-modal">Got it!</button>
   </div>
 </dialog>
@@ -128,7 +127,9 @@ class WorkoutView extends View {
   }
 
   _selectEqIMG(eq) {
-    document.querySelector(".eq-img").setAttribute("src", `src/eq/${eq}.jpg`);
+    let html = `<img src="src/eq/${eq}.jpg" class="eq-img"></img>
+    `;
+    document.querySelector(".Eq-header").insertAdjacentHTML("afterend", html);
   }
 
   _insertNoEq() {
