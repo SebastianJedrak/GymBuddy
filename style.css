@@ -466,7 +466,7 @@ ul > .nav-tile:hover {
   color: var(--lightslategray);
   padding: 1.5rem;
   max-width: 80vw;
-  height: 70vh;
+  height: 90vh;
   margin: auto;
   overflow: auto;
 }
@@ -493,9 +493,8 @@ ul > .nav-tile:hover {
 }
 
 .eq-img {
-  aspect-ratio: 1/1;
-  width: 50%;
-  min-height: 5vh;
+  height: 25%;
+  margin-bottom: 1rem;
 }
 
 /*! MODAL TROPHY WINDOW*/

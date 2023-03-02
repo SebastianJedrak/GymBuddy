@@ -12,7 +12,6 @@ class WorkoutView extends View {
   _HTML() {
     return `        <div class="workout-wrapper">
   <div class="progress-bar"></div>
-  <div class="modal-wrapper">
   <dialog class="modal">
   <div class="modal-content-wrapper">
   <h2>Instruction</h2>
@@ -20,10 +19,9 @@ class WorkoutView extends View {
   ${this._data.exercises[this.currentExercise].instructions}
   </p>
   <h3 class="Eq-header">Equipment</h3>
-  <button class="btn btn-33 btn-orange btn-close-modal">Got it!</button>
+  <button class="btn btn-50 btn-orange btn-close-modal">Got it!</button>
   </div>
 </dialog>
-</div>
 <dialog class="modal-trophy">
   <div class="modal-content-wrapper">
     <h2 class="modal-trophy-finished">Finished!</h2>
