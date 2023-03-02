@@ -27,18 +27,13 @@ class WorkoutView extends View {
 </div>
 <dialog class="modal-trophy">
   <div class="modal-content-wrapper">
-    <h2>Finished!</h2>
+    <h2 class="modal-trophy-finished">Finished!</h2>
     <div class="trophy"></div>
-    <h3>Full-body balanced workout</h3>
-    <ul>
-      <li>execise</li>
-      <li>execise</li>
-      <li>execise</li>
-      <li>execise</li>
-      <li>execise</li>
-      <li>execise</li>
-      <li>execise</li>
-      <li>execise</li>
+    <h3 class="modal-trophy-finished">${this._parameters.bodyPart}-body ${
+      this._parameters.type
+    } workout</h3>
+    <p class="modal-trophy-finished">Your last sets</p>
+    <ul class="last-set-list">
     </ul>
     <button class="btn btn-33 btn-orange btn-close-trophy-modal">
       Great
@@ -140,6 +135,15 @@ class WorkoutView extends View {
     document
       .querySelector(".Eq-header")
       .insertAdjacentHTML("afterend", "<span>None</span>");
+  }
+
+  insertToLastSetList() {
+    for (let i = 0; i < this._data.exercises.length; i++) {
+      let entry = `<li class="trophy-modal-exercise-item"> ${this._data.exercises[i].name} <p p class="trophy-modal-exercise-parameters">${this._data.reps[i]} reps X ${this._data.weight[i]} kg</p></li> `;
+      document
+        .querySelector(".last-set-list")
+        .insertAdjacentHTML("beforeend", entry);
+    }
   }
 
   _generateImgEq() {

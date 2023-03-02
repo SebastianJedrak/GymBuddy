@@ -122,6 +122,7 @@ function doneHandler() {
   }
   if (workoutView.currentExercise === model.workout.exercises.length - 1) {
     resetWorkoutView();
+    workoutView.insertToLastSetList();
     return workoutView.renderEndModal(renderHome);
   }
   workoutView.currentSet = 1;
@@ -132,6 +133,7 @@ function doneHandler() {
 function skipToHandler() {
   if (workoutView.currentExercise === model.workout.exercises.length - 1) {
     resetWorkoutView();
+    workoutView.insertToLastSetList();
     return workoutView.renderEndModal(renderHome);
   }
   for (
