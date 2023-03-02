@@ -18,10 +18,7 @@ class WorkoutView extends View {
   <div class="modal-content-wrapper">
   <h2>Instruction</h2>
   <p class="instruction-content">
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-    Quibusdam excepturi delectus odio dicta minima provident, rem
-    tempora eius deleniti consequatur culpa. Aspernatur illum eligendi
-    vel eius voluptatum aut placeat officia.
+  ${this._data.exercises[this.currentExercise].instructions}
   </p>
   <h3>Equipment</h3>
   <img src="src/eq/band.jpg" class="eq-img"></img>
