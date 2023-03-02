@@ -122,12 +122,13 @@ class WorkoutView extends View {
       });
   }
 
-  renderEndModal() {
+  renderEndModal(after) {
     document.querySelector(".modal-trophy").showModal();
     document
       .querySelector(".btn-close-trophy-modal")
       .addEventListener("click", function () {
         document.querySelector(".modal-trophy").close();
+        after();
       });
   }
 
