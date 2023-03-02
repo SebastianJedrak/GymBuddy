@@ -465,8 +465,8 @@ ul > .nav-tile:hover {
   background-color: white;
   color: var(--lightslategray);
   padding: 1.5rem;
-  max-width: 80vw;
-  height: 90vh;
+  width: 45vw;
+
   margin: auto;
   overflow: auto;
 }
@@ -486,6 +486,7 @@ ul > .nav-tile:hover {
 
 .instruction-content {
   overflow-y: scroll;
+  max-height: 40vh;
 }
 
 .Eq-header {
@@ -493,7 +494,7 @@ ul > .nav-tile:hover {
 }
 
 .eq-img {
-  height: 25%;
+  max-height: 10vh;
   margin-bottom: 1rem;
 }
 
