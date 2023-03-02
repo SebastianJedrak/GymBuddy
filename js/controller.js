@@ -71,6 +71,8 @@ function renderWorkoutView() {
   // Light and Heavy listeners
   workoutView.heavyListener(heavyHandler);
   workoutView.lightListener(lightHandler);
+  // Info Modal window listener
+  workoutView.openInfoModalListener(openModalHandler)
 }
 
 function navStart() {
@@ -171,3 +173,5 @@ function lightHandler() {
   }
   doneHandler();
 }
+
+function openModalHandler() {}

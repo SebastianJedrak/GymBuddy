@@ -48,6 +48,10 @@ class WorkoutView extends View {
 </div>`;
   }
 
+  _infoModalHTML() {
+    return ``;
+  }
+
   progressBar() {
     const sumSets = this._data.sets.reduce((acc, element) => {
       return (acc += element);
@@ -76,7 +80,16 @@ class WorkoutView extends View {
   lightListener(handler) {
     document.querySelector(".btn-light").addEventListener("click", handler);
   }
-  
+
+  renderInfoModal() {
+    this._parentElement.insertAdjacentHTML("afterbegin", this._infoModalHTML());
+  }
+
+  openInfoModalListener(handler) {
+    document
+      .querySelector(".instruct-svg-container")
+      .addEventListener("click", handler);
+  }
 }
 
 export default new WorkoutView();

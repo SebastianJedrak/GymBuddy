@@ -460,3 +460,8 @@ ul > .nav-tile:hover {
   max-width: 60vw;
   height: 40vh;
 }
+
+.eq-img {
+  max-width: 10vw;
+  min-width: 10vh;
+}
