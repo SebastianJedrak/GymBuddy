@@ -368,6 +368,7 @@ ul > .nav-tile:hover {
 }
 
 .exercise-name-text {
+  width: 100%;
   margin-bottom: 1vh;
   text-align: center;
 }

@@ -75,8 +75,6 @@ function renderWorkoutView() {
   workoutView.openInfoModalListener();
   // Render equipment img
   workoutView._generateImgEq();
-
-  console.log(workoutView._data);
 }
 
 function navStart() {

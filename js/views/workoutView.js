@@ -140,7 +140,7 @@ class WorkoutView extends View {
 
   insertToLastSetList() {
     for (let i = 0; i < this._data.exercises.length; i++) {
-      let entry = `<li class="trophy-modal-exercise-item"> ${this._data.exercises[i].name} <p p class="trophy-modal-exercise-parameters">${this._data.reps[i]} reps X ${this._data.weight[i]} kg</p></li> `;
+      let entry = `<li class="trophy-modal-exercise-item"> ${this._data.exercises[i].name} <p p class="trophy-modal-exercise-parameters">${this._data.reps[i]} reps ${this._data.weight[i]} kg</p></li> `;
       document
         .querySelector(".last-set-list")
         .insertAdjacentHTML("beforeend", entry);
