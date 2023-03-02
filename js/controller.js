@@ -52,7 +52,7 @@ async function renderWorkout() {
   await model.generateExercises();
   console.log(model.workout);
   // Send workout data to render view
-  workoutView.getDataToRender(model.workout);
+  workoutView.getDataToRender(model.workout, model.workoutParameters);
   // Render View
   renderWorkoutView();
 }
@@ -75,6 +75,8 @@ function renderWorkoutView() {
   workoutView.openInfoModalListener();
   // Render equipment img
   workoutView._generateImgEq();
+
+  console.log(workoutView._data);
 }
 
 function navStart() {

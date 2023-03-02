@@ -20,8 +20,9 @@ export default class View {
     this._parentElement.insertAdjacentHTML("afterbegin", this._HTML());
   }
 
-  getDataToRender(data) {
+  getDataToRender(data, parameters) {
     this._data = data;
+    this._parameters = parameters;
   }
 
   _backgroundRender() {

@@ -500,6 +500,11 @@ ul > .nav-tile:hover {
   overflow: auto;
 }
 
+.modal-trophy::backdrop {
+  background: linear-gradient(165deg, #6e7da2, #8badc2, #aedadd);
+  opacity: 0.3;
+}
+
 .trophy {
   background-image: url(src/trophy.svg);
   background-repeat: no-repeat;
