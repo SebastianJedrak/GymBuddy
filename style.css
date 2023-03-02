@@ -501,8 +501,8 @@ ul > .nav-tile:hover {
 .modal-trophy {
   background-color: var(--lightslategray);
   color: var(--floralwhite);
-  padding: 2rem;
-  width: 60vw;
+  padding: 0.5rem 1.5rem;
+  width: 80vw;
   /* min-height: 80vh; */
   margin: auto;
   overflow: auto;
@@ -517,13 +517,13 @@ ul > .nav-tile:hover {
   background-image: url(src/trophy.svg);
   background-repeat: no-repeat;
   background-position: center;
-  width: 10vw;
-  height: 20vh;
+  width: 100%;
+  min-height: 10vh;
 }
 
 .modal-trophy-finished {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .trophy-modal-exercise-item {
