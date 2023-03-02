@@ -13,6 +13,18 @@ class WorkoutView extends View {
     return `        <div class="workout-wrapper">
   <h3 class="timer-text">Time: 00:16:32</h3>
   <div class="progress-bar"></div>
+  <dialog class="modal">
+  <h2>Instruction</h2>
+  <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+    Quibusdam excepturi delectus odio dicta minima provident, rem
+    tempora eius deleniti consequatur culpa. Aspernatur illum eligendi
+    vel eius voluptatum aut placeat officia.
+  </p>
+  <h3>Equipment</h3>
+  <img src="src/eq/band.jpg" class="eq-img"></img>
+  <button class="btn btn-33 btn-orange btn-close-modal">Got it!</button>
+</dialog>
   <div class="workout-card-container">
     <div class="exercise-YT-container">
       <h2 class="exercise-name-text">
@@ -81,14 +93,12 @@ class WorkoutView extends View {
     document.querySelector(".btn-light").addEventListener("click", handler);
   }
 
-  renderInfoModal() {
-    this._parentElement.insertAdjacentHTML("afterbegin", this._infoModalHTML());
-  }
-
-  openInfoModalListener(handler) {
+  openInfoModalListener() {
     document
       .querySelector(".instruct-svg-container")
-      .addEventListener("click", handler);
+      .addEventListener("click", function () {
+        document.querySelector(".modal").showModal();
+      });
   }
 }
 

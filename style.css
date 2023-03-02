@@ -446,13 +446,8 @@ ul > .nav-tile:hover {
 
 /*! MODAL WINDOW*/
 
-.modal-wrapper {
-  display: flex;
-  align-items: center;
-}
-
 .modal {
-  display: flex;
+  /* display: flex; */
   justify-content: space-around;
   align-items: center;
   flex-direction: column;

@@ -9,7 +9,7 @@ import * as model from "./model.js";
 //! RENDER CONTROL
 
 function init() {
-  // renderHome();
+  renderHome();
 }
 init();
 
@@ -72,7 +72,7 @@ function renderWorkoutView() {
   workoutView.heavyListener(heavyHandler);
   workoutView.lightListener(lightHandler);
   // Info Modal window listener
-  workoutView.openInfoModalListener(openModalHandler)
+  workoutView.openInfoModalListener();
 }
 
 function navStart() {
