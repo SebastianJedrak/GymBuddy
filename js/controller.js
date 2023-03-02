@@ -163,8 +163,12 @@ function heavyHandler() {
     if (model.workout.reps[workoutView.currentExercise] === 2) return;
     model.workout.reps[workoutView.currentExercise] -= 1;
   } else {
-    if (model.workout.weight[workoutView.currentExercise] === 2) return;
-    model.workout.weight[workoutView.currentExercise] -= 2;
+    if (model.workout.weight[workoutView.currentExercise] === 2) {
+      if (model.workout.reps[workoutView.currentExercise] === 2) return;
+      model.workout.reps[workoutView.currentExercise] -= 1;
+    } else {
+      model.workout.weight[workoutView.currentExercise] -= 2;
+    }
   }
   doneHandler();
 }
