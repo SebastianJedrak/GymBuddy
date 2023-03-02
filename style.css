@@ -502,7 +502,7 @@ ul > .nav-tile:hover {
   background-color: var(--lightslategray);
   color: var(--floralwhite);
   padding: 0.5rem 1.5rem;
-  width: 80vw;
+  max-width: 80vw;
   /* min-height: 80vh; */
   margin: auto;
   overflow: auto;
