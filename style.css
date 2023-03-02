@@ -37,8 +37,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-left: 2px solid var(--lightslategray);
-  border-right: 2px solid var(--lightslategray);
 }
 
 @media all and (min-width: 992px) {

@@ -11,7 +11,6 @@ class WorkoutView extends View {
 
   _HTML() {
     return `        <div class="workout-wrapper">
-  <h3 class="timer-text">Time: 00:16:32</h3>
   <div class="progress-bar"></div>
   <div class="modal-wrapper">
   <dialog class="modal">
@@ -145,10 +144,9 @@ class WorkoutView extends View {
       case "kettlebells":
         this._selectEqIMG("kettlebells");
         break;
-        case "exercise_ball":
-          this._selectEqIMG("exercise_ball");
-          break;
-        
+      case "exercise_ball":
+        this._selectEqIMG("exercise_ball");
+        break;
     }
   }
 }

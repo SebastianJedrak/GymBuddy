@@ -29,7 +29,7 @@ export const workout = {
 export const workoutParameters = {
   bodyPart: "full",
   type: "balanced",
-  duration: "medium", 
+  duration: "medium",
 };
 
 export const muscles = {
@@ -139,10 +139,10 @@ export async function generateExercises() {
   if (workoutParameters.bodyPart === "full") {
     {
       await pushExercise(muscles.quadriceps, "compound");
-      await pushExercise(muscles.chest, "compound");
-      await pushExercise(muscles.lats, "compound");
-      await pushExercise(muscles.hamstrings, "accessory");
-      await pushExercise(muscles.triceps, "accessory");
+      // await pushExercise(muscles.chest, "compound");
+      // await pushExercise(muscles.lats, "compound");
+      // await pushExercise(muscles.hamstrings, "accessory");
+      // await pushExercise(muscles.triceps, "accessory");
     }
     if (
       workoutParameters.duration === "medium" ||
@@ -157,10 +157,10 @@ export async function generateExercises() {
   if (workoutParameters.bodyPart === "upper") {
     {
       await pushExercise(muscles.chest, "compound");
-      // await pushExercise(muscles.lats, "compound");
-      // await pushExercise(muscles.triceps, "accessory");
-      // await pushExercise(muscles.biceps, "accessory");
-      // await pushExercise(muscles.abdominals, "accessory");
+      await pushExercise(muscles.lats, "compound");
+      await pushExercise(muscles.triceps, "accessory");
+      await pushExercise(muscles.biceps, "accessory");
+      await pushExercise(muscles.abdominals, "accessory");
     }
     if (
       workoutParameters.duration === "medium" ||
