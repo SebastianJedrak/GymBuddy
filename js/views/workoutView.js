@@ -25,7 +25,7 @@ class WorkoutView extends View {
   </div>
 </dialog>
 </div>
-<dialog  class="modal-trophy">
+<dialog class="modal-trophy">
   <div class="modal-content-wrapper">
     <h2>Finished!</h2>
     <div class="trophy"></div>
@@ -40,7 +40,7 @@ class WorkoutView extends View {
       <li>execise</li>
       <li>execise</li>
     </ul>
-    <button class="btn btn-33 btn-orange btn-close-modal">
+    <button class="btn btn-33 btn-orange btn-close-trophy-modal">
       Great
     </button>
   </div>
@@ -124,6 +124,11 @@ class WorkoutView extends View {
 
   renderEndModal() {
     document.querySelector(".modal-trophy").showModal();
+    document
+      .querySelector(".btn-close-trophy-modal")
+      .addEventListener("click", function () {
+        document.querySelector(".modal-trophy").close();
+      });
   }
 
   _selectEqIMG(eq) {

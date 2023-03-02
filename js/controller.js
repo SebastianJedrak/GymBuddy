@@ -120,7 +120,7 @@ function doneHandler() {
   }
   if (workoutView.currentExercise === model.workout.exercises.length - 1) {
     resetWorkoutView();
-    return renderHome();
+    return workoutView.renderEndModal();
   }
   workoutView.currentSet = 1;
   workoutView.currentExercise += 1;
@@ -130,7 +130,7 @@ function doneHandler() {
 function skipToHandler() {
   if (workoutView.currentExercise === model.workout.exercises.length - 1) {
     resetWorkoutView();
-    return renderHome();
+    return workoutView.renderEndModal();
   }
   for (
     let i = 0;
