@@ -24,11 +24,9 @@
 }
 
 body {
-  background-color: var(--darksalmon);
-  opacity: 0.9;
   background-image: radial-gradient(
-    var(--lightslategray) 2px,
-    var(--darksalmon) 2px
+    var(--lightblue) 2px,
+    var(--floralwhite) 2px
   );
   background-size: 40px 40px;
 }
@@ -39,6 +37,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 2px solid var(--lightslategray);
 }
 
 @media all and (min-width: 992px) {
@@ -113,6 +112,7 @@ ul {
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .btn:focus {
