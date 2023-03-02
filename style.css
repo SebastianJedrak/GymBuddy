@@ -443,3 +443,20 @@ ul > .nav-tile:hover {
   animation: rotate 2s cubic-bezier(0.29, 0.6, 0.54, 0.89) infinite
     alternate-reverse;
 }
+
+/*! MODAL WINDOW*/
+
+.modal-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.modal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 60vw;
+  height: 40vh;
+}
