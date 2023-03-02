@@ -318,19 +318,12 @@ ul > .nav-tile:hover {
   justify-content: space-around;
 }
 
-.timer-text {
-  color: var(--lightslategray);
-  text-align: center;
-  margin-bottom: 1vh;
-}
-
 .progress-bar {
   width: 75%;
   height: 32px;
   border: 2px solid var(--lightslategray);
   border-radius: 10px;
   padding: 2px;
-  margin-bottom: 2vh;
   display: flex;
   align-items: center;
 }
@@ -457,7 +450,7 @@ ul > .nav-tile:hover {
     alternate-reverse;
 }
 
-/*! MODAL WINDOW*/
+/*! MODAL INFO WINDOW*/
 
 .modal {
   background-color: white;
@@ -493,4 +486,24 @@ ul > .nav-tile:hover {
 .eq-img {
   max-width: 10vw;
   max-height: 10vh;
+}
+
+/*! MODAL TROPHY WINDOW*/
+
+.modal-trophy {
+  background-color: var(--lightslategray);
+  color: var(--floralwhite);
+  padding: 1.5rem;
+  max-width: 40vw;
+  height: 60vh;
+  margin: auto;
+  overflow: auto;
+}
+
+.trophy {
+  background-image: url(src/trophy.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 10vw;
+  height: 20vh;
 }
