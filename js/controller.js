@@ -11,7 +11,7 @@ import * as model from "./model.js";
 function init() {
   renderHome();
 }
-// init();
+init();
 
 function renderHome() {
   // Render HTML

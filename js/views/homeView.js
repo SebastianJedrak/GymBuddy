@@ -8,6 +8,58 @@ class HomeView extends View {
 
   _HTML() {
     return `<div class="workout-parameters-container">
+    <dialog class="modal modal-home-tutorial">
+    <div class="modal-tutorial-home-wrapper">
+      <div class="modal-tutorial-home-parameter">
+        <h3>Body parameters</h3>
+        <ul>
+          <h4>Choose the body part you want to train.</h4>
+          <li>
+            By choosing the lower part of the body, you will work such
+            muscle groups as quadriceps, hamstrings or glutes.
+          </li>
+          <li>
+            With a full body workout, you train all muscle groups.
+            However, it will not affect the length of the training.
+          </li>
+          <li>
+            An upper body workout will focus on your chest, back, and
+            arms.
+          </li>
+        </ul>
+      </div>
+      <div class="modal-tutorial-home-parameter">
+        <h3>Type</h3>
+        <ul>
+          <h4>Specify what type of training you want to do.</h4>
+          <li>
+            With endurance training, you will do fewer sets but more
+            repetitions.
+          </li>
+          <li>
+            Strength training will increase the number of sets but
+            decrease the number of repetitions.
+          </li>
+          <li>
+            Choose a balanced workout if you don't want to focus solely on
+            strength or endurance.
+          </li>
+        </ul>
+      </div>
+      <div class="modal-tutorial-home-parameter">
+        <h3>Duration</h3>
+        <ul>
+          <h4>Describe how long your training should last.</h4>
+          <li>You should complete a short workout in 30 minutes.</li>
+          <li>A medium workout should last about 45 minutes.</li>
+          <li>A long workout should not exceed an hour.</li>
+        </ul>
+      </div>
+      <div class="btn-close-model-home-tutorial-wrapper">
+        <button class="btn btn-50 btn-orange btn-close-model-home-tutorial">OK</button>
+      </div>
+    </div>
+  </dialog>
   <h3 class="workout-parameters-text">Body part</h3>
   <ul class="workout-parameters part-parameters">
     <li data-part="lower"><button class="btn btn-33 btn-white" >Lower</button></li>
@@ -59,6 +111,20 @@ class HomeView extends View {
     [...document.querySelector(".duration-parameters").children].forEach(
       (parameter) => parameter.addEventListener("click", handler)
     );
+  }
+
+  durationParameterListener() {
+    const modal = document.querySelector(".modal-home-tutorial");
+    document
+      .querySelector(".tutorial-button")
+      .addEventListener("click", function () {
+        modal.showModal();
+      });
+    document
+      .querySelector(".btn-close-model-home-tutorial")
+      .addEventListener("click", function () {
+        modal.close();
+      });
   }
 }
 
