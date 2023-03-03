@@ -538,6 +538,10 @@ ul > .nav-tile:hover {
 
 /*! MODAL TUTORIAL HOME*/
 
+.modal-home-tutorial {
+  width: fit-content;
+}
+
 .modal-tutorial-home-parameter {
   margin-bottom: 5vh;
 }

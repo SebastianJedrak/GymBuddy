@@ -7,9 +7,8 @@ class HomeView extends View {
   _headerConfig = [false, false, true];
 
   _HTML() {
-    return `<div class="workout-parameters-container">
+    return `
     <dialog class="modal modal-home-tutorial">
-    <div class="modal-tutorial-home-wrapper">
       <div class="modal-tutorial-home-parameter">
         <h3>Body parameters</h3>
         <ul>
@@ -58,8 +57,8 @@ class HomeView extends View {
       <div class="btn-close-model-home-tutorial-wrapper">
         <button class="btn btn-50 btn-orange btn-close-model-home-tutorial">OK</button>
       </div>
-    </div>
   </dialog>
+    <div class="workout-parameters-container">
   <h3 class="workout-parameters-text">Body part</h3>
   <ul class="workout-parameters part-parameters">
     <li data-part="lower"><button class="btn btn-33 btn-white" >Lower</button></li>
