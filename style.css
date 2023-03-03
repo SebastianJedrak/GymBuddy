@@ -535,3 +535,30 @@ ul > .nav-tile:hover {
 .trophy-modal-exercise-parameters {
   text-align: center;
 }
+
+/*! MODAL TUTORIAL HOME*/
+
+.modal-tutorial-home-parameter {
+  margin-bottom: 5vh;
+}
+
+.modal-tutorial-home-parameter h3 {
+  color: var(--darksalmon);
+}
+
+.modal-tutorial-home-parameter h3,
+h4 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.modal-tutorial-home-parameter li {
+  list-style: disc;
+  margin-left: 2.5vw;
+}
+
+.btn-close-model-home-tutorial-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
