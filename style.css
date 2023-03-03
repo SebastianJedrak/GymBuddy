@@ -485,7 +485,7 @@ ul > .nav-tile:hover {
 }
 
 .instruction-content {
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 40vh;
 }
 

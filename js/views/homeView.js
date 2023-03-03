@@ -10,7 +10,7 @@ class HomeView extends View {
     return `
     <dialog class="modal modal-home-tutorial">
       <div class="modal-tutorial-home-parameter">
-        <h3>Body parameters</h3>
+        <h3>Body part</h3>
         <ul>
           <h4>Choose the body part you want to train.</h4>
           <li>
