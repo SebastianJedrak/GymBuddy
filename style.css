@@ -10,8 +10,8 @@
   --lightblue: #aedadd;
   --darksalmon: #db996c;
   --lightslategray: #6e7da2;
-  --red: #d72626;
-  --green: #99c817;
+  --red: #d72626bb;
+  --green: #99c817bb;
   --transparent: rgba(0, 0, 0, 0.5);
   --gradient: linear-gradient(165deg, #6e7da2, #8badc2, #aedadd);
   --radialGradient: radial-gradient(
@@ -165,6 +165,7 @@ ul {
   color: var(--floralwhite);
   border: 1px solid var(--floralwhite);
   background-color: var(--red);
+  opacity: var(--transparent);
 }
 
 .btn-green {
@@ -360,6 +361,7 @@ ul > .nav-tile:hover {
   margin-bottom: 2.5vh;
   border-radius: 5px;
   padding: 5vh 0;
+  overflow: auto;
 }
 
 .exercise-YT-container {
@@ -418,6 +420,10 @@ ul > .nav-tile:hover {
 .reps-weight-text {
   color: var(--transparent);
   margin-bottom: 0.5vh;
+}
+
+.modify-next-set-text {
+  color: var(--lightslategray);
 }
 
 .red-green-btn-container {

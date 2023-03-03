@@ -4,7 +4,7 @@ class WorkoutView extends View {
   _parentElement = document.querySelector(".main-content");
   _navigator = false;
   _backgroundType = "whitish";
-  _headerConfig = [`Workout`, true, true];
+  _headerConfig = [`Workout`, true, false];
   currentExercise = 0;
   currentSet = 1;
   progress = 0;
@@ -62,9 +62,10 @@ class WorkoutView extends View {
     </div>
     <button class="btn btn-100 btn-orange btn-done">Done</button>
   </div>
+  <h4 class="modify-next-set-text">Modify your next set</h4>
   <div class="red-green-btn-container">
-    <button class="btn btn-50 btn-red btn-heavy"><span>Too heavy...</span></button>
-    <button class="btn btn-50 btn-green btn-light"><span>Too light!</span></button>
+    <button class="btn btn-50 btn-red btn-heavy"><span>Lighter...</span></button>
+    <button class="btn btn-50 btn-green btn-light"><span>Heavier!</span></button>
   </div>
   <button class="btn btn-100 btn-white btn-skip">
     Skip to: ${this._data.exercises[this.currentExercise + 1]?.name || "End"}
