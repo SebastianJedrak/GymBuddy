@@ -29,7 +29,7 @@ class WorkoutView extends View {
     <h3 class="modal-trophy-finished">${this._parameters.bodyPart}-body ${
       this._parameters.type
     } workout</h3>
-    <p class="modal-trophy-finished">Your last sets</p>
+    <h4 class="modal-trophy-finished">Your last sets</h4>
     <ul class="last-set-list">
     </ul>
     <button class="btn btn-33 btn-orange btn-close-trophy-modal">
@@ -138,7 +138,7 @@ class WorkoutView extends View {
 
   insertToLastSetList() {
     for (let i = 0; i < this._data.exercises.length; i++) {
-      let entry = `<li class="trophy-modal-exercise-item"> ${this._data.exercises[i].name} <p p class="trophy-modal-exercise-parameters">${this._data.reps[i]} reps ${this._data.weight[i]} kg</p></li> `;
+      let entry = `<li class="trophy-modal-exercise-item"> <b> ${this._data.exercises[i].name} </b> <p class="trophy-modal-exercise-parameters">${this._data.reps[i]} reps ${this._data.weight[i]} kg</p></li> `;
       document
         .querySelector(".last-set-list")
         .insertAdjacentHTML("beforeend", entry);
