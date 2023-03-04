@@ -337,7 +337,7 @@ ul > .nav-tile:hover {
 }
 
 .progress-bar::before {
-  content: "Progress";
+  content: "";
   display: flex;
   align-items: center;
   color: var(--floralwhite);

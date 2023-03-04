@@ -49,7 +49,7 @@ function renderHistory() {
 
 async function renderWorkout() {
   // Loading
-  spinnerView.renderView();
+  await spinnerView.renderSpinner();
   // Generator
   await model.generateExercises();
   console.log(model.workout);
