@@ -572,3 +572,9 @@ h4 {
   display: flex;
   justify-content: center;
 }
+
+/*! MODAL EXIT WORKOUT*/
+
+.exit-workout-content {
+  margin: 2rem 0;
+}
