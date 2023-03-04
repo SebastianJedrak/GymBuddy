@@ -48,6 +48,12 @@ body {
   }
 }
 
+@media all and (max-width: 500px) {
+  * {
+    font-size: 14px;
+  }
+}
+
 .BG-whitish {
   background-color: var(--floralwhite);
 }
@@ -357,22 +363,21 @@ ul > .nav-tile:hover {
   justify-content: space-around;
   align-items: center;
   overflow: hidden;
-  margin-top: 0.5rem;
-  margin-bottom: 2.5vh;
+  margin: 2.5vh 0;
   border-radius: 5px;
-  padding: 5vh 0;
-  overflow: hidden;
+  padding-bottom: 2.5vh;
+  overflow: auto;
 }
 
 .exercise-YT-container {
   display: flex;
   justify-content: center;
   margin: 0.5rem;
+  align-items: center;
 }
 
 .exercise-name-text {
   width: 100%;
-  margin-bottom: 1vh;
   text-align: center;
 }
 
@@ -381,7 +386,7 @@ ul > .nav-tile:hover {
   aspect-ratio: 1 /1;
   height: 32px;
   border-radius: 100%;
-  margin: 0.5rem 0 0 5px;
+  margin: 0.5rem 0 0 0.5rem;
   cursor: pointer;
 }
 
@@ -391,7 +396,6 @@ ul > .nav-tile:hover {
   color: var(--transparent);
 }
 .set-text {
-  margin-bottom: 2.5vh;
   text-align: center;
 }
 
@@ -399,7 +403,7 @@ ul > .nav-tile:hover {
   display: flex;
   width: 250px;
   justify-content: center;
-  margin: 2vh 0;
+  margin: 1vh 0;
 }
 
 .reps-container {
@@ -431,6 +435,10 @@ ul > .nav-tile:hover {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.btn-done {
+  margin-top: 1vh;
 }
 
 /*! MAIN SPINNER*/
