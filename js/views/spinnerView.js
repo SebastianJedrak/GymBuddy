@@ -12,12 +12,6 @@ class SpinnerView extends View {
     <div class="spinner-circle"></div>
   </div>`;
   }
-
-  async renderSpinner() {
-    this._clear();
-    this._backgroundRender();
-    this._parentElement.insertAdjacentHTML("afterbegin", this._HTML());
-  }
 }
 
 export default new SpinnerView();

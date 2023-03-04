@@ -102,12 +102,10 @@ ul {
 
 @keyframes rotate {
   from {
-    transform: rotate(0deg) scale(1.2, 1.2);
   }
   to {
-    transform: rotate(360deg) scale(1.2, 1.2);
-  }
-}
+    transform: rotate(360deg);
+}}
 
 /*! BUTTONS */
 
@@ -449,6 +447,7 @@ ul > .nav-tile:hover {
   background-position: center;
   aspect-ratio: 1/1;
   width: 40vh;
+  transform: scale(0.8, 0.8);
   z-index: 2;
 }
 

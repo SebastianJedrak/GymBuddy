@@ -49,10 +49,9 @@ function renderHistory() {
 
 async function renderWorkout() {
   // Loading
-  await spinnerView.renderSpinner();
+  spinnerView.renderView();
   // Generator
   await model.generateExercises();
-  console.log(model.workout);
   // Send workout data to render view
   workoutView.getDataToRender(model.workout, model.workoutParameters);
   // Render View
