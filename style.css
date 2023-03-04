@@ -563,6 +563,7 @@ ul > .nav-tile:hover {
 .modal-home-tutorial {
   width: fit-content;
   overflow: auto;
+  padding: 0.5rem;
 }
 
 .modal-home-tutorial-content {
