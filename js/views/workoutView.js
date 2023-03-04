@@ -12,6 +12,23 @@ class WorkoutView extends View {
   _HTML() {
     return `        <div class="workout-wrapper">
   <div class="progress-bar"></div>
+  <dialog class="modal modal-exit-workout">
+  <div class="modal-content-wrapper">
+    <h2>Exit</h2>
+    <p class="exit-workout-content">
+      Do you really want to abaddon your workout? Progress will not be
+      saved.
+    </p>
+    <div class="red-green-btn-container">
+      <button class="btn btn-50 btn-navy btn-exit-no">
+        <span>No</span>
+      </button>
+      <button class="btn btn-50 btn-white btn-exit-yes">
+        <span>Yes</span>
+      </button>
+    </div>
+  </div>
+</dialog>
   <dialog class="modal">
   <div class="modal-content-wrapper">
   <h2>Instruction</h2>
@@ -83,7 +100,20 @@ class WorkoutView extends View {
   }
 
   backListener(handler) {
-    document.querySelector(".back-button").addEventListener("click", handler);
+    const exitModal = document.querySelector(".modal-exit-workout");
+    document
+      .querySelector(".back-button")
+      .addEventListener("click", function () {
+        exitModal.showModal();
+        document
+          .querySelector(".btn-exit-no")
+          .addEventListener("click", function () {
+            exitModal.close();
+          });
+        document
+          .querySelector(".btn-exit-yes")
+          .addEventListener("click", handler);
+      });
   }
 
   doneListener(handler) {
