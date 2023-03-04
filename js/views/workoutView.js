@@ -16,7 +16,7 @@ class WorkoutView extends View {
   <div class="modal-content-wrapper">
     <h2>Exit</h2>
     <p class="exit-workout-content">
-      Do you really want to abaddon your workout? Progress will not be
+      Do you really want to abandon your workout? Progress will not be
       saved.
     </p>
     <div class="red-green-btn-container">
