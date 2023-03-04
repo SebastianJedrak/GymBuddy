@@ -213,6 +213,18 @@ class WorkoutView extends View {
         break;
     }
   }
+
+  playSoundNext() {
+    const audio = new Audio("src/sound/next.mp3");
+    audio.volume = 0.1;
+    audio.play();
+  }
+
+  playSoundFinish() {
+    const audio = new Audio("src/sound/finish.mp3");
+    audio.volume = 0.3;
+    audio.play();
+  }
 }
 
 export default new WorkoutView();

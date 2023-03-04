@@ -118,15 +118,18 @@ function doneHandler() {
     workoutView.currentSet < model.workout.sets[workoutView.currentExercise]
   ) {
     workoutView.currentSet += 1;
+    workoutView.playSoundNext();
     return renderWorkoutView();
   }
   if (workoutView.currentExercise === model.workout.exercises.length - 1) {
     resetWorkoutView();
     workoutView.insertToLastSetList();
+    workoutView.playSoundFinish();
     return workoutView.renderEndModal(renderHome);
   }
   workoutView.currentSet = 1;
   workoutView.currentExercise += 1;
+  workoutView.playSoundNext();
   renderWorkoutView();
 }
 
@@ -134,6 +137,7 @@ function skipToHandler() {
   if (workoutView.currentExercise === model.workout.exercises.length - 1) {
     resetWorkoutView();
     workoutView.insertToLastSetList();
+    workoutView.playSoundFinish();
     return workoutView.renderEndModal(renderHome);
   }
   for (
@@ -146,6 +150,7 @@ function skipToHandler() {
   }
   workoutView.currentSet = 1;
   workoutView.currentExercise += 1;
+  workoutView.playSoundNext();
   renderWorkoutView();
 }
 
