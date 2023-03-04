@@ -29,7 +29,7 @@ class WorkoutView extends View {
     </div>
   </div>
 </dialog>
-  <dialog class="modal">
+  <dialog class="modal modal-instructions">
   <div class="modal-content-wrapper">
   <h2>Instruction</h2>
   <p class="instruction-content">
@@ -136,12 +136,12 @@ class WorkoutView extends View {
     document
       .querySelector(".instruct-svg-container")
       .addEventListener("click", function () {
-        document.querySelector(".modal").showModal();
+        document.querySelector(".modal-instructions").showModal();
       });
     document
       .querySelector(".btn-close-modal")
       .addEventListener("click", function () {
-        document.querySelector(".modal").close();
+        document.querySelector(".modal-instructions").close();
       });
   }
 
