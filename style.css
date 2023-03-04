@@ -479,6 +479,10 @@ ul > .nav-tile:hover {
   overflow: auto;
 }
 
+.modal-instructions {
+  max-width: 80vw;
+}
+
 .modal-instructions h2 {
   margin-bottom: 1rem;
 }
