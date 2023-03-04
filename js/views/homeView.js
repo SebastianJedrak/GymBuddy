@@ -77,7 +77,7 @@ class HomeView extends View {
   <div class="workout-parameters-container">
   <h3 class="workout-parameters-text">Duration</h3>
   <ul class="workout-parameters duration-parameters">
-  <li data-duration="short"><button class="btn btn-33 btn-white" >Short</button></li>
+  <li data-duration="short"><button class="btn btn-33 btn-white">Short</button></li>
   <li data-duration="medium"><button class="btn btn-33 btn-orange" >Medium</button></li>
   <li data-duration="long"><button class="btn btn-33 btn-white" >Long</button></li>
   </ul>
@@ -112,7 +112,7 @@ class HomeView extends View {
     );
   }
 
-  durationParameterListener() {
+  openTutorialModalListener() {
     const modal = document.querySelector(".modal-home-tutorial");
     document
       .querySelector(".tutorial-button")

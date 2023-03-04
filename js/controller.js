@@ -23,6 +23,8 @@ function renderHome() {
   homeView.startWorkoutListener(renderWorkout.bind(workoutView));
   // Parameters listeners
   parametersListeners();
+  // Tutorial listener
+  homeView.openTutorialModalListener();
   // Reset workoutParametersObject
   model.workoutParameters.bodyPart = "full";
   model.workoutParameters.type = "balanced";
