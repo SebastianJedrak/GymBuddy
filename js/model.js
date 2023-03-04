@@ -137,10 +137,10 @@ export async function generateExercises() {
   if (workoutParameters.bodyPart === "full") {
     {
       await pushExercise(muscles.quadriceps, "compound");
-      // await pushExercise(muscles.chest, "compound");
-      // await pushExercise(muscles.lats, "compound");
-      // await pushExercise(muscles.hamstrings, "accessory");
-      // await pushExercise(muscles.triceps, "accessory");
+      await pushExercise(muscles.chest, "compound");
+      await pushExercise(muscles.lats, "compound");
+      await pushExercise(muscles.hamstrings, "accessory");
+      await pushExercise(muscles.triceps, "accessory");
     }
     if (
       workoutParameters.duration === "medium" ||
@@ -173,10 +173,10 @@ export async function generateExercises() {
   if (workoutParameters.bodyPart === "lower") {
     {
       await pushExercise(muscles.quadriceps, "compound");
-      // await pushExercise(muscles.hamstrings, "compound");
-      // await pushExercise(muscles.glutes, "compound")
-      // await pushExercise(muscles.abductors, "accessory");
-      // await pushExercise(muscles.abdominals, "accessory");
+      await pushExercise(muscles.hamstrings, "compound");
+      await pushExercise(muscles.glutes, "compound")
+      await pushExercise(muscles.abductors, "accessory");
+      await pushExercise(muscles.abdominals, "accessory");
     }
     if (
       workoutParameters.duration === "medium" ||
