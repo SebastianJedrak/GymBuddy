@@ -9,6 +9,7 @@ class HomeView extends View {
   _HTML() {
     return `
     <dialog class="modal modal-home-tutorial">
+    <div class="modal-home-tutorial-content">
       <div class="modal-tutorial-home-parameter">
         <h3>Body part</h3>
         <ul>
@@ -18,7 +19,7 @@ class HomeView extends View {
             muscle groups as quadriceps, hamstrings or glutes.
           </li>
           <li>
-            With a full body workout, you train all muscle groups.
+            With a full body workout, you will train all muscle groups.
             However, it will not affect the length of the training.
           </li>
           <li>
@@ -54,9 +55,10 @@ class HomeView extends View {
           <li>A long workout should not exceed an hour.</li>
         </ul>
       </div>
-      <div class="btn-close-model-home-tutorial-wrapper">
-        <button class="btn btn-50 btn-orange btn-close-model-home-tutorial">OK</button>
       </div>
+      <div class="btn-close-model-home-tutorial-wrapper">
+      <button class="btn btn-50 btn-orange btn-close-model-home-tutorial">OK</button>
+    </div>
   </dialog>
     <div class="workout-parameters-container">
   <h3 class="workout-parameters-text">Body part</h3>
