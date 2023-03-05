@@ -54,6 +54,24 @@ body {
   }
 }
 
+@supports (-webkit-touch-callout: none) {
+  .modal,
+  .modal-trophy {
+    height: fit-content;
+    min-height: 90vh;
+    overflow-y: auto;
+  }
+  .btn-close-model-home-tutorial {
+    min-height: 48px;
+  }
+  .btn-close-model-home-tutorial-wrapper {
+    min-height: 48px;
+  }
+  .modal-exit-workout {
+    min-height: 60vh;
+  }
+}
+
 .BG-whitish {
   background-color: var(--floralwhite);
 }
@@ -366,7 +384,7 @@ ul > .nav-tile:hover {
   margin: 2.5vh 0;
   border-radius: 5px;
   padding-bottom: 2.5vh;
-  overflow: auto;
+  overflow-y: auto;
 }
 
 .exercise-YT-container {
