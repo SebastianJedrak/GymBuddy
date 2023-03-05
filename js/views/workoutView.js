@@ -56,10 +56,10 @@ class WorkoutView extends View {
 </dialog>
   <div class="workout-card-container">
     <div class="exercise-YT-container">
+    <div class="instruct-svg-container"></div>
       <h2 class="exercise-name-text">
       ${this._data.exercises[this.currentExercise].name}
       </h2>
-      <div class="instruct-svg-container"></div>
     </div>
     <p class="muscle-text">${
       this._data.exercises[this.currentExercise].muscle

@@ -371,14 +371,16 @@ ul > .nav-tile:hover {
 
 .exercise-YT-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  width: 100%;
   margin: 0.5rem;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .exercise-name-text {
   width: 100%;
   text-align: center;
+  margin-right: calc(32px + 1rem);
 }
 
 .instruct-svg-container {
@@ -386,7 +388,7 @@ ul > .nav-tile:hover {
   aspect-ratio: 1 /1;
   height: 32px;
   border-radius: 100%;
-  margin: 0.5rem 0 0 0.5rem;
+  margin-left: 1rem;
   cursor: pointer;
 }
 
