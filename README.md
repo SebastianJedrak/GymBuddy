@@ -1,6 +1,8 @@
-# LOGO
+<img src="https://user-images.githubusercontent.com/115486676/223082952-72bfc490-4777-4d18-bcfa-dd598be2901e.svg" alt="banner" height="250px" />
 
 # GymBuddy
+
+
 
 # Getting started
 
