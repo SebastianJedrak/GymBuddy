@@ -11,7 +11,7 @@
 # GymBuddy
 
 GymBuddy is a project that was created out of my passion for the gym. During my adventure with the gym, I acquired a lot of knowledge about training. 
-For this reason, many of my friends have turned to me for help with their training. This is how the application project was born, which will guide your training in a simple and quick way. This is how the idea for an application was born, which will guide the user's training in a simple and quick way.
+For this reason, many of my friends have turned to me for help with their training. This is how the idea for an application was born. The application will guide the user's training in a simple and quick way.
 
 The goal of the application was to combine simplicity of use with a variety of exercises and solid training plans. 
 
@@ -23,7 +23,7 @@ To use my program locally you will need an API key. You can get one for free fro
 
 <b>The use of the application is very simple.</b>
 
-You specify the parameters of the training you want to perform. You can choose which body part you want to focus on, decide on the type of training and its length. Aa built-in tutorial will walk you through the details of each option.
+You specify the parameters of the training you want to perform. You can choose which body part you want to focus on, decide on the type of training and its length. A built-in tutorial will walk you through the details of each option.
 
 <img src="https://user-images.githubusercontent.com/115486676/223096576-03c93f7d-48d9-4c4b-8b31-bef89e8d3d21.png" alt="home-view" width="250px" />
 
@@ -41,7 +41,7 @@ After you have completed all the exercises, a dialog box will open with a summar
 - [ ] User registration
 - [ ] User login
 - [ ] Workouts history
-- [ ] App self-lear
+- [ ] App self-learn
 
 # Contact
 
