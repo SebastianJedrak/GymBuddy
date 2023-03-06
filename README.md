@@ -53,9 +53,6 @@ Repository: https://github.com/SebastianJedrak/GymBuddy
 
 # Acknowledgments
 
-API
-https://rapidapi.com/apininjas/api/exercises-by-api-ninjas/details
-
 User SVG
 <a href="https://pl.freepik.com/darmowe-wektory/znajdz-osobe-do-pracy_8063764.htm#query=user&position=6&from_view=search&track=aitestb">Obraz autorstwa studiogstock</a> na Freepik
 
