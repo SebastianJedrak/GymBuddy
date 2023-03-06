@@ -1,4 +1,4 @@
-import { key } from "./key.js";
+import { key } from "./API_key.js";
 
 export const options = {
   method: "GET",
