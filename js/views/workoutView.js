@@ -36,6 +36,9 @@ class WorkoutView extends View {
   ${this._data.exercises[this.currentExercise].instructions}
   </p>
   <h3 class="Eq-header">Equipment</h3>
+  <p class="instruction-content">${
+    this._data.exercises[this.currentExercise].equipment
+  }</p>
   <button class="btn btn-50 btn-orange btn-close-modal">Got it!</button>
   </div>
 </dialog>
