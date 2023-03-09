@@ -40,11 +40,14 @@ body {
   justify-content: space-between;
 }
 
-@media all and (min-width: 992px) {
+@media all and (min-width: 1024px) {
   .global-container {
     width: 50vw;
     height: 90vh;
     margin: 5vh auto;
+  }
+  .modal {
+    max-width: 49vw;
   }
 }
 
@@ -495,25 +498,23 @@ ul > .nav-tile:hover {
     alternate-reverse;
 }
 
-/*! MODAL INFO WINDOW*/
+/*! MODAL */
 
 .modal {
-  background-color: white;
-  color: var(--lightslategray);
   padding: 1.5rem;
-  width: 45vw;
   width: fit-content;
-
   margin: auto;
   overflow: auto;
 }
 
-.modal-instructions {
-  max-width: 80vw;
+.modal-white {
+  background-color: white;
+  color: var(--lightslategray);
 }
 
-.modal-instructions h2 {
-  margin-bottom: 1rem;
+.modal-navy {
+  background-color: var(--lightslategray);
+  color: var(--floralwhite);
 }
 
 .modal::backdrop {
@@ -533,6 +534,12 @@ ul > .nav-tile:hover {
   margin-bottom: 1rem;
 }
 
+/*! MODAL INSTRUCTION*/
+
+.modal-instructions h2 {
+  margin-bottom: 1rem;
+}
+
 .instruction-content {
   overflow-y: auto;
   max-height: 40vh;
@@ -548,21 +555,7 @@ ul > .nav-tile:hover {
   margin-bottom: 1rem;
 }
 
-/*! MODAL TROPHY WINDOW*/
-
-.modal-trophy {
-  background-color: var(--lightslategray);
-  color: var(--floralwhite);
-  padding: 0.5rem 1.5rem;
-  max-width: 80vw;
-  margin: auto;
-  overflow: auto;
-}
-
-.modal-trophy::backdrop {
-  background: linear-gradient(165deg, #6e7da2, #8badc2, #aedadd);
-  opacity: 0.3;
-}
+/*! MODAL TROPHY*/
 
 .trophy {
   background-image: url(src/trophy.svg);
@@ -589,7 +582,6 @@ ul > .nav-tile:hover {
 /*! MODAL TUTORIAL HOME*/
 
 .modal-home-tutorial {
-  width: fit-content;
   overflow-y: hidden;
   padding: 0.5rem;
 }
@@ -598,11 +590,10 @@ ul > .nav-tile:hover {
   max-height: 80vh;
   overflow-y: auto;
   padding-right: 0.5rem;
-  margin-top: 0.5rem;
 }
 
 .modal-tutorial-home-parameter {
-  margin-bottom: 5vh;
+  margin-bottom: 2vh;
 }
 
 .modal-tutorial-home-parameter h3 {
@@ -628,15 +619,6 @@ h4 {
 
 /*! MODAL EXIT WORKOUT*/
 
-.modal-exit-workout {
-  width: fit-content;
-}
-
 .exit-workout-content {
   margin: 2rem 0;
-}
-
-.modal,
-.modal-trophy {
-  max-width: 45vw;
 }

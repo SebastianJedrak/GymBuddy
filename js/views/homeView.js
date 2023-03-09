@@ -8,7 +8,7 @@ class HomeView extends View {
 
   _HTML() {
     return `
-    <dialog class="modal modal-home-tutorial">
+    <dialog class="modal modal-home-tutorial modal-white">
     <div class="modal-home-tutorial-content">
       <div class="modal-tutorial-home-parameter">
         <h3>Body part</h3>

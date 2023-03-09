@@ -12,7 +12,7 @@ class WorkoutView extends View {
   _HTML() {
     return `        <div class="workout-wrapper">
   <div class="progress-bar"></div>
-  <dialog class="modal modal-exit-workout">
+  <dialog class="modal modal-exit-workout modal-white">
   <div class="modal-content-wrapper">
     <h2>Exit</h2>
     <p class="exit-workout-content">
@@ -29,7 +29,7 @@ class WorkoutView extends View {
     </div>
   </div>
 </dialog>
-  <dialog class="modal modal-instructions">
+  <dialog class="modal modal-instructions modal-white">
   <div class="modal-content-wrapper">
   <h2>Instruction</h2>
   <p class="instruction-content">
@@ -39,7 +39,7 @@ class WorkoutView extends View {
   <button class="btn btn-50 btn-orange btn-close-modal">Got it!</button>
   </div>
 </dialog>
-<dialog class="modal-trophy">
+<dialog class="modal modal-trophy modal-navy">
   <div class="modal-content-wrapper">
     <h2 class="modal-trophy-finished">Finished!</h2>
     <div class="trophy"></div>
