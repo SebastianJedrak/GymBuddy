@@ -37,7 +37,7 @@ class WorkoutView extends View {
   </p>
   <h3 class="Eq-header">Equipment</h3>
   <p class="instruction-content">${
-    this._data.exercises[this.currentExercise].equipment
+    this._data.exercises[this.currentExercise].equipment.replace(/_/gm, " ")
   }</p>
   <button class="btn btn-50 btn-orange btn-close-modal">Got it!</button>
   </div>
@@ -65,7 +65,7 @@ class WorkoutView extends View {
       </h2>
     </div>
     <p class="muscle-text">${
-      this._data.exercises[this.currentExercise].muscle
+      this._data.exercises[this.currentExercise].muscle.replace(/_/gm, " ")
     }</p>
     <h4 class="set-text">set ${this.currentSet}/${
       this._data.sets[this.currentExercise]
