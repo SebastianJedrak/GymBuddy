@@ -17,8 +17,8 @@ function renderHome() {
   // Render HTML
   homeView.renderView();
   // Navigation bar init
-  // navStart();
-  // document.querySelector(".nav-tile-home").classList.add("active");
+  navStart();
+  document.querySelector(".nav-tile-home").classList.add("active");
   // Start button listener
   homeView.startWorkoutListener(renderWorkout.bind(workoutView));
   // Parameters listeners

@@ -2,7 +2,7 @@ import View from "./view.js";
 
 class HomeView extends View {
   _parentElement = document.querySelector(".main-content");
-  _navigator = false;
+  _navigator = true;
   _backgroundType = "gradient";
   _headerConfig = [false, false, true];
 

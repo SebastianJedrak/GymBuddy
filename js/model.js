@@ -137,10 +137,10 @@ export async function generateExercises() {
   if (workoutParameters.bodyPart === "full") {
     {
       await pushExercise(muscles.quadriceps, "compound");
-      await pushExercise(muscles.chest, "compound");
-      await pushExercise(muscles.lats, "compound");
-      await pushExercise(muscles.hamstrings, "accessory");
-      await pushExercise(muscles.triceps, "accessory");
+      // await pushExercise(muscles.chest, "compound");
+      // await pushExercise(muscles.lats, "compound");
+      // await pushExercise(muscles.hamstrings, "accessory");
+      // await pushExercise(muscles.triceps, "accessory");
     }
     if (
       workoutParameters.duration === "medium" ||
