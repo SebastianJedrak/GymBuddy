@@ -36,9 +36,9 @@ class WorkoutView extends View {
   ${this._data.exercises[this.currentExercise].instructions}
   </p>
   <h3 class="Eq-header">Equipment</h3>
-  <p class="instruction-content">${
-    this._data.exercises[this.currentExercise].equipment.replace(/_/gm, " ")
-  }</p>
+  <p class="instruction-content">${this._data.exercises[
+    this.currentExercise
+  ].equipment.replace(/_/gm, " ")}</p>
   <button class="btn btn-50 btn-orange btn-close-modal">Got it!</button>
   </div>
 </dialog>
@@ -64,9 +64,9 @@ class WorkoutView extends View {
       ${this._data.exercises[this.currentExercise].name}
       </h2>
     </div>
-    <p class="muscle-text">${
-      this._data.exercises[this.currentExercise].muscle.replace(/_/gm, " ")
-    }</p>
+    <p class="muscle-text">${this._data.exercises[
+      this.currentExercise
+    ].muscle.replace(/_/gm, " ")}</p>
     <h4 class="set-text">set ${this.currentSet}/${
       this._data.sets[this.currentExercise]
     }</h4>
@@ -84,7 +84,7 @@ class WorkoutView extends View {
   </div>
   <h4 class="modify-next-set-text">Modify your next set</h4>
   <div class="red-green-btn-container">
-    <button class="btn btn-50 btn-red btn-heavy"><span>Lighter...</span></button>
+    <button class="btn btn-50 btn-red btn-heavy"><span>Easier...</span></button>
     <button class="btn btn-50 btn-green btn-light"><span>Heavier!</span></button>
   </div>
   <button class="btn btn-100 btn-white btn-skip">
@@ -163,7 +163,6 @@ class WorkoutView extends View {
     `;
     document.querySelector(".Eq-header").insertAdjacentHTML("afterend", html);
   }
-
 
   insertToLastSetList() {
     for (let i = 0; i < this._data.exercises.length; i++) {
