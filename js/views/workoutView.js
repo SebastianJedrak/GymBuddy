@@ -164,11 +164,6 @@ class WorkoutView extends View {
     document.querySelector(".Eq-header").insertAdjacentHTML("afterend", html);
   }
 
-  _insertNoEq() {
-    document
-      .querySelector(".Eq-header")
-      .insertAdjacentHTML("afterend", "<span>None</span>");
-  }
 
   insertToLastSetList() {
     for (let i = 0; i < this._data.exercises.length; i++) {
@@ -182,7 +177,6 @@ class WorkoutView extends View {
   _generateImgEq() {
     switch (this._data.exercises[this.currentExercise].equipment) {
       case "body_only":
-        this._insertNoEq();
         break;
       case "cable":
         this._selectEqIMG("cable");
@@ -194,7 +188,6 @@ class WorkoutView extends View {
         this._selectEqIMG("machine");
         break;
       case "other":
-        this._insertNoEq();
         break;
       case "dumbbell":
         this._selectEqIMG("dumbbell");
@@ -206,7 +199,6 @@ class WorkoutView extends View {
         this._selectEqIMG("e-z_curl_bar");
         break;
       case "None":
-        this._insertNoEq();
         break;
       case "kettlebells":
         this._selectEqIMG("kettlebells");
