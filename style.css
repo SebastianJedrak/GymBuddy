@@ -700,9 +700,28 @@ h4 {
 }
 
 .dropdown-experience-container {
-  display: flex;
-  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
 }
 
-.dropdown-experience-list {
+.dropdown-experience-current-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+.dropdown-arrow {
+  background-image: url(src/profile/keyboard_arrow_down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  aspect-ratio: 1/1;
+  width: 16px;
+  margin-left: 0.5rem;
+}
+
+.dropdown-experience-current-container h4 {
+  color: var(--floralwhite);
+  margin: 0;
 }
