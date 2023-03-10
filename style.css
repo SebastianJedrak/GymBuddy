@@ -766,6 +766,7 @@ h4 {
   background-repeat: no-repeat;
   background-position: center;
   aspect-ratio: 1/1;
+  height: 100%;
   width: 16px;
   margin-left: 0.5rem;
 }
