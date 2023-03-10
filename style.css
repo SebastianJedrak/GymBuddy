@@ -698,3 +698,11 @@ h4 {
 
 .bmi-label {
 }
+
+.dropdown-experience-container {
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-experience-list {
+}
