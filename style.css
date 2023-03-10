@@ -623,3 +623,65 @@ h4 {
 .exit-workout-content {
   margin: 2rem 0;
 }
+
+/*! PROFILE VIEW */
+
+.avatar {
+  background-image: url(src/profile/avatar-man.svg);
+  background-repeat: no-repeat;
+  aspect-ratio: 1/1;
+  width: 64px;
+}
+
+.name-edit-container {
+}
+
+.user-name {
+}
+
+.edit-user-name {
+  background-image: url(src/profile/edit.svg);
+  background-repeat: no-repeat;
+  aspect-ratio: 1/1;
+  width: 32px;
+}
+
+.user-parameters-container {
+}
+
+.user-parameters {
+}
+
+.edit-user-parameters {
+  background-image: url(src/profile/edit.svg);
+  background-repeat: no-repeat;
+  aspect-ratio: 1/1;
+  width: 32px;
+}
+
+.bmi-meter-container {
+  display: flex;
+  justify-content: center;
+}
+
+.bmi-meter {
+  position: absolute;
+  background-image: url(src/profile/meter-colors.svg);
+  background-repeat: no-repeat;
+  height: 15vh;
+  width: 80vw;
+}
+
+.bmi-meter-arrow {
+  position: relative;
+  background-image: url(src/profile/arrow-meter.svg);
+  background-repeat: no-repeat;
+  height: 15vh;
+  width: 80vw;
+}
+
+.bmi-number {
+}
+
+.bmi-label {
+}
