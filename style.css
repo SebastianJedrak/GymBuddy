@@ -224,26 +224,27 @@ ul {
   align-self: start;
   display: flex;
   padding-left: 2rem;
-
   margin-top: 11.5px;
+}
+
+.header-buttons-svg {
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1 /1;
+  height: 1.8rem;
+  cursor: pointer;
 }
 
 .back-button {
   background-image: url(./src/abadonTraining.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  aspect-ratio: 1 /1;
-  height: 1.8rem;
-  cursor: pointer;
 }
 
 .tutorial-button {
   background-image: url(./src/help_FILL0_wght400_GRAD0_opsz48.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  aspect-ratio: 1 /1;
-  cursor: pointer;
-  height: 1.8rem;
+}
+
+.logout-button {
+  background-image: url(./src/profile/logout.svg);
 }
 
 .header-text {

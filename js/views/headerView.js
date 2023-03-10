@@ -1,20 +1,28 @@
 class HeaderView {
-  headerRender(header, back, tutorial) {
+  /**
+   * 
+   * @param {header text, false for not display header} header 
+   * @param {display back button} back 
+   * @param {dsplay tutorial button} tutorial 
+   * @param {dsplay logout button} logout 
+   */
+  headerRender(header, back, tutorial, logout) {
     const headerText = `<header class="header">           <h2 class="header-text">${header}</h2>
     </header>`;
     const containerButtons = `<div class="header-buttons"> </div>`;
-    const backBtn = `<div class="back-button"></div>`;
-    const tutorialBtn = `   <div class="tutorial-button"></div>`;
+    const backBtn = `<div class="back-button header-buttons-svg"></div>`;
+    const tutorialBtn = `<div class="tutorial-button header-buttons-svg"></div>`;
+    const logoutBtn = `<div class="logout-button header-buttons-svg"></div>`
     document.querySelector(".header-container").textContent = "";
     if (header)
       document
         .querySelector(".header-container")
         .insertAdjacentHTML("afterbegin", headerText);
-    if ((back || tutorial) && header)
+    if ((back || tutorial || logout) && header)
       document
         .querySelector(".header")
         .insertAdjacentHTML("afterbegin", containerButtons);
-    if ((back || tutorial) && !header)
+    if ((back || tutorial || logout) && !header)
       document
         .querySelector(".header-container")
         .insertAdjacentHTML("afterbegin", containerButtons);
@@ -26,6 +34,10 @@ class HeaderView {
       document
         .querySelector(".header-buttons")
         .insertAdjacentHTML("beforeend", tutorialBtn);
+        if (logout)
+      document
+        .querySelector(".header-buttons")
+        .insertAdjacentHTML("beforeend", logoutBtn);
   }
 }
 

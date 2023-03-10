@@ -4,7 +4,7 @@ class UserView extends View {
   _parentElement = document.querySelector(".main-content");
   _navigator = true;
   _backgroundType = "whitish";
-  _headerConfig = [`User`, false, false];
+  _headerConfig = [`User`, false, false, true];
 
   _HTML() {
     return `user`;
