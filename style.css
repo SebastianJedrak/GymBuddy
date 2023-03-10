@@ -5,6 +5,7 @@
   margin: 0;
   font-size: 16px;
   font-family: "Lato", sans-serif;
+  color: var(--lightslategray);
 }
 :root {
   --floralwhite: #fcf8f3;
@@ -626,37 +627,42 @@ h4 {
 
 /*! PROFILE VIEW */
 
+.avatar-name-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
 .avatar {
   background-image: url(src/profile/avatar-man.svg);
   background-repeat: no-repeat;
   aspect-ratio: 1/1;
   width: 64px;
+  margin-bottom: 1rem;
 }
 
 .name-edit-container {
+  display: flex;
 }
 
 .user-name {
 }
 
-.edit-user-name {
+.edit-user {
   background-image: url(src/profile/edit.svg);
   background-repeat: no-repeat;
   aspect-ratio: 1/1;
-  width: 32px;
+  width: 16px;
+  margin-left: 0.5rem;
 }
 
 .user-parameters-container {
+  display: flex;
+  justify-content: center;
 }
 
 .user-parameters {
-}
-
-.edit-user-parameters {
-  background-image: url(src/profile/edit.svg);
-  background-repeat: no-repeat;
-  aspect-ratio: 1/1;
-  width: 32px;
 }
 
 .bmi-meter-container {
@@ -687,6 +693,7 @@ h4 {
 }
 
 .bmi-number {
+  text-align: center;
 }
 
 .bmi-label {
