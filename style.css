@@ -651,9 +651,6 @@ h4 {
   display: flex;
 }
 
-.user-name {
-}
-
 .edit-user {
   background-image: url(src/profile/edit.svg);
   background-repeat: no-repeat;
@@ -665,9 +662,6 @@ h4 {
 .user-parameters-container {
   display: flex;
   justify-content: center;
-}
-
-.user-parameters {
 }
 
 .bmi-meter-container {
@@ -701,14 +695,12 @@ h4 {
   text-align: center;
 }
 
-.bmi-label {
-}
-
 .dropdown-experience-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: fit-content;
+  width: 124px;
   margin: 0 auto;
 }
 
@@ -718,6 +710,7 @@ h4 {
   align-items: center;
   margin: 0;
   padding: 0 1rem;
+  height: 48px;
 }
 
 .dropdown-arrow {
@@ -736,10 +729,14 @@ h4 {
 }
 
 .dropdown-options-list {
+  background-color: var(--floralwhite);
+  position: absolute;
   border: 1px solid var(--lightslategray);
   border-radius: 5px;
   padding: 0.5rem;
-  width: 100%;
+  width: 124px;
+  top: 48px;
+  z-index: 5;
 }
 
 .dropdown-options-item {
