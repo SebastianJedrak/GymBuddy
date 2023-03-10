@@ -662,12 +662,16 @@ h4 {
 .bmi-meter-container {
   display: flex;
   justify-content: center;
+  align-items: end;
+  height: 15vh;
+  width: 100%;
 }
 
 .bmi-meter {
   position: absolute;
   background-image: url(src/profile/meter-colors.svg);
   background-repeat: no-repeat;
+  background-position: center;
   height: 15vh;
   width: 80vw;
 }
@@ -676,7 +680,9 @@ h4 {
   position: relative;
   background-image: url(src/profile/arrow-meter.svg);
   background-repeat: no-repeat;
-  height: 15vh;
+  background-position: center;
+  transform: scale(0.8) rotate(20deg);
+  height: 5vh;
   width: 80vw;
 }
 
