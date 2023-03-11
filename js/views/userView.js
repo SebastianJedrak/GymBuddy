@@ -12,7 +12,7 @@ class UserView extends View {
     <div class="avatar-name-container">
     <div class="avatar avatar-man"></div>
     <div class="name-edit-container">
-      <h3 class="user-name">Andrew</h3>
+      <h3 class="user-name">${this._data.login}</h3>
       <div class="edit-user edit-user-name"></div>
     </div>
   </div>

@@ -32,6 +32,8 @@ function renderHome() {
 }
 
 function renderUser() {
+  // Get current user
+  userView.getDataToRender(model.activeUser)
   // Render HTML
   userView.renderView();
   // Navigation bar

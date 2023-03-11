@@ -721,7 +721,7 @@ h4 {
 }
 
 .bmi-meter {
-  position: absolute;
+  position: relative;
   background-image: url(src/profile/meter-colors.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -730,7 +730,7 @@ h4 {
 }
 
 .bmi-meter-arrow {
-  position: relative;
+  position: absolute;
   background-image: url(src/profile/arrow-meter.svg);
   background-repeat: no-repeat;
   background-position: center;
