@@ -47,6 +47,18 @@ class UserView extends View {
   </div>`;
   }
 
+  avatarGenderSwitch() {
+    const avatar = document.querySelector(".avatar");
+    if (this._data.gender === "man") {
+      avatar.classList.remove("avatar-woman");
+      avatar.classList.add("avatar-man");
+    }
+    if (this._data.gender === "woman") {
+      avatar.classList.remove("avatar-men");
+      avatar.classList.add("avatar-woman");
+    }
+  }
+
   renderLabelBMI() {
     const label = document.querySelector(".bmi-label");
     label.textContent = "";

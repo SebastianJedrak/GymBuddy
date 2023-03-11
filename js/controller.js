@@ -36,6 +36,8 @@ function renderUser() {
   userView.getDataToRender(model.activeUser);
   // Render HTML
   userView.renderView();
+  // Render avatar
+  userView.avatarGenderSwitch();
   // Render BMI label
   userView.renderLabelBMI();
   // Animate arrow
