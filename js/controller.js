@@ -33,7 +33,9 @@ function renderHome() {
 
 function renderUser() {
   // Get current user
-  userView.getDataToRender(model.activeUser)
+  userView.getDataToRender(model.activeUser);
+  // Render BMI label
+  userView.renderLabelBMI();
   // Render HTML
   userView.renderView();
   // Navigation bar

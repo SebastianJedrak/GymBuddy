@@ -5,6 +5,7 @@ class UserView extends View {
   _navigator = true;
   _backgroundType = "whitish";
   _headerConfig = [`User`, false, false, true];
+  _labelBMI;
 
   _HTML() {
     return `        
@@ -39,9 +40,24 @@ class UserView extends View {
     <div class="bmi-meter"></div>
     <div class="bmi-meter-arrow"></div>
   </div>
-  <h3 class="bmi-number">BMI: 20,1</h3>
-  <h4 class="bmi-label">Underweight</h4>
+  <h3 class="bmi-number">BMI: ${this._data.BMI}</h3>
+  <h4 class="bmi-label">${this._labelBMI}</h4>
   </div>`;
+  }
+
+  renderLabelBMI() {
+    if (this._data.BMI >= 30) {
+      this._labelBMI = `obesity`;
+    }
+    if (this._data.BMI >= 25) {
+      this._labelBMI = `overweight`;
+    }
+    if (this._data.BMI >= 18.5) {
+      this._labelBMI = `healthy weight`;
+    }
+    if (this._data.BMI < 18.5) {
+      this._labelBMI = `underweight`;
+    }
   }
 }
 
