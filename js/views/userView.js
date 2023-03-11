@@ -5,7 +5,6 @@ class UserView extends View {
   _navigator = true;
   _backgroundType = "whitish";
   _headerConfig = [`User`, false, false, true];
-  _labelBMI;
 
   _HTML() {
     return `        
@@ -46,17 +45,22 @@ class UserView extends View {
   }
 
   renderLabelBMI() {
+    const label = document.querySelector(".bmi-label");
     if (this._data.BMI >= 30) {
-      this._labelBMI = `obesity`;
+      label.style.color = "#f26d24";
+      label.textContent = `obesity`;
     }
     if (this._data.BMI >= 25) {
-      this._labelBMI = `overweight`;
+      label.style.color = "#f7b11e";
+      label.textContent = `overweight`;
     }
     if (this._data.BMI >= 18.5) {
-      this._labelBMI = `healthy weight`;
+      label.style.color = "#99c817";
+      label.textContent = `healthy weight`;
     }
     if (this._data.BMI < 18.5) {
-      this._labelBMI = `underweight`;
+      label.style.color = "#fdeb48";
+      label.textContent = `underweight`;
     }
   }
 }
