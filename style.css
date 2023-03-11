@@ -704,6 +704,7 @@ h4 {
   flex-direction: column;
   justify-content: space-evenly;
   height: 60%;
+  overflow: hidden;
 }
 
 .user-parameters-container {
@@ -737,9 +738,8 @@ h4 {
   top: 2rem;
   height: 20vh;
   width: 30vw;
-  min-width: 100px;
+  min-width: 140px;
   max-width: 200px;
-  overflow: hidden;
 }
 
 .bmi-number {
