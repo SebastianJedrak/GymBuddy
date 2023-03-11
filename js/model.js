@@ -14,7 +14,7 @@ export class User {
   }
 }
 
-const andrew = new User("andrew", "1111", "180", "110", "man", "intermediate");
+const andrew = new User("andrew", "1111", "180", "90", "man", "intermediate");
 
 export const activeUser = andrew;
 

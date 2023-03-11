@@ -739,6 +739,7 @@ h4 {
   width: 30vw;
   min-width: 100px;
   max-width: 200px;
+  overflow: hidden;
 }
 
 .bmi-number {

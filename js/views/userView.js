@@ -89,11 +89,11 @@ class UserView extends View {
     // BMI 30 = 100% 150deg = 100%
     const position = (this._data.BMI / 30) * 100;
     const rotateTo = (position * 150) / 100;
-    console.log(this._data.BMI);
-    console.log(position);
-    console.log(rotateTo);
     arrow.animate(
-      [{ transform: "rotate(10deg)" }, { transform: `rotate(${rotateTo}deg)` }],
+      [
+        { transform: "rotate(10deg)" },
+        { transform: `rotate(${rotateTo < 180 ? rotateTo : 180}deg)` },
+      ],
       { duration: 2000, fill: "forwards" }
     );
   }
