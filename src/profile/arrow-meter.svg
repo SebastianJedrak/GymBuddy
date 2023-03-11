@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 26.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 517.6 82.7" style="enable-background:new 0 0 517.6 82.7;" xml:space="preserve">
+	 viewBox="0 0 429.1 65" style="enable-background:new 0 0 429.1 65;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#6E7DA2;}
 	.st1{fill:#FFFFFF;}
 </style>
-<polygon class="st0" points="-0.5,43 267.9,60.5 267.8,23.3 "/>
-<circle class="st0" cx="268.1" cy="42.1" r="40.6"/>
-<ellipse transform="matrix(0.9648 -0.263 0.263 0.9648 -1.6257 71.9703)" class="st1" cx="268.1" cy="42.1" rx="28.9" ry="28.9"/>
-<ellipse transform="matrix(0.9958 -9.158234e-02 9.158234e-02 0.9958 -2.812 24.6962)" class="st0" cx="267.7" cy="43" rx="20.2" ry="20.2"/>
+<polygon class="st0" points="0,33.4 214.7,47.4 214.6,17.6 "/>
+<circle class="st0" cx="214.6" cy="32.5" r="32.5"/>
+<ellipse class="st1" cx="214.6" cy="32.5" rx="23.1" ry="23.1"/>
+<ellipse class="st0" cx="214.6" cy="32.5" rx="16.2" ry="16.2"/>
 </svg>
