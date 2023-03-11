@@ -713,6 +713,7 @@ h4 {
 }
 
 .bmi-meter-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: end;
@@ -721,7 +722,6 @@ h4 {
 }
 
 .bmi-meter {
-  position: relative;
   background-image: url(src/profile/meter-colors.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -734,9 +734,11 @@ h4 {
   background-image: url(src/profile/arrow-meter.svg);
   background-repeat: no-repeat;
   background-position: center;
-  height: 5vh;
-  width: 10vw;
-  scale: 0.8;
+  top: 2rem;
+  height: 20vh;
+  width: 30vw;
+  min-width: 100px;
+  max-width: 200px;
 }
 
 .bmi-number {
