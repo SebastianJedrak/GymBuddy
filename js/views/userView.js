@@ -32,7 +32,10 @@ class UserView extends View {
   </div>
   <div class="parameters-meter-bmi-container">
   <div class="user-parameters-container">
-    <h4 class="user-parameters">Man 175 cm 89kg</h4>
+    <h4 class="user-parameters">${
+      this._data.gender.slice(0, 1).toUpperCase() +
+      this._data.gender.slice(1).toLowerCase()
+    } ${this._data.height} cm ${this._data.weight} kg</h4>
     <div class="edit-user edit-user-parameters"></div>
   </div>
   <div class="bmi-meter-container">
