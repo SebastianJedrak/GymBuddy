@@ -74,17 +74,15 @@ class UserView extends View {
 
   animateArrow() {
     const arrow = document.querySelector(".bmi-meter-arrow");
-    // BMI 40 = 100% 180deg = 100%
-    const position = (this._data.BMI / 40) * 100;
-    const positionProcent = (position / 180) * 100;
-    const rotateTo = (positionProcent * 180) / 100;
+    // BMI 30 = 100% 150deg = 100%
+    const position = (this._data.BMI / 30) * 100;
+    const rotateTo = (position * 150) / 100;
     console.log(this._data.BMI);
     console.log(position);
-    console.log(positionProcent);
     console.log(rotateTo);
     arrow.animate(
       [{ transform: "rotate(10deg)" }, { transform: `rotate(${rotateTo}deg)` }],
-      { duration: 2000 }
+      { duration: 2000, fill: "forwards" }
     );
   }
 }
