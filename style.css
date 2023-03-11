@@ -729,15 +729,6 @@ h4 {
   width: 80vw;
 }
 
-@keyframes arrow-meter {
-  from {
-    transform: rotate(10deg);
-  }
-  to {
-    transform: rotate(180deg);
-  }
-}
-
 .bmi-meter-arrow {
   position: absolute;
   background-image: url(src/profile/arrow-meter.svg);
@@ -745,7 +736,7 @@ h4 {
   background-position: center;
   height: 5vh;
   width: 10vw;
-  animation: arrow-meter 2s cubic-bezier(0.1, 0.9, 0.86, 0.58) infinite;
+  animation: arrow-meter 2s cubic-bezier(0.1, 0.9, 0.86, 0.58);
 }
 
 .bmi-number {

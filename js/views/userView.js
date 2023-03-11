@@ -43,28 +43,49 @@ class UserView extends View {
     <div class="bmi-meter-arrow"></div>
   </div>
   <h3 class="bmi-number">BMI: ${this._data.BMI}</h3>
-  <h4 class="bmi-label">${this._labelBMI}</h4>
+  <h4 class="bmi-label"></h4>
   </div>`;
   }
 
   renderLabelBMI() {
     const label = document.querySelector(".bmi-label");
+    label.textContent = "";
     if (this._data.BMI >= 30) {
       label.style.color = "#f26d24";
       label.textContent = `obesity`;
+      return;
     }
     if (this._data.BMI >= 25) {
       label.style.color = "#f7b11e";
       label.textContent = `overweight`;
+      return;
     }
     if (this._data.BMI >= 18.5) {
       label.style.color = "#99c817";
       label.textContent = `healthy weight`;
+      return;
     }
     if (this._data.BMI < 18.5) {
       label.style.color = "#fdeb48";
       label.textContent = `underweight`;
+      return;
     }
+  }
+
+  animateArrow() {
+    const arrow = document.querySelector(".bmi-meter-arrow");
+    // BMI 40 = 100% 180deg = 100%
+    const position = (this._data.BMI / 40) * 100;
+    const positionProcent = (position / 180) * 100;
+    const rotateTo = (positionProcent * 180) / 100;
+    console.log(this._data.BMI);
+    console.log(position);
+    console.log(positionProcent);
+    console.log(rotateTo);
+    arrow.animate(
+      [{ transform: "rotate(10deg)" }, { transform: `rotate(${rotateTo}deg)` }],
+      { duration: 2000 }
+    );
   }
 }
 

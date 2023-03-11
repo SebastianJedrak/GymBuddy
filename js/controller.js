@@ -38,6 +38,8 @@ function renderUser() {
   userView.renderView();
   // Render BMI label
   userView.renderLabelBMI();
+  // Animate arrow
+  userView.animateArrow();
   // Navigation bar
   navStart();
   document.querySelector(".nav-tile-user").classList.add("active");

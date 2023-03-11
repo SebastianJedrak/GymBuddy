@@ -14,7 +14,7 @@ export class User {
   }
 }
 
-const andrew = new User("andrew", "1111", "180", "80", "man", "intermediate");
+const andrew = new User("andrew", "1111", "180", "90", "man", "intermediate");
 
 export const activeUser = andrew;
 
@@ -174,7 +174,7 @@ export async function generateExercises() {
     {
       await pushExercise(muscles.quadriceps, "compound");
       await pushExercise(muscles.hamstrings, "compound");
-      await pushExercise(muscles.glutes, "compound")
+      await pushExercise(muscles.glutes, "compound");
       await pushExercise(muscles.abductors, "accessory");
       await pushExercise(muscles.abdominals, "accessory");
     }
