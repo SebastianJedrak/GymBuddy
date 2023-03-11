@@ -66,7 +66,7 @@ class UserView extends View {
       return;
     }
     if (this._data.BMI < 18.5) {
-      label.style.color = "#fdeb48";
+      label.style.color = "#aedadd";
       label.textContent = `underweight`;
       return;
     }
