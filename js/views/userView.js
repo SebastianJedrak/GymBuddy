@@ -24,7 +24,6 @@ class UserView extends View {
       <div class="dropdown-arrow"></div>
     </button>
     <ul class="dropdown-options-list hidden">
-      <!-- hidden -->
       <li class="dropdown-options-item">beginner</li>
       <li class="dropdown-options-item">intermediate</li>
     </ul>
@@ -96,6 +95,28 @@ class UserView extends View {
       ],
       { duration: 2000, fill: "forwards" }
     );
+  }
+
+  openDropdownListener() {
+    const dropdown = document.querySelector(".dropdown-options-list");
+    const btnDropdown = document.querySelector(
+      ".dropdown-experience-current-container"
+    );
+    btnDropdown.addEventListener("click", () => {
+      dropdown.classList.remove("hidden");
+      this._closeDropdown();
+    });
+  }
+
+  _closeDropdown() {
+    const dropdown = document.querySelector(".dropdown-options-list");
+    const btnDropdown = document.querySelector(
+      ".dropdown-experience-current-container"
+    );
+    btnDropdown.addEventListener("click", () => {
+      dropdown.classList.add("hidden");
+      this.openDropdownListener();
+    });
   }
 }
 

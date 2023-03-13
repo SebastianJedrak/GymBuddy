@@ -693,6 +693,14 @@ h4 {
 
 .dropdown-options-item {
   cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.dropdown-options-item:hover,
+.dropdown-options-item:active {
+  color: var(--floralwhite);
+  background-color: var(--lightslategray);
 }
 
 .dropdown-options-item:first-child {

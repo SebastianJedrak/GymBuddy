@@ -42,6 +42,8 @@ function renderUser() {
   userView.renderLabelBMI();
   // Animate arrow
   userView.animateArrow();
+  // Listeners
+  userView.openDropdownListener();
   // Navigation bar
   navStart();
   document.querySelector(".nav-tile-user").classList.add("active");
@@ -118,7 +120,7 @@ function parameterListenerHandler() {
     model.workoutParameters.duration = this.dataset.duration;
 }
 
-// WORKOUT LISTENERS
+// WORKOUT HANDLERS
 
 function doneHandler() {
   if (
