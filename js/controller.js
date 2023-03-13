@@ -9,7 +9,7 @@ import * as model from "./model.js";
 //! RENDER CONTROL
 
 function init() {
-  renderHome();
+  // renderHome();
 }
 init();
 
