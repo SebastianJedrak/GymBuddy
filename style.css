@@ -146,6 +146,20 @@ ul {
 
 /*! BUTTONS */
 
+.input {
+  width: 91%;
+  min-height: 48px;
+  border-radius: 5px;
+  padding-left: 1rem;
+  border: 1px solid var(--lightslategray);
+}
+
+.input:focus,
+.input:active {
+  outline: none;
+  border: 1px solid var(--darksalmon);
+}
+
 .btn {
   min-height: 48px;
   border-radius: 5px;
@@ -787,4 +801,35 @@ h4 {
   height: 100%;
   width: 16px;
   margin-left: 0.5rem;
+}
+
+/*! Login VIEW */
+
+.login-register-container * {
+  margin: 0;
+}
+
+.svg-helloagain {
+  background-image: url(src/hello\ again!.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25vh;
+}
+
+.login-register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 25vh;
+  width: 100%;
 }
