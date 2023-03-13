@@ -239,7 +239,10 @@ function loginAction() {
   login.value = "";
   password.value = "";
   document.querySelector(".error-login-text").classList.remove("hidden");
-  document
-    .querySelectorAll(".input")
-    .forEach((input) => input.classList.add("input-error"));
+  document.querySelectorAll(".input").forEach((input) => {
+    input.classList.add("input-error");
+    input.addEventListener("click", () => {
+      input.classList.remove("input-error");
+    });
+  });
 }
