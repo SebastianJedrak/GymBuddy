@@ -8,6 +8,7 @@ class LoginView extends View {
   _HTML() {
     return ` <div class="svg-helloagain"></div>
     <div class="login-register-container">
+    <p class="error-login-text hidden">Login and/or password are incorrect. Please try again.</p>
       <form action="" method="GET" class="form-login">
         <input
           type="text"
@@ -33,7 +34,10 @@ class LoginView extends View {
   submitAction(handler) {
     document
       .querySelector(".login-submit-btn")
-      .addEventListener("click", handler);
+      .addEventListener("click", (e) => {
+        e.preventDefault();
+        handler();
+      });
   }
 }
 

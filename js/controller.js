@@ -94,6 +94,11 @@ function renderWorkoutView() {
 }
 
 function renderLogin() {
+  // Reset state
+  activeUser = "";
+  document
+    .querySelectorAll(".input")
+    .forEach((input) => input.classList.remove("input-error"));
   //Render login
   loginView.renderView();
   // Login action
@@ -223,14 +228,19 @@ function dropdownItemListHandler() {
 //LOGIN HANDLERS
 
 function loginAction() {
-  const login = document.querySelector(".login-login").value;
-  const password = document.querySelector(".login-password").value;
-  console.log(login, password);
+  let login = document.querySelector(".login-login");
+  let password = document.querySelector(".login-password");
   model.usersList.forEach((user) => {
-    if (user.login === login && user.password === password) {
+    if (user.login === login.value && user.password === password.value) {
       activeUser = user;
+      return renderHome();
+    } else {
+      login.value = "";
+      password.value = "";
+      document.querySelector(".error-login-text").classList.remove("hidden");
+      document
+        .querySelectorAll(".input")
+        .forEach((input) => input.classList.add("input-error"));
     }
   });
-
-  renderHome();
 }
