@@ -56,6 +56,9 @@ body {
   * {
     font-size: 14px;
   }
+  .login-register-container span {
+    display: none;
+  }
 }
 
 @supports (-webkit-touch-callout: none) {
