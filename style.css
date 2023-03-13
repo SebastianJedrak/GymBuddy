@@ -867,6 +867,12 @@ h4 {
   text-align: center;
 }
 
+.reg-paragraph {
+  width: 91%;
+  text-align: center;
+  margin: 0 auto;
+}
+
 .btn-gender-container {
   display: flex;
   justify-content: space-between;
