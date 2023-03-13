@@ -13,7 +13,7 @@ export let activeUser;
 
 function init() {
   // renderHome();
-  renderLogin();
+  // renderLogin();
 }
 init();
 
