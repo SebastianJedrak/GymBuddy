@@ -237,6 +237,7 @@ function loginAction() {
       return renderHome();
     }
   });
+  if (activeUser) return;
   login.value = "";
   password.value = "";
   document.querySelector(".error-login-text").classList.remove("hidden");
