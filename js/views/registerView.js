@@ -14,7 +14,7 @@ class RegisterView extends View {
       be keeping your progress and adjust your routine accordingly. I
       believe that you and me can achieve great things together!
     </p>
-    <h4>
+    <h4 class="reg-header-h4">
       Please, give me some some basic information about yourself and let's
       get started.
     </h4>
@@ -56,3 +56,5 @@ class RegisterView extends View {
     </form>`;
   }
 }
+
+export default new RegisterView();

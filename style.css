@@ -51,11 +51,14 @@ body {
   }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 350px) {
   * {
     font-size: 14px;
   }
   .login-or {
+    display: none;
+  }
+  .reg-paragraph {
     display: none;
   }
 }
@@ -861,22 +864,29 @@ h4 {
   color: var(--lightslategray);
 }
 
-/* Registration View */
+/*! Registration View */
 
 .reg-header {
   text-align: center;
+  color: var(--floralwhite);
 }
 
 .reg-paragraph {
   width: 91%;
   text-align: center;
   margin: 0 auto;
+  color: var(--floralwhite);
+}
+
+.reg-header-h4 {
+  color: var(--floralwhite);
 }
 
 .btn-gender-container {
   display: flex;
   justify-content: space-between;
   width: 91%;
+  color: var(--floralwhite);
 }
 
 .btn-gender-container .btn {

@@ -5,6 +5,7 @@ import workoutView from "./views/workoutView.js";
 import navigatorView from "./views/navigatorView.js";
 import spinnerView from "./views/spinnerView.js";
 import loginView from "./views/loginView.js";
+import registerView from "./views/registerView.js";
 import * as model from "./model.js";
 
 //! RENDER CONTROL
@@ -13,7 +14,7 @@ export let activeUser;
 
 function init() {
   // renderHome();
-  // renderLogin();
+  renderLogin();
 }
 init();
 
@@ -94,6 +95,10 @@ function renderWorkoutView() {
   workoutView._generateImgEq();
 }
 
+function renderRegisterView() {
+  registerView.renderView();
+}
+
 function renderLogin() {
   // Reset state
   activeUser = "";
@@ -104,6 +109,8 @@ function renderLogin() {
   loginView.renderView();
   // Login action
   loginView.submitAction(loginAction);
+  //Listeners
+  loginView.registerBtnListener(renderRegisterView);
 }
 
 function navStart() {
