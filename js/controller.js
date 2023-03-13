@@ -4,12 +4,14 @@ import historyView from "./views/historyView.js";
 import workoutView from "./views/workoutView.js";
 import navigatorView from "./views/navigatorView.js";
 import spinnerView from "./views/spinnerView.js";
+import loginView from "./views/loginView.js"
 import * as model from "./model.js";
 
 //! RENDER CONTROL
 
 function init() {
   // renderHome();
+  renderLogin()
 }
 init();
 
@@ -87,6 +89,10 @@ function renderWorkoutView() {
   workoutView.openInfoModalListener();
   // Render equipment img
   workoutView._generateImgEq();
+}
+
+function renderLogin() {
+  loginView.renderView()
 }
 
 function navStart() {
