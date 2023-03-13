@@ -100,14 +100,14 @@ class UserView extends View {
   }
 
   openDropdownListener() {
-    const dropdown = document.querySelector(".dropdown-options-list");
-    const btnDropdown = document.querySelector(
-      ".dropdown-experience-current-container"
-    );
-
-    btnDropdown.addEventListener("click", () => {
-      dropdown.classList.toggle("hidden");
-    });
+    document
+      .querySelector(".dropdown-experience-current-container")
+      .addEventListener("click", () => {
+        document
+          .querySelector(".dropdown-options-list")
+          .classList.toggle("hidden");
+        document.querySelector(".dropdown-arrow").classList.toggle("rotate180");
+      });
   }
 
   dropdownItemListListener(handler) {

@@ -122,6 +122,10 @@ ul {
   display: none;
 }
 
+.rotate180 {
+  transform: rotate(180deg);
+}
+
 /*! ANIMATIONS */
 
 @keyframes translateY {
@@ -150,14 +154,10 @@ ul {
   overflow: hidden;
 }
 
-.btn:focus {
-  outline: none;
-  border: 2px solid var(--lightslategray);
-}
-
+.btn:focus,
 .btn:active {
   outline: none;
-  border: 2px solid var(--lightslategray);
+  border: 1px solid var(--lightslategray);
 }
 
 .btn-33 {
@@ -191,6 +191,12 @@ ul {
   color: var(--floralwhite);
   border: 1px solid var(--floralwhite);
   background-color: var(--lightslategray);
+}
+
+.btn-navy:focus,
+.btn-navy:active {
+  outline: none;
+  border: 1px solid var(--floralwhite);
 }
 
 .btn-red {
@@ -766,7 +772,7 @@ h4 {
 
 .dropdown-experience-current-container {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   margin: 0;
   padding: 0 1rem;

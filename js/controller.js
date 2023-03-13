@@ -202,9 +202,9 @@ function lightHandler() {
 // USER HANDLERS
 
 function dropdownItemListHandler() {
-  const dropdown = document.querySelector(".dropdown-options-list");
-  const btnLabel = document.querySelector(".experience-active-btn");
-  btnLabel.textContent = this.textContent;
-  dropdown.classList.add("hidden");
+  document.querySelector(".experience-active-btn").textContent =
+    this.textContent;
+  document.querySelector(".dropdown-options-list").classList.add("hidden");
+  document.querySelector(".dropdown-arrow").classList.toggle("rotate180");
   model.activeUser.experience = this.dataset.exp;
 }
