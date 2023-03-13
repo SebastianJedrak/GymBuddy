@@ -43,7 +43,8 @@ function renderUser() {
   // Animate arrow
   userView.animateArrow();
   // Listeners
-  userView.openDropdownListener(model.activeUser.experience);
+  userView.openDropdownListener();
+  userView.dropdownItemListListener(dropdownItemListHandler);
   // Navigation bar
   navStart();
   document.querySelector(".nav-tile-user").classList.add("active");
@@ -197,4 +198,14 @@ function lightHandler() {
     model.workout.weight[workoutView.currentExercise] += 2;
   }
   doneHandler();
+}
+
+// USER HANDLERS
+
+function dropdownItemListHandler() {
+  const dropdown = document.querySelector(".dropdown-options-list");
+  const btnLabel = document.querySelector(".experience-active-btn");
+  // btnLabel.textContent = item.textContent;
+  dropdown.classList.add("hidden");
+  // model.activeUser.experience = item.dataset.exp;
 }

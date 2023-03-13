@@ -99,24 +99,21 @@ class UserView extends View {
     );
   }
 
-  openDropdownListener(experience) {
+  openDropdownListener() {
     const dropdown = document.querySelector(".dropdown-options-list");
     const btnDropdown = document.querySelector(
       ".dropdown-experience-current-container"
     );
-    const listItem = document.querySelectorAll(".dropdown-options-item");
-    const btnLabel = document.querySelector(".experience-active-btn");
 
     btnDropdown.addEventListener("click", () => {
       dropdown.classList.toggle("hidden");
     });
+  }
 
+  dropdownItemListListener(handler) {
+    const listItem = document.querySelectorAll(".dropdown-options-item");
     listItem.forEach((item) =>
-      item.addEventListener("click", () => {
-        btnLabel.textContent = item.textContent;
-        dropdown.classList.add("hidden");
-        experience = item.dataset.exp;
-      })
+      item.addEventListener("click", handler)
     );
   }
 }
