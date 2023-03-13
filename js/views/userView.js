@@ -20,12 +20,14 @@ class UserView extends View {
     <button
       class="btn btn-navy btn-33 dropdown-experience-current-container"
     >
-      <h4 class="experience-active-btn">beginner</h4>
+      <h4 class="experience-active-btn">${
+        this._data.experience === "intermediate" ? "mid" : "beginner"
+      }</h4>
       <div class="dropdown-arrow"></div>
     </button>
     <ul class="dropdown-options-list hidden">
-      <li class="dropdown-options-item">beginner</li>
-      <li class="dropdown-options-item">intermediate</li>
+      <li class="dropdown-options-item" data-exp="beginner">beginner</li>
+      <li class="dropdown-options-item" data-exp="intermediate">mid</li>
     </ul>
   </div>
   </div>
@@ -97,26 +99,25 @@ class UserView extends View {
     );
   }
 
-  openDropdownListener() {
+  openDropdownListener(experience) {
     const dropdown = document.querySelector(".dropdown-options-list");
     const btnDropdown = document.querySelector(
       ".dropdown-experience-current-container"
     );
-    btnDropdown.addEventListener("click", () => {
-      dropdown.classList.remove("hidden");
-      this._closeDropdown();
-    });
-  }
+    const listItem = document.querySelectorAll(".dropdown-options-item");
+    const btnLabel = document.querySelector(".experience-active-btn");
 
-  _closeDropdown() {
-    const dropdown = document.querySelector(".dropdown-options-list");
-    const btnDropdown = document.querySelector(
-      ".dropdown-experience-current-container"
-    );
     btnDropdown.addEventListener("click", () => {
-      dropdown.classList.add("hidden");
-      this.openDropdownListener();
+      dropdown.classList.toggle("hidden");
     });
+
+    listItem.forEach((item) =>
+      item.addEventListener("click", () => {
+        btnLabel.textContent = item.textContent;
+        dropdown.classList.add("hidden");
+        experience = item.dataset.exp;
+      })
+    );
   }
 }
 

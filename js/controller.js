@@ -43,13 +43,14 @@ function renderUser() {
   // Animate arrow
   userView.animateArrow();
   // Listeners
-  userView.openDropdownListener();
+  userView.openDropdownListener(model.activeUser.experience);
   // Navigation bar
   navStart();
   document.querySelector(".nav-tile-user").classList.add("active");
 }
 
 function renderHistory() {
+  console.log(model.activeUser.experience);
   // Render HTML
   historyView.renderView();
   // Navigation bar
