@@ -55,7 +55,7 @@ body {
   * {
     font-size: 14px;
   }
-  .login-register-container span {
+  .login-or {
     display: none;
   }
 }
@@ -847,4 +847,8 @@ h4 {
   color: red;
   width: 91%;
   text-align: center;
+}
+
+.login-or {
+  color: var(--lightslategray);
 }

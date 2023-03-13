@@ -27,7 +27,7 @@ class LoginView extends View {
         />
         <button class="btn btn-100 btn-navy login-submit-btn">Login</button>
       </form>
-      <span><b>or</b></span>
+      <span class="login-or"><b>or</b></span>
       <button class="btn btn-100 btn-orange">Register</button>
     </div>`;
   }
