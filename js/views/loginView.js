@@ -6,7 +6,9 @@ class LoginView extends View {
   _navigator = false;
   _headerConfig = [false, false, false, false];
   _HTML() {
-    return ` <div class="svg-helloagain"></div>
+    return ` 
+    <div class="svg-login-register-container">
+    <div class="svg-helloagain"></div>
     <div class="login-register-container">
     <p class="error-login-text hidden">Login and/or password are incorrect. Please try again.</p>
       <form action="" method="GET" class="form-login">
@@ -27,9 +29,9 @@ class LoginView extends View {
         />
         <button class="btn btn-100 btn-navy login-submit-btn">Login</button>
       </form>
-      <span class="login-or"><b>or</b></span>
+      <p class="login-or"><b>or</b></p>
       <button class="btn btn-100 btn-orange">Register</button>
-    </div>`;
+    </div> </div>`;
   }
   submitAction(handler) {
     document
