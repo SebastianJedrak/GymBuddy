@@ -23,9 +23,9 @@
     <div class="global-container BG-whitish">
       <div class="header-container"></div>
       <main class="main-content">
-        <h1>Welcome!</h1>
+        <h1 class="reg-header">Welcome!</h1>
         <p></p>
-        <form action="">
+        <form action="" class="login-register-container">
           <input
             type="text"
             required="required"
@@ -44,19 +44,22 @@
             type="number"
             required="required"
             placeholder="Height cm"
-            minlength="3"
-            maxlength="3"
+            min="100"
+            max="250"
             class="input reg-height"
           /><input
             type="number"
             required="required"
             placeholder="Weight kg"
-            minlength="3"
-            maxlength="3"
+            min="10"
+            max="200"
             class="input reg-weight"
-          /><button class="btn btn-50 btn-orange reg-btn-man">Man</button
-          ><button class="btn btn-50 btn-white reg-btn-woman">Woman</button
-          ><button class="btn btn-100 btn-navy reg-btn-submit">Start!</button>
+          />
+          <div class="btn-gender-container">
+            <button class="btn btn-50 btn-orange reg-btn-man">Man</button
+            ><button class="btn btn-50 btn-white reg-btn-woman">Woman</button>
+          </div>
+          <button class="btn btn-100 btn-navy reg-btn-submit">Start!</button>
         </form>
       </main>
       <nav></nav>
