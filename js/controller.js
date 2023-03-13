@@ -234,13 +234,12 @@ function loginAction() {
     if (user.login === login.value && user.password === password.value) {
       activeUser = user;
       return renderHome();
-    } else {
-      login.value = "";
-      password.value = "";
-      document.querySelector(".error-login-text").classList.remove("hidden");
-      document
-        .querySelectorAll(".input")
-        .forEach((input) => input.classList.add("input-error"));
     }
   });
+  login.value = "";
+  password.value = "";
+  document.querySelector(".error-login-text").classList.remove("hidden");
+  document
+    .querySelectorAll(".input")
+    .forEach((input) => input.classList.add("input-error"));
 }
