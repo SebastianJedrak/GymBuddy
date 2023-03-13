@@ -4,14 +4,16 @@ import historyView from "./views/historyView.js";
 import workoutView from "./views/workoutView.js";
 import navigatorView from "./views/navigatorView.js";
 import spinnerView from "./views/spinnerView.js";
-import loginView from "./views/loginView.js"
+import loginView from "./views/loginView.js";
 import * as model from "./model.js";
 
 //! RENDER CONTROL
 
+let activeUser;
+
 function init() {
   // renderHome();
-  renderLogin()
+  renderLogin();
 }
 init();
 
@@ -35,7 +37,7 @@ function renderHome() {
 
 function renderUser() {
   // Get current user
-  userView.getDataToRender(model.activeUser);
+  userView.getDataToRender(activeUser);
   // Render HTML
   userView.renderView();
   // Render avatar
@@ -92,7 +94,10 @@ function renderWorkoutView() {
 }
 
 function renderLogin() {
-  loginView.renderView()
+  //Render login
+  loginView.renderView();
+  // Login action
+  loginView.submitAction(loginAction);
 }
 
 function navStart() {
@@ -212,5 +217,20 @@ function dropdownItemListHandler() {
     this.textContent;
   document.querySelector(".dropdown-options-list").classList.add("hidden");
   document.querySelector(".dropdown-arrow").classList.toggle("rotate180");
-  model.activeUser.experience = this.dataset.exp;
+  activeUser.experience = this.dataset.exp;
+}
+
+//LOGIN HANDLERS
+
+function loginAction() {
+  const login = document.querySelector(".login-login").value;
+  const password = document.querySelector(".login-password").value;
+  console.log(login, password);
+  model.usersList.forEach((user) => {
+    if (user.login === login && user.password === password) {
+      activeUser = user;
+    }
+  });
+
+  renderHome();
 }

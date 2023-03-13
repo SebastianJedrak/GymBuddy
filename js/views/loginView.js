@@ -13,22 +13,27 @@ class LoginView extends View {
           type="text"
           placeholder="Login"
           required="required"
-          class="input"
+          class="input login-login"
           minlength="4"
           maxlength="16"
         /><input
           type="password"
           placeholder="Password"
           required="required"
-          class="input"
+          class="input login-password"
           minlength="4"
           maxlength="16"
         />
-        <button type="submit" class="btn btn-100 btn-navy">Login</button>
+        <button class="btn btn-100 btn-navy login-submit-btn">Login</button>
       </form>
       <span><b>or</b></span>
       <button class="btn btn-100 btn-orange">Register</button>
     </div>`;
+  }
+  submitAction(handler) {
+    document
+      .querySelector(".login-submit-btn")
+      .addEventListener("click", handler);
   }
 }
 

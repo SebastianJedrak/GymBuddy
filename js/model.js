@@ -15,8 +15,9 @@ export class User {
 }
 
 const andrew = new User("andrew", "1111", "180", "90", "man", "intermediate");
+const lila = new User("lila", "2222", "150", "50", "woman", "beginner");
 
-export const activeUser = andrew;
+export const usersList = [andrew, lila];
 
 export const workout = {
   exercises: [],
