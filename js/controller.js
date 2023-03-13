@@ -51,7 +51,6 @@ function renderUser() {
 }
 
 function renderHistory() {
-  console.log(model.activeUser.experience);
   // Render HTML
   historyView.renderView();
   // Navigation bar
@@ -205,7 +204,7 @@ function lightHandler() {
 function dropdownItemListHandler() {
   const dropdown = document.querySelector(".dropdown-options-list");
   const btnLabel = document.querySelector(".experience-active-btn");
-  // btnLabel.textContent = item.textContent;
+  btnLabel.textContent = this.textContent;
   dropdown.classList.add("hidden");
-  // model.activeUser.experience = item.dataset.exp;
+  model.activeUser.experience = this.dataset.exp;
 }

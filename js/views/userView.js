@@ -112,9 +112,7 @@ class UserView extends View {
 
   dropdownItemListListener(handler) {
     const listItem = document.querySelectorAll(".dropdown-options-item");
-    listItem.forEach((item) =>
-      item.addEventListener("click", handler)
-    );
+    listItem.forEach((item) => item.addEventListener("click", handler));
   }
 }
 
