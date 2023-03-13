@@ -49,6 +49,7 @@ function renderUser() {
   // Listeners
   userView.openDropdownListener();
   userView.dropdownItemListListener(dropdownItemListHandler);
+  userView.logoutButtonListener(renderLogin);
   // Navigation bar
   navStart();
   document.querySelector(".nav-tile-user").classList.add("active");

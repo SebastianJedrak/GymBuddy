@@ -114,6 +114,10 @@ class UserView extends View {
     const listItem = document.querySelectorAll(".dropdown-options-item");
     listItem.forEach((item) => item.addEventListener("click", handler));
   }
+
+  logoutButtonListener(handler) {
+    document.querySelector(".logout-button").addEventListener("click", handler)
+  }
 }
 
 export default new UserView();
