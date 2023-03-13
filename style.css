@@ -5,7 +5,6 @@
   margin: 0;
   font-size: 16px;
   font-family: "Lato", sans-serif;
-  color: var(--lightslategray);
 }
 :root {
   --floralwhite: #fcf8f3;
@@ -155,6 +154,7 @@ ul {
   border-radius: 5px;
   padding-left: 1rem;
   border: 1px solid var(--lightslategray);
+  color: var(--lightslategray);
 }
 
 .input-error {
@@ -671,6 +671,7 @@ h4 {
   flex-direction: column;
   width: 100%;
   align-items: center;
+  color: var(--lightslategray);
 }
 
 .avatar {
@@ -740,6 +741,7 @@ h4 {
   justify-content: space-evenly;
   height: 60%;
   overflow: hidden;
+  color: var(--lightslategray);
 }
 
 .user-parameters-container {

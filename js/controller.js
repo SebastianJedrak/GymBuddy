@@ -9,7 +9,7 @@ import * as model from "./model.js";
 
 //! RENDER CONTROL
 
-let activeUser;
+export let activeUser;
 
 function init() {
   // renderHome();

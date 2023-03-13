@@ -1,6 +1,7 @@
 import { options } from "./config.js";
 import { API_URL } from "./config.js";
 import { randomize } from "./helpers.js";
+import { activeUser } from "./controller.js";
 
 export class User {
   constructor(login, password, height, weight, gender, experience) {
