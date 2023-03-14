@@ -275,13 +275,31 @@ function regSubmitHandler() {
       return true;
     } else return false;
   });
+  // Login validation
   if (login.value.length < 4 || login.value.length > 16 || loginUniqueBoolean) {
-    validationError(login, "Unique name with 4 - 16 characters");
+    validationError(login, "Unique name contains 4 - 16 characters");
   }
+  // Password validation
   if (password.value.length < 4 || password.value.length > 16) {
-    validationError(password);
+    validationError(password, "Strong password 4 - 16 characters long");
   }
+  // Height validation
+  if (height.value.length !== 3 || height.value > 300) {
+    validationError(height, "Height in centimeters, no special characters");
+  }
+  // Weight validation
+  if (
+    weight.value.length < 2 ||
+    weight.value.length > 3 ||
+    weight.value > 200 ||
+    weight.value < 30
+  ) {
+    validationError(weight, "Weight in kilograms, no special characters");
+  }
+  // Guard clause
   if (document.querySelector(".input-error")) return;
+
+  // New user after validation
   model.usersList.push(
     new model.User(
       login.value,
