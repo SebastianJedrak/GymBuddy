@@ -269,8 +269,14 @@ function regSubmitHandler() {
   const weight = document.querySelector(".reg-weight");
   const gender = document.querySelector(".radio[name=gender]:checked");
   const experience = document.querySelector(".radio[name=experience]:checked");
-  if (login.value.length < 4 || login.value.length > 16) {
-    validationError(login, "wrong login");
+  // Unique login check
+  const loginUniqueBoolean = model.usersList.some((user) => {
+    if (user.login === login.value) {
+      return true;
+    } else return false;
+  });
+  if (login.value.length < 4 || login.value.length > 16 || loginUniqueBoolean) {
+    validationError(login, "Unique name with 4 - 16 characters");
   }
   if (password.value.length < 4 || password.value.length > 16) {
     validationError(password);
