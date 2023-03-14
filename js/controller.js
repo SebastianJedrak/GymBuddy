@@ -100,7 +100,7 @@ function renderRegisterView() {
   registerView.renderView();
   //Listeners
   registerView.backBtnListener(renderLogin);
-  registerView.regSubmitAction();
+  registerView.regSubmitAction(regSubmitHandler);
 }
 
 function renderLogin() {
@@ -258,4 +258,21 @@ function loginAction() {
       input.classList.remove("input-error");
     });
   });
+}
+
+// REGISTER HANDLERS
+
+function regSubmitHandler() {
+  const login = document.querySelector(".reg-login").value;
+  const password = document.querySelector(".reg-password").value;
+  const height = document.querySelector(".reg-height").value;
+  const weight = document.querySelector(".reg-weight").value;
+  const gender = document.querySelector(".radio[name=gender]:checked").value;
+  const experience = document.querySelector(
+    ".radio[name=experience]:checked"
+  ).value;
+  model.usersList.push(
+    new model.User(login, password, height, weight, gender, experience)
+  );
+  renderLogin();
 }

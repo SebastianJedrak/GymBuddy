@@ -43,8 +43,8 @@ class RegisterView extends View {
 </div>
 <div class="radial-container">
 <span><b>Experience:</b></span>
-<label><input type="radio" name="experience" class="radio" value="beginner" checked/>Beginner</label>
-<label><input type="radio" name="experience" class="radio" value="intermediate"/>Intermediate</label>
+<label><input type="radio" name="experience" class="radio radio-exp" value="beginner" checked/>Beginner</label>
+<label><input type="radio" name="experience" class="radio radio-exp" value="intermediate"/>Intermediate</label>
 </div>
       <button class="btn btn-100 btn-navy reg-btn-submit">Start!</button>
     </form>`;
@@ -54,9 +54,10 @@ class RegisterView extends View {
     document.querySelector(".back-button").addEventListener("click", handler);
   }
 
-  regSubmitAction() {
+  regSubmitAction(handler) {
     document.querySelector(".reg-btn-submit").addEventListener("click", (e) => {
       e.preventDefault();
+      handler()
     });
   }
 }
