@@ -271,11 +271,11 @@ function regSubmitHandler() {
   const experience = document.querySelector(".radio[name=experience]:checked");
   if (login.value.length < 4 || login.value.length > 16) {
     validationError(login, "wrong login");
-    return;
-  } else if (password.value.length < 4 || password.value.length > 16) {
-    validationError(password);
-    return;
   }
+  if (password.value.length < 4 || password.value.length > 16) {
+    validationError(password);
+  }
+  if (document.querySelector(".input-error")) return;
   model.usersList.push(
     new model.User(
       login.value,
