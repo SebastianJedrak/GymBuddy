@@ -61,6 +61,8 @@ class RegisterView extends View {
       <button class="btn btn-100 btn-navy reg-btn-submit">Start!</button>
     </form>`;
   }
+
+  backBtnListener () {}
 }
 
 export default new RegisterView();
