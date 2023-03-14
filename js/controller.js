@@ -263,16 +263,37 @@ function loginAction() {
 // REGISTER HANDLERS
 
 function regSubmitHandler() {
-  const login = document.querySelector(".reg-login").value;
-  const password = document.querySelector(".reg-password").value;
-  const height = document.querySelector(".reg-height").value;
-  const weight = document.querySelector(".reg-weight").value;
-  const gender = document.querySelector(".radio[name=gender]:checked").value;
-  const experience = document.querySelector(
-    ".radio[name=experience]:checked"
-  ).value;
+  const login = document.querySelector(".reg-login");
+  const password = document.querySelector(".reg-password");
+  const height = document.querySelector(".reg-height");
+  const weight = document.querySelector(".reg-weight");
+  const gender = document.querySelector(".radio[name=gender]:checked");
+  const experience = document.querySelector(".radio[name=experience]:checked");
+  if (login.value.length < 4 || login.value.length > 16) {
+    validationError(login, "wrong login");
+    return;
+  } else if (password.value.length < 4 || password.value.length > 16) {
+    validationError(password);
+    return;
+  }
   model.usersList.push(
-    new model.User(login, password, height, weight, gender, experience)
+    new model.User(
+      login.value,
+      password.value,
+      height.value,
+      weight.value,
+      gender.value,
+      experience.value
+    )
   );
   renderLogin();
+}
+
+function validationError(input, text) {
+  input.value = "";
+  input.classList.add("input-error");
+  input.addEventListener("click", () => {
+    input.classList.remove("input-error");
+  });
+  input.attribute.placeholder = text;
 }
