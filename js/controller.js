@@ -284,21 +284,25 @@ function regSubmitHandler() {
     validationError(password, "Strong password 4 - 16 characters long");
   }
   // Height validation
-  if (height.value.length !== 3 || height.value > 300) {
-    validationError(height, "Height in centimeters, no special characters");
+  if (
+    height.value.length !== 3 ||
+    height.value > 300 ||
+    !Number.isInteger(Number(height.value))
+  ) {
+    validationError(height, "Use centimeters, no special characters");
   }
   // Weight validation
   if (
     weight.value.length < 2 ||
     weight.value.length > 3 ||
-    weight.value > 200 ||
-    weight.value < 30
+    weight.value > 250 ||
+    weight.value < 30 ||
+    !Number.isInteger(Number(weight.value))
   ) {
-    validationError(weight, "Weight in kilograms, no special characters");
+    validationError(weight, "Use kilograms, no special characters");
   }
   // Guard clause
   if (document.querySelector(".input-error")) return;
-
   // New user after validation
   model.usersList.push(
     new model.User(
