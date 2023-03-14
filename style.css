@@ -733,6 +733,7 @@ h4 {
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 5px;
+  color: var(--lightslategray);
 }
 
 .dropdown-options-item:hover,
