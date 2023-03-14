@@ -96,7 +96,10 @@ function renderWorkoutView() {
 }
 
 function renderRegisterView() {
+  // Render view
   registerView.renderView();
+  //Listeners
+  registerView.backBtnListener(renderLogin);
 }
 
 function renderLogin() {

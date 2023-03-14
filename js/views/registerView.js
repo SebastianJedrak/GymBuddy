@@ -62,7 +62,7 @@ class RegisterView extends View {
     </form>`;
   }
 
-  backBtnListener () {}
+  backBtnListener (handler) {document.querySelector(".back-button").addEventListener("click", handler)}
 }
 
 export default new RegisterView();
