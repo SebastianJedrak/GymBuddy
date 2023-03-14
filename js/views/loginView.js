@@ -30,7 +30,7 @@ class LoginView extends View {
         <button class="btn btn-100 btn-navy login-submit-btn">Login</button>
       </form>
       <p class="login-or"><b>or</b></p>
-      <button class="btn btn-100 btn-orange btn-register">Register</button>
+      <button class="btn btn-100 btn-orange btn-register">Registration</button>
     </div> </div>`;
   }
   submitAction(handler) {

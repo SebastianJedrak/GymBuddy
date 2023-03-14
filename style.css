@@ -61,6 +61,9 @@ body {
   .reg-paragraph {
     display: none;
   }
+  .radial-container * {
+    margin: 0 !important;
+  }
 }
 
 @supports (-webkit-touch-callout: none) {
