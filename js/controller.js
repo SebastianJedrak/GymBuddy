@@ -292,8 +292,9 @@ function regSubmitHandler() {
 function validationError(input, text) {
   input.value = "";
   input.classList.add("input-error");
+  input.setAttribute("placeholder", `${text}`);
   input.addEventListener("click", () => {
     input.classList.remove("input-error");
+    input.setAttribute("placeholder", input.dataset.placeholder);
   });
-  input.attribute.placeholder = text;
 }

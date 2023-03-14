@@ -23,18 +23,22 @@ class RegisterView extends View {
         type="text"
         placeholder="Login"
         class="input reg-login"
+        data-placeholder = "Login"
       /><input
         type="text"
         placeholder="Password"
         class="input reg-password"
+        data-placeholder = "Password"
       /><input
         type="number"
         placeholder="Height cm"
         class="input reg-height"
+        data-placeholder = "Height cm"
       /><input
         type="number"
         placeholder="Weight kg"
         class="input reg-weight"
+        data-placeholder = "Weight kg"
       />
       <div class="radial-container">
       <span><b>Gender:</b></span>
@@ -57,7 +61,7 @@ class RegisterView extends View {
   regSubmitAction(handler) {
     document.querySelector(".reg-btn-submit").addEventListener("click", (e) => {
       e.preventDefault();
-      handler()
+      handler();
     });
   }
 }

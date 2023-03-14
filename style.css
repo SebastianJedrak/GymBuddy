@@ -171,6 +171,10 @@ ul {
   border: 1px solid red;
 }
 
+.input-error::placeholder {
+  color: red;
+}
+
 .input:focus,
 .input:active {
   outline: none;
