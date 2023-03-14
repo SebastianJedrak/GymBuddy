@@ -48,10 +48,16 @@ class RegisterView extends View {
         max="200"
         class="input reg-weight"
       />
-      <div class="btn-gender-container">
-        <button class="btn btn-50 btn-orange reg-btn-man">Man</button
-        ><button class="btn btn-50 btn-white reg-btn-woman">Woman</button>
-      </div>
+      <div class="radial-container">
+      <span><b>Gender:</b></span>
+<label><input type="radio" name="gender" class="radio" value="Man" checked/>Man</label>
+<label><input type="radio" name="gender" class="radio" value="Woman"/>Woman</label>
+</div>
+<div class="radial-container">
+<span><b>Experience:</b></span>
+<label><input type="radio" name="experience" class="radio" value="beginner" checked/>Beginner</label>
+<label><input type="radio" name="experience" class="radio" value="intermediate"/>Intermediate</label>
+</div>
       <button class="btn btn-100 btn-navy reg-btn-submit">Start!</button>
     </form>`;
   }

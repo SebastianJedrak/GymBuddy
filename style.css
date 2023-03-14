@@ -321,10 +321,10 @@ ul > .nav-tile:hover {
 
 .main-content {
   height: 100%;
-  margin: 2.5vh 5vw;
+  margin: .5vh 5vw 2.5vh 5vw; 
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   overflow-x: auto;
 }
 
@@ -871,22 +871,36 @@ h4 {
   color: var(--floralwhite);
 }
 
-.reg-paragraph, .reg-header-h4 {
+.reg-paragraph,
+.reg-header-h4 {
   width: 91%;
   text-align: center;
   margin: 0 auto;
   color: var(--floralwhite);
 }
 
-.btn-gender-container {
+.radial-container {
   display: flex;
-  justify-content: space-between;
   width: 91%;
-  color: var(--floralwhite);
+  color: var(--lightslategray);
 }
 
-.btn-gender-container .btn {
-  width: 100%;
+.radial-container span {
+  margin-right: 0.5rem;
+}
+
+.radial-container label {
+  margin-right: 0.5rem;
+}
+
+.radio,
+label {
+  cursor: pointer;
+}
+
+.radio {
+  margin-right: 0.5rem;
+  vertical-align: middle;
 }
 
 .reg-btn-man {
