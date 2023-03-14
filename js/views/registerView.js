@@ -21,31 +21,19 @@ class RegisterView extends View {
     <form action="" class="login-register-container">
       <input
         type="text"
-        required="required"
         placeholder="Login"
-        minlength="4"
-        maxlength="16"
         class="input reg-login"
       /><input
         type="text"
-        required="required"
         placeholder="Password"
-        minlength="4"
-        maxlength="16"
         class="input reg-password"
       /><input
         type="number"
-        required="required"
         placeholder="Height cm"
-        min="100"
-        max="250"
         class="input reg-height"
       /><input
         type="number"
-        required="required"
         placeholder="Weight kg"
-        min="10"
-        max="200"
         class="input reg-weight"
       />
       <div class="radial-container">
@@ -62,7 +50,15 @@ class RegisterView extends View {
     </form>`;
   }
 
-  backBtnListener (handler) {document.querySelector(".back-button").addEventListener("click", handler)}
+  backBtnListener(handler) {
+    document.querySelector(".back-button").addEventListener("click", handler);
+  }
+
+  regSubmitAction() {
+    document.querySelector(".reg-btn-submit").addEventListener("click", (e) => {
+      e.preventDefault();
+    });
+  }
 }
 
 export default new RegisterView();

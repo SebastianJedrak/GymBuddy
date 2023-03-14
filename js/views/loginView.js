@@ -15,17 +15,11 @@ class LoginView extends View {
         <input
           type="text"
           placeholder="Login"
-          required="required"
           class="input login-login"
-          minlength="4"
-          maxlength="16"
         /><input
           type="password"
           placeholder="Password"
-          required="required"
           class="input login-password"
-          minlength="4"
-          maxlength="16"
         />
         <button class="btn btn-100 btn-navy login-submit-btn">Login</button>
       </form>

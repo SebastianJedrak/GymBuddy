@@ -100,6 +100,7 @@ function renderRegisterView() {
   registerView.renderView();
   //Listeners
   registerView.backBtnListener(renderLogin);
+  registerView.regSubmitAction();
 }
 
 function renderLogin() {
