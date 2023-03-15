@@ -7,7 +7,43 @@ class UserView extends View {
   _headerConfig = [`User`, false, false, true];
 
   _HTML() {
-    return `        
+    return ` 
+    <dialog open class="modal modal-edit-acc modal-white">
+        <div class="modal-content-wrapper">
+          <h2>Edit Profile</h2>
+          <form action="" class="profile-edit-form-container">
+            <input
+              type="text"
+              placeholder="New login"
+              class="input edit-login"
+              data-placeholder="New login"
+            />
+            <input
+              type="text"
+              placeholder="Old password"
+              class="input edit-password-old"
+              data-placeholder="Old password"
+            />
+            <input
+              type="text"
+              placeholder="New password"
+              class="input edit-password-new"
+              data-placeholder="New password"
+            />
+          </form>
+          <div class="red-green-btn-container">
+            <button class="btn btn-50 btn-navy btn-edit-profile-cancel">
+              <span>Cancel</span>
+            </button>
+            <button class="btn btn-50 btn-white btn-edit-profile-save">
+              <span>Save</span>
+            </button>
+          </div>
+          <button class="btn btn-100 btn-white btn-edit-profile-delete">
+            <span>Delete Account</span>
+          </button>
+        </div>
+      </dialog>       
     <div class="avatar-name-experience-container">
     <div class="avatar-name-container">
     <div class="avatar avatar-man"></div>
@@ -116,7 +152,7 @@ class UserView extends View {
   }
 
   logoutButtonListener(handler) {
-    document.querySelector(".logout-button").addEventListener("click", handler)
+    document.querySelector(".logout-button").addEventListener("click", handler);
   }
 }
 
