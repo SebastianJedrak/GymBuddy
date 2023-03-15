@@ -827,6 +827,22 @@ h4 {
   margin-left: 0.5rem;
 }
 
+.modal-edit-acc-profile {
+  width: 40vw;
+}
+
+.profile-edit-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 91%;
+  margin: 1rem;
+}
+
+.profile-edit-form-container .input {
+  width: 100%;
+}
+
 /*! Login VIEW */
 
 .svg-login-register-container {

@@ -8,7 +8,7 @@ class UserView extends View {
 
   _HTML() {
     return ` 
-    <dialog class="modal modal-edit-acc modal-white">
+    <dialog class="modal modal-edit-acc modal-edit-acc-profile modal-white">
         <div class="modal-content-wrapper">
           <h2>Edit Profile</h2>
           <form action="" class="profile-edit-form-container">
@@ -39,7 +39,7 @@ class UserView extends View {
               <span>Save</span>
             </button>
           </div>
-          <button class="btn btn-100 btn-white btn-edit-profile-delete">
+          <button class="btn btn-100 btn-red btn-edit-profile-delete">
             <span>Delete Account</span>
           </button>
         </div>
