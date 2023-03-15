@@ -58,7 +58,7 @@ class UserView extends View {
             /><input
               type="number"
               placeholder="Weight kg"
-              class="input edit-weight"
+              class="input reg-weight"
               data-placeholder="Weight kg"
             />
             <div class="radial-container radial-edit-container">

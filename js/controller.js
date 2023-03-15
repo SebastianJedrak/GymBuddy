@@ -247,16 +247,17 @@ function deleteAccHandler() {}
 function saveEditParametersHandler() {
   console.log(activeUser);
   const height = document.querySelector(".reg-height");
-  const weight = document.querySelector(".edit-weight");
+  const weight = document.querySelector(".reg-weight");
   // Validation
-  heightValidation();
-  weightValidation();
+  if (height.value !== "") heightValidation();
+  if (weight.value !== "") weightValidation();
   // Guard clause
   if (document.querySelector(".input-error")) return;
-  activeUser.height = height.value;
-  activeUser.weight = weight.value;
+  // Action
+  if (height.value !== "") activeUser.height = height.value;
+  if (weight.value !== "") activeUser.weight = weight.value;
+  renderUser();
 }
-
 //LOGIN HANDLERS
 
 function loginAction() {
