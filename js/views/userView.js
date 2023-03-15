@@ -44,6 +44,54 @@ class UserView extends View {
           </button>
         </div>
       </dialog>       
+      <dialog
+        class="modal modal-edit-parameters modal-edit-acc-profile modal-white"
+      >
+        <div class="modal-content-wrapper">
+          <h3>Edit Parameters</h3>
+          <form action="" class="profile-edit-form-container">
+            <input
+              type="number"
+              placeholder="Height cm"
+              class="input edit-height"
+              data-placeholder="Height cm"
+            /><input
+              type="number"
+              placeholder="Weight kg"
+              class="input edit-weight"
+              data-placeholder="Weight kg"
+            />
+            <div class="radial-container radial-edit-container">
+              <span><b>Gender:</b></span>
+              <label
+                ><input
+                  type="radio"
+                  name="gender"
+                  class="radio"
+                  value="Man"
+                  checked
+                />Man</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="gender"
+                  class="radio"
+                  value="Woman"
+                />Woman</label
+              >
+            </div>
+          </form>
+          <div class="red-green-btn-container">
+            <button class="btn btn-50 btn-navy btn-edit-parameters-cancel">
+              <span>Cancel</span>
+            </button>
+            <button class="btn btn-50 btn-white btn-edit-parameters-save">
+              <span>Save</span>
+            </button>
+          </div>
+        </div>
+      </dialog>
     <div class="avatar-name-experience-container">
     <div class="avatar-name-container">
     <div class="avatar avatar-man"></div>
@@ -172,6 +220,23 @@ class UserView extends View {
         document
           .querySelector(".btn-edit-profile-delete")
           .addEventListener("click", handlerDelete);
+      });
+  }
+
+  modalParametersEditListener(handlerSave) {
+    const editParameters = document.querySelector(".modal-edit-parameters");
+    document
+      .querySelector(".edit-user-parameters")
+      .addEventListener("click", function () {
+        editParameters.showModal();
+        document
+          .querySelector(".btn-edit-parameters-cancel")
+          .addEventListener("click", function () {
+            editParameters.close();
+          });
+        document
+          .querySelector(".btn-edit-parameters-save")
+          .addEventListener("click", handlerSave);
       });
   }
 }

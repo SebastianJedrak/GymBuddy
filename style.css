@@ -828,7 +828,7 @@ h4 {
 }
 
 .modal-edit-acc-profile {
-  width: 40vw;
+  min-width: 20vw;
 }
 
 .profile-edit-form-container {
@@ -836,11 +836,16 @@ h4 {
   flex-direction: column;
   justify-content: center;
   width: 91%;
-  margin: 1rem;
+  margin: 1rem 0;
 }
 
 .profile-edit-form-container .input {
   width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.radial-edit-container {
+  width: 100% !important;
 }
 
 /*! Login VIEW */

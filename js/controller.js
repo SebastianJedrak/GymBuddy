@@ -53,6 +53,7 @@ function renderUser() {
   userView.dropdownItemListListener(dropdownItemListHandler);
   userView.logoutButtonListener(renderLogin);
   userView.modalProfileEditListener(saveEditProfileHandler, deleteAccHandler);
+  userView.modalParametersEditListener(saveEditParametersHandler);
   // Navigation bar
   navStart();
   document.querySelector(".nav-tile-user").classList.add("active");
@@ -242,6 +243,8 @@ function dropdownItemListHandler() {
 function saveEditProfileHandler() {}
 
 function deleteAccHandler() {}
+
+function saveEditParametersHandler() {}
 
 //LOGIN HANDLERS
 
