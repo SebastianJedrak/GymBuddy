@@ -174,11 +174,11 @@ ul {
 }
 
 .input-error {
-  border: 1px solid red;
+  border: 1px solid var(--red);
 }
 
 .input-error::placeholder {
-  color: red;
+  color: var(--red);
 }
 
 .input:focus,
@@ -899,7 +899,7 @@ h4 {
 }
 
 .error-login-text {
-  color: red;
+  color: var(--red);
   width: 91%;
   text-align: center;
 }
