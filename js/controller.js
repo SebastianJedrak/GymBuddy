@@ -241,13 +241,12 @@ function dropdownItemListHandler() {
 }
 
 function saveEditProfileHandler() {
-  console.log(activeUser);
   const login = document.querySelector(".reg-login");
   const password = document.querySelector(".reg-password");
   // Validation
   if (login.value !== "") loginValidation();
-  if (password.value !== "") passwordValidation();
   if (password.value !== "") changePasswordValidation();
+  if (password.value !== "") passwordValidation();
   // Guard clause
   if (document.querySelector(".input-error")) return;
   // Action
