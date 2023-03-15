@@ -8,7 +8,7 @@ class UserView extends View {
 
   _HTML() {
     return ` 
-    <dialog open class="modal modal-edit-acc modal-white">
+    <dialog class="modal modal-edit-acc modal-white">
         <div class="modal-content-wrapper">
           <h2>Edit Profile</h2>
           <form action="" class="profile-edit-form-container">
@@ -153,6 +153,26 @@ class UserView extends View {
 
   logoutButtonListener(handler) {
     document.querySelector(".logout-button").addEventListener("click", handler);
+  }
+
+  modalProfileEditListener(handlerSave, handlerDelete) {
+    const editAcc = document.querySelector(".modal-edit-acc");
+    document
+      .querySelector(".edit-user-name")
+      .addEventListener("click", function () {
+        editAcc.showModal();
+        document
+          .querySelector(".btn-edit-profile-cancel")
+          .addEventListener("click", function () {
+            editAcc.close();
+          });
+        document
+          .querySelector(".btn-edit-profile-save")
+          .addEventListener("click", handlerSave);
+        document
+          .querySelector(".btn-edit-profile-delete")
+          .addEventListener("click", handlerDelete);
+      });
   }
 }
 

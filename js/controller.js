@@ -52,6 +52,7 @@ function renderUser() {
   userView.openDropdownListener();
   userView.dropdownItemListListener(dropdownItemListHandler);
   userView.logoutButtonListener(renderLogin);
+  userView.modalProfileEditListener(saveEditProfileHandler, deleteAccHandler);
   // Navigation bar
   navStart();
   document.querySelector(".nav-tile-user").classList.add("active");
@@ -237,6 +238,10 @@ function dropdownItemListHandler() {
   document.querySelector(".dropdown-arrow").classList.toggle("rotate180");
   activeUser.experience = this.dataset.exp;
 }
+
+function saveEditProfileHandler() {}
+
+function deleteAccHandler() {}
 
 //LOGIN HANDLERS
 
