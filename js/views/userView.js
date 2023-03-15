@@ -243,6 +243,9 @@ class UserView extends View {
           input.classList.remove("input-error");
           input.setAttribute("placeholder", input.dataset.placeholder);
         });
+        document
+          .querySelectorAll(".radio")
+          .forEach((radio) => (radio.checked = false));
         // Show modal
         editParameters.showModal();
         document
