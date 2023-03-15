@@ -241,18 +241,26 @@ function dropdownItemListHandler() {
 }
 
 function saveEditProfileHandler() {
+  console.log(activeUser);
   const login = document.querySelector(".reg-login");
   const password = document.querySelector(".reg-password");
-  const currentPassword = document.querySelector(".reg-password-current");
   // Validation
   if (login.value !== "") loginValidation();
   if (password.value !== "") passwordValidation();
+  if (password.value !== "") changePasswordValidation();
   // Guard clause
   if (document.querySelector(".input-error")) return;
   // Action
   if (login.value !== "") activeUser.login = login.value;
   if (password.value !== "") activeUser.password = password.value;
   renderUser();
+}
+
+function changePasswordValidation() {
+  const currentPassword = document.querySelector(".reg-password-current");
+  if (currentPassword.value !== activeUser.password) {
+    validationError(currentPassword, "Wrong password");
+  }
 }
 
 function deleteAccHandler() {}
