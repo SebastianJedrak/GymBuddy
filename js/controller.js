@@ -278,38 +278,11 @@ function regSubmitHandler() {
   const weight = document.querySelector(".reg-weight");
   const gender = document.querySelector(".radio[name=gender]:checked");
   const experience = document.querySelector(".radio[name=experience]:checked");
-  // Unique login check
-  const loginUniqueBoolean = model.usersList.some((user) => {
-    if (user.login === login.value) {
-      return true;
-    } else return false;
-  });
-  // Login validation
-  if (login.value.length < 4 || login.value.length > 16 || loginUniqueBoolean) {
-    validationError(login, "Unique name contains 4 - 16 characters");
-  }
-  // Password validation
-  if (password.value.length < 4 || password.value.length > 16) {
-    validationError(password, "Strong password 4 - 16 characters long");
-  }
-  // Height validation
-  if (
-    height.value.length !== 3 ||
-    height.value > 300 ||
-    !Number.isInteger(Number(height.value))
-  ) {
-    validationError(height, "Use centimeters, no special characters");
-  }
-  // Weight validation
-  if (
-    weight.value.length < 2 ||
-    weight.value.length > 3 ||
-    weight.value > 250 ||
-    weight.value < 30 ||
-    !Number.isInteger(Number(weight.value))
-  ) {
-    validationError(weight, "Use kilograms, no special characters");
-  }
+  // Validation
+  loginValidation();
+  passwordValidation();
+  heightValidation();
+  weightValidation();
   // Guard clause
   if (document.querySelector(".input-error")) return;
   // New user after validation
@@ -334,4 +307,47 @@ function validationError(input, text) {
     input.classList.remove("input-error");
     input.setAttribute("placeholder", input.dataset.placeholder);
   });
+}
+
+function loginValidation() {
+  const login = document.querySelector(".reg-login");
+  const loginUniqueBoolean = model.usersList.some((user) => {
+    if (user.login === login.value) {
+      return true;
+    } else return false;
+  });
+  if (login.value.length < 4 || login.value.length > 8 || loginUniqueBoolean) {
+    validationError(login, "Unique name contains 4 - 8 characters");
+  }
+}
+
+function passwordValidation() {
+  const password = document.querySelector(".reg-password");
+  if (password.value.length < 4 || password.value.length > 16) {
+    validationError(password, "Strong password 4 - 16 characters long");
+  }
+}
+
+function heightValidation() {
+  const height = document.querySelector(".reg-height");
+  if (
+    height.value.length !== 3 ||
+    height.value > 300 ||
+    !Number.isInteger(Number(height.value))
+  ) {
+    validationError(height, "Use centimeters, no special characters");
+  }
+}
+
+function weightValidation() {
+  const weight = document.querySelector(".reg-weight");
+  if (
+    weight.value.length < 2 ||
+    weight.value.length > 3 ||
+    weight.value > 250 ||
+    weight.value < 30 ||
+    !Number.isInteger(Number(weight.value))
+  ) {
+    validationError(weight, "Use kilograms, no special characters");
+  }
 }
