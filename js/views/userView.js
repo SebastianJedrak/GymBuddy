@@ -15,19 +15,19 @@ class UserView extends View {
             <input
               type="text"
               placeholder="New login"
-              class="input edit-login"
+              class="input reg-login"
               data-placeholder="New login"
             />
             <input
-              type="text"
-              placeholder="Old password"
-              class="input edit-password-old"
-              data-placeholder="Old password"
+              type="password"
+              placeholder="Cld password"
+              class="input reg-password-current"
+              data-placeholder="Current password"
             />
             <input
               type="text"
               placeholder="New password"
-              class="input edit-password-new"
+              class="input reg-password-new reg-password"
               data-placeholder="New password"
             />
           </form>

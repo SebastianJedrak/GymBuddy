@@ -240,7 +240,20 @@ function dropdownItemListHandler() {
   activeUser.experience = this.dataset.exp;
 }
 
-function saveEditProfileHandler() {}
+function saveEditProfileHandler() {
+  const login = document.querySelector(".reg-login");
+  const password = document.querySelector(".reg-password");
+  const currentPassword = document.querySelector(".reg-password-current");
+  // Validation
+  if (login.value !== "") loginValidation();
+  if (password.value !== "") passwordValidation();
+  // Guard clause
+  if (document.querySelector(".input-error")) return;
+  // Action
+  if (login.value !== "") activeUser.login = login.value;
+  if (password.value !== "") activeUser.password = password.value;
+  renderUser();
+}
 
 function deleteAccHandler() {}
 
