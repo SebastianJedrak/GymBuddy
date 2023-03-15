@@ -10,14 +10,15 @@ class UserView extends View {
     return ` 
     <dialog class="modal modal-edit-acc modal-edit-acc-profile modal-white">
         <div class="modal-content-wrapper">
-          <h2>Edit Profile</h2>
           <form action="" class="profile-edit-form-container">
+          <h3 class="profile-edit-label">Edit Name</h3>
             <input
               type="text"
               placeholder="New login"
               class="input reg-login"
               data-placeholder="New login"
             />
+            <h3 class="profile-edit-label">Edit Password</h3>
             <input
               type="password"
               placeholder="Cld password"
