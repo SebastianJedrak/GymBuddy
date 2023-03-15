@@ -208,6 +208,13 @@ class UserView extends View {
     document
       .querySelector(".edit-user-name")
       .addEventListener("click", function () {
+        // Reset inputs
+        document.querySelectorAll(".input").forEach((input) => {
+          input.value = "";
+          input.classList.remove("input-error");
+          input.setAttribute("placeholder", input.dataset.placeholder);
+        });
+        // Show modal
         editAcc.showModal();
         document
           .querySelector(".btn-edit-profile-cancel")
@@ -228,6 +235,13 @@ class UserView extends View {
     document
       .querySelector(".edit-user-parameters")
       .addEventListener("click", function () {
+        // Reset inputs
+        document.querySelectorAll(".input").forEach((input) => {
+          input.value = "";
+          input.classList.remove("input-error");
+          input.setAttribute("placeholder", input.dataset.placeholder);
+        });
+        // Show modal
         editParameters.showModal();
         document
           .querySelector(".btn-edit-parameters-cancel")
