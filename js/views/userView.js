@@ -53,7 +53,7 @@ class UserView extends View {
             <input
               type="number"
               placeholder="Height cm"
-              class="input edit-height"
+              class="input reg-height"
               data-placeholder="Height cm"
             /><input
               type="number"

@@ -244,7 +244,18 @@ function saveEditProfileHandler() {}
 
 function deleteAccHandler() {}
 
-function saveEditParametersHandler() {}
+function saveEditParametersHandler() {
+  console.log(activeUser);
+  const height = document.querySelector(".reg-height");
+  const weight = document.querySelector(".edit-weight");
+  // Validation
+  heightValidation();
+  weightValidation();
+  // Guard clause
+  if (document.querySelector(".input-error")) return;
+  activeUser.height = height.value;
+  activeUser.weight = weight.value;
+}
 
 //LOGIN HANDLERS
 
