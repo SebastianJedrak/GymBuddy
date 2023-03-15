@@ -68,8 +68,8 @@ class UserView extends View {
                   type="radio"
                   name="gender"
                   class="radio"
-                  value="Man"
-                  checked
+                  value="man"
+                  
                 />Man</label
               >
               <label
@@ -77,7 +77,7 @@ class UserView extends View {
                   type="radio"
                   name="gender"
                   class="radio"
-                  value="Woman"
+                  value="woman"
                 />Woman</label
               >
             </div>

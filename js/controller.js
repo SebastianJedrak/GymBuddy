@@ -245,14 +245,16 @@ function saveEditProfileHandler() {}
 function deleteAccHandler() {}
 
 function saveEditParametersHandler() {
-  console.log(activeUser);
   const height = document.querySelector(".reg-height");
   const weight = document.querySelector(".reg-weight");
+  const gender = document.querySelector(".radio[name=gender]:checked");
   // Validation
   if (height.value !== "") heightValidation();
   if (weight.value !== "") weightValidation();
   // Guard clause
   if (document.querySelector(".input-error")) return;
+  // Gender
+  if (gender !== null) activeUser.gender = gender.value;
   // Action
   if (height.value !== "") activeUser.height = height.value;
   if (weight.value !== "") activeUser.weight = weight.value;

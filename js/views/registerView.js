@@ -42,8 +42,8 @@ class RegisterView extends View {
       />
       <div class="radial-container">
       <span><b>Gender:</b></span>
-<label><input type="radio" name="gender" class="radio" value="Man" checked/>Man</label>
-<label><input type="radio" name="gender" class="radio" value="Woman"/>Woman</label>
+<label><input type="radio" name="gender" class="radio" value="man" checked/>Man</label>
+<label><input type="radio" name="gender" class="radio" value="woman"/>Woman</label>
 </div>
 <div class="radial-container">
 <span><b>Experience:</b></span>
