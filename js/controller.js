@@ -256,6 +256,13 @@ function saveEditParametersHandler() {
   // Action
   if (height.value !== "") activeUser.height = height.value;
   if (weight.value !== "") activeUser.weight = weight.value;
+  // BMI recalculation
+  if (weight.value !== "" || height.value !== "") {
+    activeUser.BMI = (
+      activeUser.weight /
+      (activeUser.height / 100) ** 2
+    ).toFixed(2);
+  }
   renderUser();
 }
 //LOGIN HANDLERS
