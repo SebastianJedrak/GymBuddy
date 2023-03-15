@@ -64,6 +64,12 @@ body {
   .radial-container * {
     margin: 0 !important;
   }
+  .input {
+    padding-left: 0 !important;
+  }
+  .modal-edit-acc-profile {
+    min-width: 310px !important;
+  }
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -162,7 +168,7 @@ ul {
   width: 91%;
   min-height: 48px;
   border-radius: 5px;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   border: 1px solid var(--lightslategray);
   color: var(--lightslategray);
 }
@@ -828,7 +834,8 @@ h4 {
 }
 
 .modal-edit-acc-profile {
-  min-width: 20vw;
+  width: 30vw;
+  min-width: 360px;
 }
 
 .profile-edit-form-container {
