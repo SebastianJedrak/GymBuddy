@@ -25,7 +25,10 @@ class LoginView extends View {
       </form>
       <p class="login-or"><b>or</b></p>
       <button class="btn btn-100 btn-orange btn-register">Registration</button>
-    </div> </div>`;
+      <p class="login-footer">All data will be stored only locally. Any information about you will not be sent to external server.  
+      Application created by Sebastian Jędrak for portfolio purposes.</p>
+    </div> </div>
+   `;
   }
   submitAction(handler) {
     document
@@ -36,8 +39,8 @@ class LoginView extends View {
       });
   }
 
-  registerBtnListener (handler) {
-    document.querySelector(".btn-register").addEventListener("click", handler)
+  registerBtnListener(handler) {
+    document.querySelector(".btn-register").addEventListener("click", handler);
   }
 }
 

@@ -918,6 +918,15 @@ h4 {
   color: var(--lightslategray);
 }
 
+.login-footer {
+  width: 75%;
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 2rem;
+  color: var(--lightslategray);
+}
+
 /*! Registration View */
 
 .reg-header {
