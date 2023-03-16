@@ -11,6 +11,7 @@ class LoginView extends View {
     <div class="svg-helloagain"></div>
     <div class="login-register-container">
     <p class="error-login-text hidden">Login and/or password are incorrect. Please try again.</p>
+    <p class="test-acc-text">Test accounts: bobby 1111 , lila 2222</p>
       <form action="" method="GET" class="form-login">
         <input
           type="text"
@@ -25,8 +26,10 @@ class LoginView extends View {
       </form>
       <p class="login-or"><b>or</b></p>
       <button class="btn btn-100 btn-orange btn-register">Registration</button>
+      <footer>
       <p class="login-footer">All data will be stored only locally. Any information about you will not be sent to external server.  
       Application created by Sebastian Jędrak for portfolio purposes.</p>
+      </footer>
     </div> </div>
    `;
   }

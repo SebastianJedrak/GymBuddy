@@ -13,9 +13,9 @@ import * as model from "./model.js";
 export let activeUser;
 
 function init() {
-  activeUser = model.andrew;
-  renderHome();
-  // renderLogin();
+  // activeUser = model.bobby;
+  // renderHome();
+  renderLogin();
 }
 init();
 

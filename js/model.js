@@ -15,10 +15,10 @@ export class User {
   }
 }
 
-export const andrew = new User("andrew", "1111", "180", "90", "man", "intermediate");
+export const bobby = new User("bobby", "1111", "180", "90", "man", "intermediate");
 const lila = new User("lila", "2222", "150", "50", "woman", "beginner");
 
-export const usersList = [andrew, lila];
+export const usersList = [bobby, lila];
 
 export const workout = {
   exercises: [],

@@ -927,6 +927,12 @@ h4 {
   color: var(--lightslategray);
 }
 
+.test-acc-text {
+  width: 91%;
+  font-size: 0.8rem;
+  color: var(--lightslategray);
+}
+
 /*! Registration View */
 
 .reg-header {
