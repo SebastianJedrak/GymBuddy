@@ -262,7 +262,9 @@ function changePasswordValidation() {
   }
 }
 
-function deleteAccHandler() {}
+function deleteAccHandler() {
+  console.log("click");
+}
 
 function saveEditParametersHandler() {
   const height = document.querySelector(".reg-height");

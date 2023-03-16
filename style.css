@@ -860,6 +860,16 @@ h4 {
   width: 100% !important;
 }
 
+.modal-delete-acc {
+  width: 27.5vw;
+  min-width: 350px;
+}
+
+.modal-delete-acc p {
+  margin: 1rem 0;
+  width: 91%;
+}
+
 /*! Login VIEW */
 
 .svg-login-register-container {

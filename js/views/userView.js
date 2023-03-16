@@ -99,10 +99,10 @@ class UserView extends View {
       <h3>Delete account</h3>
       <p>This action is irreversible. Are you sure want to continue?</p>
       <div class="red-green-btn-container">
-        <button class="btn btn-50 btn-white btn-edit-parameters-cancel">
+        <button class="btn btn-50 btn-white btn-delete-acc-cancel">
           <span>No</span>
         </button>
-        <button class="btn btn-50 btn-red btn-edit-parameters-save">
+        <button class="btn btn-50 btn-red btn-delete-acc-delete">
           <span>Delete</span>
         </button>
       </div>
@@ -221,6 +221,7 @@ class UserView extends View {
 
   modalProfileEditListener(handlerSave, handlerDelete) {
     const editAcc = document.querySelector(".modal-edit-acc");
+    const deleteAcc = document.querySelector(".modal-delete-acc");
     document
       .querySelector(".edit-user-name")
       .addEventListener("click", function () {
@@ -241,9 +242,20 @@ class UserView extends View {
         document
           .querySelector(".btn-edit-profile-save")
           .addEventListener("click", handlerSave);
+        // Delete account action
         document
           .querySelector(".btn-edit-profile-delete")
-          .addEventListener("click", handlerDelete);
+          .addEventListener("click", function () {
+            deleteAcc.showModal();
+            document
+              .querySelector(".btn-delete-acc-cancel")
+              .addEventListener("click", function () {
+                deleteAcc.close();
+              });
+            document
+              .querySelector(".btn-delete-acc-delete")
+              .addEventListener("click", handlerDelete);
+          });
       });
   }
 
