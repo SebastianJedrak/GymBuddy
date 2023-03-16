@@ -94,6 +94,20 @@ class UserView extends View {
           </div>
         </div>
       </dialog>
+      <dialog class="modal modal-delete-acc modal-edit-acc-profile modal-navy">
+    <div class="modal-content-wrapper">
+      <h3>Delete account</h3>
+      <p>This action is irreversible. Are you sure want to continue?</p>
+      <div class="red-green-btn-container">
+        <button class="btn btn-50 btn-white btn-edit-parameters-cancel">
+          <span>No</span>
+        </button>
+        <button class="btn btn-50 btn-red btn-edit-parameters-save">
+          <span>Delete</span>
+        </button>
+      </div>
+    </div>
+  </dialog>
     <div class="avatar-name-experience-container">
     <div class="avatar-name-container">
     <div class="avatar avatar-man"></div>
@@ -218,6 +232,7 @@ class UserView extends View {
         });
         // Show modal
         editAcc.showModal();
+        // Close action
         document
           .querySelector(".btn-edit-profile-cancel")
           .addEventListener("click", function () {
