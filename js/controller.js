@@ -261,9 +261,9 @@ function changePasswordValidation() {
     validationError(currentPassword, "Wrong password");
   }
 }
-
 function deleteAccHandler() {
-  console.log("click");
+  model.usersList.splice(model.usersList.indexOf(activeUser), 1);
+  renderLogin();
 }
 
 function saveEditParametersHandler() {
