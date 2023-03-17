@@ -12,7 +12,7 @@ export class User {
     this.gender = gender;
     this.experience = experience;
     this.BMI = (weight / (height / 100) ** 2).toFixed(2);
-    this.lastSetsMap = new Set([]);
+    this.lastSetsMap = [];
   }
 }
 
@@ -38,10 +38,12 @@ export const workout = {
 export function exerciseRp(index) {
   //Estimated One Rep Max formula:
   // reps * 2.5 = x ; 100 - x = y ; y / 100 = z ; 1RM = weight / z
+  // strength = 0.8 RP ; balanced = 0.6 RP ; endurance = 0.4 RP
   const x = workout.reps[index] * 2.5;
   const y = 100 - x;
   const z = y / 100;
   const oneRM = workout.weight[index] / z;
+  return Math.trunc(oneRM);
 }
 
 export const workoutParameters = {

@@ -195,11 +195,16 @@ function skipToHandler() {
   renderWorkoutView();
 }
 
-
 function renderEndModalHandler() {
-  activeUser.lastSetsMap.add([model.workout.exercises[0].name]);
-  console.log(activeUser);
-  renderHome;
+  for (let i = 0; i < model.workout.exercises.length; i++) {
+    activeUser.lastSetsMap.push([
+      model.workout.exercises[i].name,
+      Number.isFinite(model.exerciseRp(i))
+        ? model.exerciseRp(i)
+        : model.workout.reps[i],
+    ]);
+  }
+  renderHome();
 }
 
 function backHomeHandler() {
