@@ -12,7 +12,7 @@ export class User {
     this.gender = gender;
     this.experience = experience;
     this.BMI = (weight / (height / 100) ** 2).toFixed(2);
-    this.lastSetsMap = [];
+    this.lastSetsArray = [];
   }
 }
 
@@ -86,15 +86,48 @@ async function pushExercise(muscle, type) {
   // PUSH EXERCISE
   workout.exercises.push(await getMuscle(muscle));
 
+  function checkRp(name) {
+    let isTrue = false;
+    activeUser.lastSetsArray.forEach((element) => {
+      if (element[0] === name) {
+        isTrue = true;
+      }
+    });
+    return isTrue;
+  }
+
+  function getRp(name, multiplier) {
+    let weight;
+    activeUser.lastSetsArray.forEach((element) => {
+      if (element[0] === name) {
+        weight = element[1] * multiplier;
+      }
+    });
+    workout.weight.push(weight);
+  }
+
   // PUSH SETS AND REPS
   if (type === "compound") {
     if (
       workout.exercises.at(-1).equipment === "body_only" ||
       workout.exercises.at(-1).equipment === "other"
     ) {
-      workout.weight.push("-");
+      if (checkRp(workout.exercises.at(-1).name)) {
+        getRp(workout.exercises.at(-1).name, 1);
+      }
+      // Add weight if it's first time
+      else {
+        workout.weight.push("-");
+      }
     } else {
-      workout.weight.push(20);
+      // Add weight calculated from previous workouts
+      if (checkRp(workout.exercises.at(-1).name)) {
+        getRp(workout.exercises.at(-1).name, 0.8);
+      }
+      // Add weight if it's first time
+      else {
+        workout.weight.push(20);
+      }
     }
     switch (workoutParameters.type) {
       case "balanced":
@@ -113,9 +146,21 @@ async function pushExercise(muscle, type) {
       workout.exercises.at(-1).equipment === "body_only" ||
       workout.exercises.at(-1).equipment === "other"
     ) {
-      workout.weight.push("-");
+      if (checkRp(workout.exercises.at(-1).name)) {
+        getRp(workout.exercises.at(-1).name, 1);
+      }
+      // Add weight if it's first time
+      else {
+        workout.weight.push("-");
+      }
     } else {
-      workout.weight.push(4);
+      if (checkRp(workout.exercises.at(-1).name)) {
+        getRp(workout.exercises.at(-1).name, 0.8);
+      }
+      // Add weight if it's first time
+      else {
+        workout.weight.push(4);
+      }
     }
     switch (workoutParameters.type) {
       case "balanced":

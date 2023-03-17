@@ -68,6 +68,7 @@ function renderHistory() {
 }
 
 async function renderWorkout() {
+  console.log(activeUser.lastSetsArray);
   // Loading
   spinnerView.renderView();
   // Generator
@@ -197,7 +198,7 @@ function skipToHandler() {
 
 function renderEndModalHandler() {
   for (let i = 0; i < model.workout.exercises.length; i++) {
-    activeUser.lastSetsMap.push([
+    activeUser.lastSetsArray.push([
       model.workout.exercises[i].name,
       Number.isFinite(model.exerciseRp(i))
         ? model.exerciseRp(i)
