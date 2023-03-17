@@ -12,10 +12,18 @@ export class User {
     this.gender = gender;
     this.experience = experience;
     this.BMI = (weight / (height / 100) ** 2).toFixed(2);
+    this.lastSetsMap = new Set([]);
   }
 }
 
-export const bobby = new User("bobby", "1111", "180", "90", "man", "intermediate");
+export const bobby = new User(
+  "bobby",
+  "1111",
+  "180",
+  "90",
+  "man",
+  "intermediate"
+);
 const lila = new User("lila", "2222", "150", "50", "woman", "beginner");
 
 export const usersList = [bobby, lila];
@@ -26,6 +34,15 @@ export const workout = {
   reps: [],
   weight: [],
 };
+
+export function exerciseRp(index) {
+  //Estimated One Rep Max formula:
+  // reps * 2.5 = x ; 100 - x = y ; y / 100 = z ; 1RM = weight / z
+  const x = workout.reps[index] * 2.5;
+  const y = 100 - x;
+  const z = y / 100;
+  const oneRM = workout.weight[index] / z;
+}
 
 export const workoutParameters = {
   bodyPart: "full",

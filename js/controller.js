@@ -13,9 +13,9 @@ import * as model from "./model.js";
 export let activeUser;
 
 function init() {
-  // activeUser = model.bobby;
-  // renderHome();
-  renderLogin();
+  activeUser = model.bobby;
+  renderHome();
+  // renderLogin();
 }
 init();
 
@@ -166,7 +166,7 @@ function doneHandler() {
     resetWorkoutView();
     workoutView.insertToLastSetList();
     workoutView.playSoundFinish();
-    return workoutView.renderEndModal(renderHome);
+    return workoutView.renderEndModal(renderEndModalHandler);
   }
   workoutView.currentSet = 1;
   workoutView.currentExercise += 1;
@@ -179,7 +179,7 @@ function skipToHandler() {
     resetWorkoutView();
     workoutView.insertToLastSetList();
     workoutView.playSoundFinish();
-    return workoutView.renderEndModal(renderHome);
+    return workoutView.renderEndModal(renderEndModalHandler);
   }
   for (
     let i = 0;
@@ -193,6 +193,13 @@ function skipToHandler() {
   workoutView.currentExercise += 1;
   workoutView.playSoundNext();
   renderWorkoutView();
+}
+
+
+function renderEndModalHandler() {
+  activeUser.lastSetsMap.add([model.workout.exercises[0].name]);
+  console.log(activeUser);
+  renderHome;
 }
 
 function backHomeHandler() {
