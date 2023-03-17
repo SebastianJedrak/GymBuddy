@@ -96,14 +96,15 @@ async function pushExercise(muscle, type) {
     return isTrue;
   }
 
-  function getRp(name, multiplier) {
+  function getRp(name, multiplier, bodyOnly = false) {
     let weight;
     activeUser.lastSetsArray.forEach((element) => {
       if (element[0] === name) {
         weight = element[1] * multiplier;
       }
     });
-    workout.weight.push(weight);
+    if (bodyOnly) workout.reps.push(weight);
+    if (!bodyOnly) workout.weight.push(weight);
   }
 
   function getMultiplier(reps) {
@@ -119,10 +120,7 @@ async function pushExercise(muscle, type) {
       workout.exercises.at(-1).equipment === "other"
     ) {
       if (checkRp(workout.exercises.at(-1).name)) {
-        getRp(workout.exercises.at(-1).name, 1);
-      }
-      // Add weight if it's first time
-      else {
+        getRp(workout.exercises.at(-1).name, 1, true);
         workout.weight.push("-");
       }
     } else {
@@ -155,16 +153,14 @@ async function pushExercise(muscle, type) {
       workout.exercises.at(-1).equipment === "body_only" ||
       workout.exercises.at(-1).equipment === "other"
     ) {
-      if (checkRp(workout.exercises.at(-1).name)) {
-        getRp(workout.exercises.at(-1).name, 1);
-      }
-      // Add weight if it's first time
-      else {
-        workout.weight.push("-");
-      }
+      getRp(workout.exercises.at(-1).name, 1, true);
+      workout.weight.push("-");
     } else {
       if (checkRp(workout.exercises.at(-1).name)) {
-        getRp(workout.exercises.at(-1).name, getMultiplier(workout.reps.at(-1)));
+        getRp(
+          workout.exercises.at(-1).name,
+          getMultiplier(workout.reps.at(-1))
+        );
       }
       // Add weight if it's first time
       else {
