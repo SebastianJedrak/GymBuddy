@@ -106,6 +106,12 @@ async function pushExercise(muscle, type) {
     workout.weight.push(weight);
   }
 
+  function getMultiplier(reps) {
+    if (reps === 12) return 0.6;
+    if (reps === 8) return 0.7;
+    if (reps === 5) return 0.8;
+  }
+
   // PUSH SETS AND REPS
   if (type === "compound") {
     if (
@@ -122,7 +128,10 @@ async function pushExercise(muscle, type) {
     } else {
       // Add weight calculated from previous workouts
       if (checkRp(workout.exercises.at(-1).name)) {
-        getRp(workout.exercises.at(-1).name, 0.8);
+        getRp(
+          workout.exercises.at(-1).name,
+          getMultiplier(workout.reps.at(-1))
+        );
       }
       // Add weight if it's first time
       else {
@@ -155,7 +164,7 @@ async function pushExercise(muscle, type) {
       }
     } else {
       if (checkRp(workout.exercises.at(-1).name)) {
-        getRp(workout.exercises.at(-1).name, 0.8);
+        getRp(workout.exercises.at(-1).name, getMultiplier(workout.reps.at(-1)));
       }
       // Add weight if it's first time
       else {
