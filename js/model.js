@@ -81,48 +81,56 @@ async function getMuscle(muscle) {
   }
 }
 
+function checkRp(name) {
+  let isTrue = false;
+  activeUser.lastSetsArray.forEach((element) => {
+    if (element[0] === name) {
+      isTrue = true;
+    }
+  });
+  return isTrue;
+}
+
+function getRp(name, multiplier, bodyOnly = false) {
+  let weight;
+  activeUser.lastSetsArray.forEach((element) => {
+    if (element[0] === name) {
+      weight = element[1] * multiplier;
+    }
+  });
+  if (bodyOnly) workout.reps.push(weight);
+  if (!bodyOnly) workout.weight.push(Math.trunc(weight));
+}
+
+function getMultiplier(reps) {
+  if (reps === 12) return 0.6;
+  if (reps === 8) return 0.7;
+  if (reps === 5) return 0.8;
+}
+
 // PUSH TO WORKOUT ARRAY
 async function pushExercise(muscle, type) {
   // PUSH EXERCISE
   workout.exercises.push(await getMuscle(muscle));
 
-  function checkRp(name) {
-    let isTrue = false;
-    activeUser.lastSetsArray.forEach((element) => {
-      if (element[0] === name) {
-        isTrue = true;
-      }
-    });
-    return isTrue;
-  }
-
-  function getRp(name, multiplier, bodyOnly = false) {
-    let weight;
-    activeUser.lastSetsArray.forEach((element) => {
-      if (element[0] === name) {
-        weight = element[1] * multiplier;
-      }
-    });
-    if (bodyOnly) workout.reps.push(weight);
-    if (!bodyOnly) workout.weight.push(weight);
-  }
-
-  function getMultiplier(reps) {
-    if (reps === 12) return 0.6;
-    if (reps === 8) return 0.7;
-    if (reps === 5) return 0.8;
-  }
-
   // PUSH SETS AND REPS
   if (type === "compound") {
+    switch (workoutParameters.type) {
+      case "balanced":
+        getSetsReps(randomize(2) + 1 === 2 ? "medium" : "low");
+        break;
+      case "strength":
+        getSetsReps("low");
+        break;
+      case "endurance":
+        getSetsReps("medium");
+        break;
+    }
     if (
       workout.exercises.at(-1).equipment === "body_only" ||
       workout.exercises.at(-1).equipment === "other"
     ) {
-      if (checkRp(workout.exercises.at(-1).name)) {
-        getRp(workout.exercises.at(-1).name, 1, true);
-        workout.weight.push("-");
-      }
+      workout.weight.push("-");
     } else {
       // Add weight calculated from previous workouts
       if (checkRp(workout.exercises.at(-1).name)) {
@@ -136,24 +144,23 @@ async function pushExercise(muscle, type) {
         workout.weight.push(20);
       }
     }
-    switch (workoutParameters.type) {
-      case "balanced":
-        getSetsReps(randomize(2) + 1 === 2 ? "medium" : "low");
-        break;
-      case "strength":
-        getSetsReps("low");
-        break;
-      case "endurance":
-        getSetsReps("medium");
-        break;
-    }
+  }
+  switch (workoutParameters.type) {
+    case "balanced":
+      getSetsReps(randomize(2) + 1 === 2 ? "medium" : "high");
+      break;
+    case "strength":
+      getSetsReps("medium");
+      break;
+    case "endurance":
+      getSetsReps("high");
+      break;
   }
   if (type === "accessory") {
     if (
       workout.exercises.at(-1).equipment === "body_only" ||
       workout.exercises.at(-1).equipment === "other"
     ) {
-      getRp(workout.exercises.at(-1).name, 1, true);
       workout.weight.push("-");
     } else {
       if (checkRp(workout.exercises.at(-1).name)) {
@@ -166,17 +173,6 @@ async function pushExercise(muscle, type) {
       else {
         workout.weight.push(4);
       }
-    }
-    switch (workoutParameters.type) {
-      case "balanced":
-        getSetsReps(randomize(2) + 1 === 2 ? "medium" : "high");
-        break;
-      case "strength":
-        getSetsReps("medium");
-        break;
-      case "endurance":
-        getSetsReps("high");
-        break;
     }
   }
 }
