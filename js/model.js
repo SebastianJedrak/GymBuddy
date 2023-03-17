@@ -26,7 +26,7 @@ export const bobby = new User(
 );
 const lila = new User("lila", "2222", "150", "50", "woman", "beginner");
 
-export const usersList = [bobby, lila];
+export let usersList = [bobby, lila];
 
 export const workout = {
   exercises: [],
@@ -274,4 +274,15 @@ export async function generateExercises() {
       await pushExercise(muscles.adductors, "accessory");
     }
   }
+}
+
+//! LOCAL STORAGE
+export function storageSaveData() {
+  localStorage.setItem("usersList", JSON.stringify(usersList));
+}
+
+export function storageGetData() {
+  const dataStorage = JSON.parse(localStorage.getItem(`usersList`));
+  if (!dataStorage) return;
+  usersList = dataStorage;
 }

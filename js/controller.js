@@ -13,9 +13,13 @@ import * as model from "./model.js";
 export let activeUser;
 
 function init() {
-  activeUser = model.bobby;
-  renderHome();
-  // renderLogin();
+  // For testing
+  // activeUser = model.bobby;
+  // renderHome();
+  // Get data from storage
+  model.storageGetData();
+  // Render login
+  renderLogin();
 }
 init();
 
@@ -38,6 +42,8 @@ function renderHome() {
 }
 
 function renderUser() {
+  // Save data to storage
+  model.storageSaveData();
   // Get current user
   userView.getDataToRender(activeUser);
   // Render HTML
