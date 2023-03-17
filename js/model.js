@@ -91,7 +91,7 @@ function checkRp(name) {
   return isTrue;
 }
 
-function getRp(name, multiplier, bodyOnly = false) {
+function getRp(name, multiplier, bodyOnly) {
   let weight;
   activeUser.lastSetsArray.forEach((element) => {
     if (element[0] === name) {
@@ -145,18 +145,19 @@ async function pushExercise(muscle, type) {
       }
     }
   }
-  switch (workoutParameters.type) {
-    case "balanced":
-      getSetsReps(randomize(2) + 1 === 2 ? "medium" : "high");
-      break;
-    case "strength":
-      getSetsReps("medium");
-      break;
-    case "endurance":
-      getSetsReps("high");
-      break;
-  }
   if (type === "accessory") {
+    switch (workoutParameters.type) {
+      case "balanced":
+        getSetsReps(randomize(2) + 1 === 2 ? "medium" : "high");
+        break;
+      case "strength":
+        getSetsReps("medium");
+        break;
+      case "endurance":
+        getSetsReps("high");
+        break;
+    }
+
     if (
       workout.exercises.at(-1).equipment === "body_only" ||
       workout.exercises.at(-1).equipment === "other"
@@ -180,17 +181,35 @@ async function pushExercise(muscle, type) {
 // SETS AND REPS
 
 function getSetsReps(reps) {
-  if (reps === "medium") {
-    workout.sets.push(4);
-    workout.reps.push(8);
-  }
-  if (reps === "low") {
-    workout.sets.push(5);
-    workout.reps.push(5);
-  }
-  if (reps === "high") {
-    workout.sets.push(3);
-    workout.reps.push(12);
+  if (
+    (checkRp(workout.exercises.at(-1).name) &&
+      workout.exercises.at(-1).equipment === "body_only") ||
+    (checkRp(workout.exercises.at(-1).name) &&
+      workout.exercises.at(-1).equipment === "other")
+  ) {
+    getRp(workout.exercises.at(-1).name, 1, true);
+    if (reps === "medium") {
+      workout.sets.push(4);
+    }
+    if (reps === "low") {
+      workout.sets.push(5);
+    }
+    if (reps === "high") {
+      workout.sets.push(3);
+    }
+  } else {
+    if (reps === "medium") {
+      workout.sets.push(4);
+      workout.reps.push(8);
+    }
+    if (reps === "low") {
+      workout.sets.push(5);
+      workout.reps.push(5);
+    }
+    if (reps === "high") {
+      workout.sets.push(3);
+      workout.reps.push(12);
+    }
   }
 }
 
