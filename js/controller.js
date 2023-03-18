@@ -41,6 +41,7 @@ function renderHome() {
   // Tutorial listener
   homeView.openTutorialModalListener();
   // Reset workoutParametersObject
+  model.workoutParameters.date = "";
   model.workoutParameters.bodyPart = "full";
   model.workoutParameters.type = "balanced";
   model.workoutParameters.duration = "medium";
@@ -69,7 +70,6 @@ function renderUser() {
 }
 
 function renderHistory() {
-  console.log(activeUser.workoutsHistory);
   // Get current user
   historyView.getDataToRender(activeUser.workoutsHistory);
   // Render HTML
@@ -219,10 +219,10 @@ function renderEndModalHandler() {
     ]);
   }
   model.workoutParameters.date = getDate();
-  activeUser.workoutsHistory.push(model.workoutParameters);
+  const historyItem = { ...model.workoutParameters };
+  activeUser.workoutsHistory.push(historyItem);
   renderHome();
 }
-console.log(model.workoutParameters);
 
 function getDate() {
   const fullDate = new Date();
