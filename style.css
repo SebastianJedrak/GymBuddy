@@ -996,6 +996,8 @@ label {
   overflow: auto;
   padding-right: 0.5rem;
 }
+
+
 .history-list {
   height: fit-content;
 }

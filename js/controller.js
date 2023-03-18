@@ -79,6 +79,8 @@ function renderHistory() {
   // Navigation bar
   navStart();
   document.querySelector(".nav-tile-history").classList.add("active");
+  // Listeners
+  historyView.deleteWorkoutListener();
 }
 
 async function renderWorkout() {

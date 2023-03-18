@@ -38,6 +38,15 @@ class HistoryView extends View {
       listContainer.insertAdjacentHTML("afterbegin", html);
     });
   }
+
+  deleteWorkoutListener(handler) {
+    const itemsList = document.querySelector(".history-list");
+    itemsList.addEventListener("click", function (e) {
+      const target = e.target.closest(".svg-delete");
+      if (!target) return;
+      target.addEventListener("click", handler)
+    });
+  }
 }
 
 export default new HistoryView();
