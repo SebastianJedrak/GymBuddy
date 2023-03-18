@@ -52,6 +52,10 @@ class HistoryView extends View {
   sortWorkoutsListener(handler) {
     document.querySelector(".btn-sort").addEventListener("click", handler);
   }
+
+  filterWorkoutsListener(handler) {
+    document.querySelector(".btn-filter").addEventListener("click", handler);
+  }
 }
 
 export default new HistoryView();

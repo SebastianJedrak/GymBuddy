@@ -84,6 +84,7 @@ function renderHistory() {
   // Listeners
   historyView.deleteWorkoutListener(deleteWorkoutHandler);
   historyView.sortWorkoutsListener(sortWorkoutsHandler);
+  historyView.filterWorkoutsListener(filterWorkoutsHandler)
 }
 
 async function renderWorkout() {
@@ -474,3 +475,5 @@ function sortBtnState() {
     btnSort.textContent = "Oldest";
   }
 }
+
+function filterWorkoutsHandler () {}
