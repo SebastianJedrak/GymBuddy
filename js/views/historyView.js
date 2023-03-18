@@ -8,7 +8,7 @@ class HistoryView extends View {
 
   _HTML() {
     return `<div class="filter-sort-container">
-    <button class="btn btn-white btn-50 btn-sort">Latest</button
+    <button class="btn btn-50 btn-sort">Latest</button
     ><button class="btn btn-white btn-50 btn-filter">Filter</button>
   </div>
   <div class="history-container">
