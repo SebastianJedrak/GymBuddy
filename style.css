@@ -981,3 +981,27 @@ label {
 .filter-sort-container {
   width: 50%;
 }
+
+.history-container {
+  height: 100%;
+}
+
+.history-list {
+  margin-top: 2rem;
+}
+
+.history-item {
+  background-color: var(--lightslategray);
+  border-radius: 5px;
+  padding: 0.5rem;
+  color: var(--floralwhite);
+}
+
+.header-delete-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.svg-delete {
+  scale: 0.8;
+}
