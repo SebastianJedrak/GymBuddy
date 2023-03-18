@@ -69,6 +69,9 @@ function renderUser() {
 }
 
 function renderHistory() {
+  console.log(activeUser.workoutsHistory);
+  // Get current user
+  historyView.getDataToRender(activeUser.workoutsHistory);
   // Render HTML
   historyView.renderView(model.storageSaveData());
   // Navigation bar
