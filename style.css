@@ -1008,6 +1008,10 @@ label {
   margin-bottom: 1rem;
 }
 
+.workout-details-date {
+  margin-right: 0.5rem;
+}
+
 .header-delete-container {
   display: flex;
   justify-content: space-between;

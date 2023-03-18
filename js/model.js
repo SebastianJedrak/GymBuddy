@@ -51,6 +51,7 @@ export const workoutParameters = {
   bodyPart: "full",
   type: "balanced",
   duration: "medium",
+  date: "",
 };
 
 export const muscles = {

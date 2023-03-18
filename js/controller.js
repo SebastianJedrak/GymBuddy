@@ -218,10 +218,20 @@ function renderEndModalHandler() {
         : model.workout.reps[i],
     ]);
   }
+  model.workoutParameters.date = getDate();
   activeUser.workoutsHistory.push(model.workoutParameters);
+  model.workoutParameters;
   renderHome();
 }
 console.log(activeUser);
+
+function getDate() {
+  const fullDate = new Date();
+  const workoutDate = `${String(fullDate.getDate()).padStart(2, "0")}-${String(
+    fullDate.getMonth() + 1
+  ).padStart(2, "0")}-${fullDate.getFullYear()}`;
+  return workoutDate;
+}
 
 function backHomeHandler() {
   resetWorkoutView();
