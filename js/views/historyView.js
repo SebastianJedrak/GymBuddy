@@ -20,7 +20,7 @@ class HistoryView extends View {
   addHistoryItems() {
     const listContainer = document.querySelector(".history-list");
     this._data.forEach((item, i) => {
-      const html = `      <li class="history-item" dataset-index="${i}">
+      const html = `      <li class="history-item" data-index="${i}">
       <div class="header-delete-container">
         <h4 class="workout-history-header">Workout ${i + 1}</h4>
         <div class="svg-delete header-buttons-svg back-button"></div>
