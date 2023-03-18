@@ -80,7 +80,7 @@ function renderHistory() {
   navStart();
   document.querySelector(".nav-tile-history").classList.add("active");
   // Listeners
-  historyView.deleteWorkoutListener();
+  historyView.deleteWorkoutListener(deleteWorkoutHandler);
 }
 
 async function renderWorkout() {
@@ -433,4 +433,10 @@ function weightValidation() {
   ) {
     validationError(weight, "Use kilograms, no special characters");
   }
+}
+
+// History View handlers
+
+function deleteWorkoutHandler() {
+  // this.closest(".history-item").remove();
 }

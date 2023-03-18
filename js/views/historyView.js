@@ -44,7 +44,7 @@ class HistoryView extends View {
     itemsList.addEventListener("click", function (e) {
       const target = e.target.closest(".svg-delete");
       if (!target) return;
-      target.addEventListener("click", handler)
+      target.closest(".history-item").remove();
     });
   }
 }
