@@ -13,6 +13,7 @@ export class User {
     this.experience = experience;
     this.BMI = (weight / (height / 100) ** 2).toFixed(2);
     this.lastSetsArray = [];
+    // this.workoutsHistory = [];
   }
 }
 
@@ -279,6 +280,7 @@ export async function generateExercises() {
 //! LOCAL STORAGE
 export function storageSaveData() {
   localStorage.setItem("usersList", JSON.stringify(usersList));
+  sessionStorage.setItem("activeUser", JSON.stringify(activeUser));
 }
 
 export function storageGetData() {

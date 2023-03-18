@@ -210,9 +210,11 @@ function renderEndModalHandler() {
         : model.workout.reps[i],
     ]);
   }
+  // activeUser.workoutsHistory.push(model.workout);
+  console.log(activeUser);
   renderHome();
 }
-
+console.log(activeUser);
 function backHomeHandler() {
   resetWorkoutView();
   return renderHome();
