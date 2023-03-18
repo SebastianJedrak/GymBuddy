@@ -988,16 +988,13 @@ label {
 .filter-sort-container {
   margin-top: 1rem;
   width: 50%;
+  padding-bottom: 1rem;
 }
 
 .history-container {
   height: 100%;
   overflow: auto;
   padding-right: 0.5rem;
-}
-
-.history-list {
-  margin-top: 2rem;
 }
 
 .history-item {

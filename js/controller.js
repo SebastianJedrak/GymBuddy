@@ -44,7 +44,6 @@ function renderHome() {
   model.workoutParameters.bodyPart = "full";
   model.workoutParameters.type = "balanced";
   model.workoutParameters.duration = "medium";
-  model.workoutParameters.date = "";
 }
 
 function renderUser() {
@@ -221,10 +220,9 @@ function renderEndModalHandler() {
   }
   model.workoutParameters.date = getDate();
   activeUser.workoutsHistory.push(model.workoutParameters);
-  model.workoutParameters;
   renderHome();
 }
-console.log(activeUser);
+console.log(model.workoutParameters);
 
 function getDate() {
   const fullDate = new Date();

@@ -26,7 +26,7 @@ class HistoryView extends View {
         <div class="svg-delete header-buttons-svg back-button"></div>
       </div>
       <div class="workout-details-container">
-        <span class="workout-details-date">02-02-2023</span>
+        <span class="workout-details-date">${item.date}</span>
         <span class="workout-details-body-part">${
           item.bodyPart.slice(0, 1).toUpperCase() +
           item.bodyPart.slice(1).toLowerCase()
