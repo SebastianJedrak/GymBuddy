@@ -979,6 +979,7 @@ label {
 /*! HISTORY VIEW */
 
 .filter-sort-container {
+  margin-top: 1rem;
   width: 50%;
 }
 
