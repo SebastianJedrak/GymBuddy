@@ -978,3 +978,6 @@ label {
 
 /*! HISTORY VIEW */
 
+.filter-sort-container {
+  width: 50%;
+}
