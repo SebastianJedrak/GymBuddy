@@ -13,6 +13,9 @@ import * as model from "./model.js";
 export let activeUser;
 
 function init() {
+  // storage reset
+  // localStorage.clear();
+  // sessionStorage.clear();
   // For testing
   // activeUser = model.bobby;
   // renderHome();
@@ -210,11 +213,10 @@ function renderEndModalHandler() {
         : model.workout.reps[i],
     ]);
   }
-  // activeUser.workoutsHistory.push(model.workout);
-  console.log(activeUser);
+  activeUser.workoutsHistory.push(model.workout);
   renderHome();
 }
-console.log(activeUser);
+
 function backHomeHandler() {
   resetWorkoutView();
   return renderHome();

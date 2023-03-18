@@ -13,7 +13,7 @@ export class User {
     this.experience = experience;
     this.BMI = (weight / (height / 100) ** 2).toFixed(2);
     this.lastSetsArray = [];
-    // this.workoutsHistory = [];
+    this.workoutsHistory = [];
   }
 }
 
