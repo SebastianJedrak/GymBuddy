@@ -83,7 +83,7 @@ function renderHistory() {
   document.querySelector(".nav-tile-history").classList.add("active");
   // Listeners
   historyView.deleteWorkoutListener(deleteWorkoutHandler);
-  historyView.sortWorkoutsListener(sortWorkoutsHandler);
+  // historyView.sortWorkoutsListener(sortWorkoutsHandler);
   historyView.filterWorkoutsListener(filterWorkoutsHandler);
 }
 
@@ -444,7 +444,10 @@ function weightValidation() {
 
 function deleteWorkoutHandler(item) {
   item.remove();
-  activeUser.workoutsHistory.splice(item.dataset.index, 1);
+  const indexOfElement = activeUser.workoutsHistory.findIndex((element) => {
+    return element.index === Number(item.dataset.index);
+  });
+  activeUser.workoutsHistory.splice(indexOfElement, 1);
   model.storageSaveData();
 }
 
