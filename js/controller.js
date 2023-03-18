@@ -25,7 +25,7 @@ init();
 
 function renderHome() {
   // Render HTML
-  homeView.renderView();
+  homeView.renderView(model.storageSaveData());
   // Navigation bar init
   navStart();
   document.querySelector(".nav-tile-home").classList.add("active");
@@ -42,12 +42,10 @@ function renderHome() {
 }
 
 function renderUser() {
-  // Save data to storage
-  model.storageSaveData();
   // Get current user
   userView.getDataToRender(activeUser);
   // Render HTML
-  userView.renderView();
+  userView.renderView(model.storageSaveData());
   // Render avatar
   userView.avatarGenderSwitch();
   // Render BMI label
@@ -67,16 +65,15 @@ function renderUser() {
 
 function renderHistory() {
   // Render HTML
-  historyView.renderView();
+  historyView.renderView(model.storageSaveData());
   // Navigation bar
   navStart();
   document.querySelector(".nav-tile-history").classList.add("active");
 }
 
 async function renderWorkout() {
-  console.log(activeUser.lastSetsArray);
   // Loading
-  spinnerView.renderView();
+  spinnerView.renderView(model.storageSaveData());
   // Generator
   await model.generateExercises();
   // Send workout data to render view
@@ -87,7 +84,7 @@ async function renderWorkout() {
 
 function renderWorkoutView() {
   // Render HTML
-  workoutView.renderView();
+  workoutView.renderView(model.storageSaveData());
   // Back button
   workoutView.backListener(backHomeHandler);
   // Done button
@@ -107,7 +104,7 @@ function renderWorkoutView() {
 
 function renderRegisterView() {
   // Render view
-  registerView.renderView();
+  registerView.renderView(model.storageSaveData());
   //Listeners
   registerView.backBtnListener(renderLogin);
   registerView.regSubmitAction(regSubmitHandler);
@@ -120,7 +117,7 @@ function renderLogin() {
     .querySelectorAll(".input")
     .forEach((input) => input.classList.remove("input-error"));
   //Render login
-  loginView.renderView();
+  loginView.renderView(model.storageSaveData());
   // Login action
   loginView.submitAction(loginAction);
   //Listeners

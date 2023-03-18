@@ -4,8 +4,9 @@ import headerView from "./headerView.js";
 export default class View {
   _data;
   _globalContainer = document.querySelector(".global-container");
-  renderView() {
+  renderView(save) {
     this._clear();
+    save;
     headerView.headerRender(...this._headerConfig);
     this._backgroundRender();
     this._HTMLRender();
