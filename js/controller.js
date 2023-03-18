@@ -440,4 +440,5 @@ function weightValidation() {
 function deleteWorkoutHandler(item) {
   item.remove();
   activeUser.workoutsHistory.splice(item.dataset.index, 1);
+  model.storageSaveData();
 }
