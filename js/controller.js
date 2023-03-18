@@ -26,7 +26,7 @@ function init() {
   // Render login
   if (!activeUser) renderLogin();
 }
-init();
+// init();
 
 function renderHome() {
   // Render HTML
