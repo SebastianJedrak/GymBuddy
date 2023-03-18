@@ -81,6 +81,7 @@ function renderHistory() {
   document.querySelector(".nav-tile-history").classList.add("active");
   // Listeners
   historyView.deleteWorkoutListener(deleteWorkoutHandler);
+  historyView.sortWorkoutsListener(sortWorkoutsHandler);
 }
 
 async function renderWorkout() {
@@ -221,6 +222,7 @@ function renderEndModalHandler() {
     ]);
   }
   model.workoutParameters.date = getDate();
+  model.workoutParameters.index = activeUser.workoutsHistory.length;
   const historyItem = { ...model.workoutParameters };
   activeUser.workoutsHistory.push(historyItem);
   renderHome();
@@ -441,4 +443,9 @@ function deleteWorkoutHandler(item) {
   item.remove();
   activeUser.workoutsHistory.splice(item.dataset.index, 1);
   model.storageSaveData();
+}
+
+function sortWorkoutsHandler() {
+  activeUser.workoutsHistory.reverse();
+  renderHistory();
 }

@@ -8,7 +8,7 @@ class HistoryView extends View {
 
   _HTML() {
     return `<div class="filter-sort-container">
-    <button class="btn btn-white btn-50 btn-sort">Sort</button
+    <button class="btn btn-white btn-50 btn-sort">Latest</button
     ><button class="btn btn-white btn-50 btn-filter">Filter</button>
   </div>
   <div class="history-container">
@@ -19,10 +19,10 @@ class HistoryView extends View {
 
   addHistoryItems() {
     const listContainer = document.querySelector(".history-list");
-    this._data.forEach((item, i) => {
-      const html = `      <li class="history-item" data-index="${i}">
+    this._data.forEach((item) => {
+      const html = `      <li class="history-item" data-index="${item.index}">
       <div class="header-delete-container">
-        <h4 class="workout-history-header">Workout ${i + 1}</h4>
+        <h4 class="workout-history-header">Workout ${item.index + 1}</h4>
         <div class="svg-delete header-buttons-svg back-button"></div>
       </div>
       <div class="workout-details-container">
@@ -47,6 +47,10 @@ class HistoryView extends View {
       const item = target.closest(".history-item");
       handler(item);
     });
+  }
+
+  sortWorkoutsListener(handler) {
+    document.querySelector(".btn-sort").addEventListener("click", handler);
   }
 }
 
