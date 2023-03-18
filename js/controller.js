@@ -26,7 +26,7 @@ function init() {
   // Render login
   if (!activeUser) renderLogin();
 }
-init();
+// init();
 
 function renderHome() {
   // Render HTML
@@ -89,6 +89,7 @@ async function renderWorkout() {
   // Render View
   renderWorkoutView();
 }
+spinnerView.renderView();
 
 function renderWorkoutView() {
   // Render HTML

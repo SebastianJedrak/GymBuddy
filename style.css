@@ -519,6 +519,13 @@ ul > .nav-tile:hover {
 
 /*! MAIN SPINNER*/
 
+.main-spinner-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
 .spinner-wrapper {
   display: flex;
   aspect-ratio: 1 / 1;
