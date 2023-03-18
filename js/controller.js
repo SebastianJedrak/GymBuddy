@@ -26,7 +26,7 @@ function init() {
   // Render login
   if (!activeUser) renderLogin();
 }
-// init();
+init();
 
 function renderHome() {
   // Render HTML
@@ -74,6 +74,8 @@ function renderHistory() {
   historyView.getDataToRender(activeUser.workoutsHistory);
   // Render HTML
   historyView.renderView(model.storageSaveData());
+  // Add history items
+  historyView.addHistoryItems();
   // Navigation bar
   navStart();
   document.querySelector(".nav-tile-history").classList.add("active");
@@ -89,7 +91,6 @@ async function renderWorkout() {
   // Render View
   renderWorkoutView();
 }
-spinnerView.renderView();
 
 function renderWorkoutView() {
   // Render HTML
@@ -217,9 +218,10 @@ function renderEndModalHandler() {
         : model.workout.reps[i],
     ]);
   }
-  activeUser.workoutsHistory.push(model.workout);
+  activeUser.workoutsHistory.push(model.workoutParameters);
   renderHome();
 }
+console.log(activeUser);
 
 function backHomeHandler() {
   resetWorkoutView();
