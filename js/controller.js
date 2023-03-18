@@ -84,7 +84,7 @@ function renderHistory() {
   // Listeners
   historyView.deleteWorkoutListener(deleteWorkoutHandler);
   historyView.sortWorkoutsListener(sortWorkoutsHandler);
-  historyView.filterWorkoutsListener(filterWorkoutsHandler)
+  historyView.filterWorkoutsListener(filterWorkoutsHandler);
 }
 
 async function renderWorkout() {
@@ -467,6 +467,7 @@ function sortWorkoutsHandler() {
 
 function sortBtnState() {
   const btnSort = document.querySelector(".btn-sort");
+  if (!btnSort) return;
   if (activeUser.workoutsHistory[0].index === 0) {
     btnSort.classList.add("btn-white");
     btnSort.textContent = "Latest";
@@ -476,4 +477,6 @@ function sortBtnState() {
   }
 }
 
-function filterWorkoutsHandler () {}
+function filterWorkoutsHandler() {
+  console.log(activeUser);
+}

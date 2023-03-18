@@ -7,7 +7,8 @@ class HistoryView extends View {
   _headerConfig = [`History`, false, false];
 
   _HTML() {
-    return `<div class="filter-sort-container">
+    if (this._data === []) {
+      return `<div class="filter-sort-container">
     <button class="btn btn-50 btn-sort">Latest</button
     ><button class="btn btn-white btn-50 btn-filter">Filter</button>
   </div>
@@ -15,6 +16,10 @@ class HistoryView extends View {
     <ul class="history-list">
     </ul>
   </div>`;
+    }
+    if (this._data !== []) {
+      return `History empty`;
+    }
   }
 
   addHistoryItems() {
@@ -41,6 +46,7 @@ class HistoryView extends View {
 
   deleteWorkoutListener(handler) {
     const itemsList = document.querySelector(".history-list");
+    if (!itemsList) return;
     itemsList.addEventListener("click", function (e) {
       const target = e.target.closest(".svg-delete");
       if (!target) return;
@@ -50,11 +56,15 @@ class HistoryView extends View {
   }
 
   sortWorkoutsListener(handler) {
-    document.querySelector(".btn-sort").addEventListener("click", handler);
+    const btnSort = document.querySelector(".btn-sort");
+    if (!btnSort) return;
+    btnSort.addEventListener("click", handler);
   }
 
   filterWorkoutsListener(handler) {
-    document.querySelector(".btn-filter").addEventListener("click", handler);
+    const btnFilter = document.querySelector(".btn-filter");
+    if (!btnFilter) return;
+    btnFilter.addEventListener("click", handler);
   }
 }
 
