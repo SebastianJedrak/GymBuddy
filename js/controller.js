@@ -44,6 +44,7 @@ function renderHome() {
   model.workoutParameters.bodyPart = "full";
   model.workoutParameters.type = "balanced";
   model.workoutParameters.duration = "medium";
+  model.workoutParameters.date = "";
 }
 
 function renderUser() {
