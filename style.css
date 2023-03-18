@@ -984,6 +984,8 @@ label {
 
 .history-container {
   height: 100%;
+  overflow: auto;
+  padding-right: 0.5rem;
 }
 
 .history-list {
@@ -995,11 +997,13 @@ label {
   border-radius: 5px;
   padding: 0.5rem;
   color: var(--floralwhite);
+  margin-bottom: 1rem;
 }
 
 .header-delete-container {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 0.5rem;
 }
 
 .svg-delete {
