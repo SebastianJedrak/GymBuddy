@@ -437,6 +437,6 @@ function weightValidation() {
 
 // History View handlers
 
-function deleteWorkoutHandler() {
-  // this.closest(".history-item").remove();
+function deleteWorkoutHandler(item) {
+  item.remove();
 }
