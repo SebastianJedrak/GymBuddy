@@ -447,5 +447,22 @@ function deleteWorkoutHandler(item) {
 
 function sortWorkoutsHandler() {
   activeUser.workoutsHistory.reverse();
-  renderHistory();
+
+  const btnSort = document.querySelector(".btn-sort");
+  
+  if (btnSort.classList.contains("btn-navy")) {
+    btnSort.classList.remove("btn-navy");
+    btnSort.classList.add("btn-white");
+    btnSort.textContent = "Oldest";
+  } else if (btnSort.classList.contains("btn-white")) {
+    btnSort.classList.remove("btn-white");
+    btnSort.classList.add("btn-navy");
+    btnSort.textContent = "Latest";
+  }
+  updateHistoryList();
+}
+
+function updateHistoryList() {
+  document.querySelector(".history-list").textContent = "";
+  historyView.addHistoryItems();
 }
