@@ -7,8 +7,7 @@ class HistoryView extends View {
   _headerConfig = [`History`, false, false];
 
   _HTML() {
-    console.log(this._data === []);
-    if (this._data !== []) {
+    if (this._data.length > 0) {
       return `<div class="filter-sort-container">
     <button class="btn btn-50 btn-sort">Latest</button
     ><button class="btn btn-white btn-50 btn-filter">Filter</button>

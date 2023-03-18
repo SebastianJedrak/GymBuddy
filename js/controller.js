@@ -83,7 +83,7 @@ function renderHistory() {
   document.querySelector(".nav-tile-history").classList.add("active");
   // Listeners
   historyView.deleteWorkoutListener(deleteWorkoutHandler);
-  // historyView.sortWorkoutsListener(sortWorkoutsHandler);
+  historyView.sortWorkoutsListener(sortWorkoutsHandler);
   historyView.filterWorkoutsListener(filterWorkoutsHandler);
 }
 
@@ -449,6 +449,7 @@ function deleteWorkoutHandler(item) {
   });
   activeUser.workoutsHistory.splice(indexOfElement, 1);
   model.storageSaveData();
+  renderHistory();
 }
 
 function sortWorkoutsHandler() {
