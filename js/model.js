@@ -286,3 +286,9 @@ export function storageGetData() {
   if (!dataStorage) return;
   usersList = dataStorage;
 }
+
+export function sessionGetData() {
+  const sessionDataStorage = JSON.parse(sessionStorage.getItem(`activeUser`));
+  if (!sessionDataStorage) return;
+  return sessionDataStorage;
+}

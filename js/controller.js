@@ -18,8 +18,10 @@ function init() {
   // renderHome();
   // Get data from storage
   model.storageGetData();
+  activeUser = model.sessionGetData();
+  if (activeUser) renderHome();
   // Render login
-  renderLogin();
+  if (!activeUser) renderLogin();
 }
 init();
 
@@ -313,6 +315,7 @@ function loginAction() {
   model.usersList.forEach((user) => {
     if (user.login === login.value && user.password === password.value) {
       activeUser = user;
+      sessionStorage.setItem("activeUser", JSON.stringify(activeUser));
       return renderHome();
     }
   });
