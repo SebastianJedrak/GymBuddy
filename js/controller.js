@@ -73,7 +73,7 @@ function renderHistory() {
 
 async function renderWorkout() {
   // Loading
-  spinnerView.renderView(model.storageSaveData());
+  spinnerView.renderView();
   // Generator
   await model.generateExercises();
   // Send workout data to render view
@@ -84,7 +84,7 @@ async function renderWorkout() {
 
 function renderWorkoutView() {
   // Render HTML
-  workoutView.renderView(model.storageSaveData());
+  workoutView.renderView();
   // Back button
   workoutView.backListener(backHomeHandler);
   // Done button
