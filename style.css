@@ -212,6 +212,7 @@ ul {
 .btn:active {
   outline: none;
   border: 1px solid var(--lightslategray);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn-33 {
@@ -757,7 +758,7 @@ h4 {
   border-radius: 5px;
   padding: 0.5rem;
   width: 122px;
-  top: 46px;
+  top: 65px;
   z-index: 5;
 }
 
@@ -834,6 +835,11 @@ h4 {
   align-items: center;
   width: 124px;
   margin: 0 auto;
+}
+
+.dropdown-experience-container span {
+  color: var(--lightslategray);
+  margin-bottom: 0.2rem;
 }
 
 .dropdown-experience-current-container {
@@ -939,9 +945,6 @@ h4 {
 
 .login-or {
   color: var(--lightslategray);
-}
-
-.login-submit-btn {
 }
 
 .btn-register {

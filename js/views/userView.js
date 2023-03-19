@@ -117,17 +117,18 @@ class UserView extends View {
     </div>
   </div>
   <div class="dropdown-experience-container">
+  <span>Difficulty:</span>
     <button
       class="btn btn-navy btn-33 dropdown-experience-current-container"
     >
       <h4 class="experience-active-btn">${
-        this._data.experience === "intermediate" ? "mid" : "beginner"
+        this._data.experience === "intermediate" ? "hard" : "easy"
       }</h4>
       <div class="dropdown-arrow"></div>
     </button>
     <ul class="dropdown-options-list hidden dropdown-options-experience-list">
-      <li class="dropdown-options-item" data-exp="beginner">beginner</li>
-      <li class="dropdown-options-item" data-exp="intermediate">mid</li>
+      <li class="dropdown-options-item" data-exp="beginner">easy</li>
+      <li class="dropdown-options-item" data-exp="intermediate">hard</li>
     </ul>
   </div>
   </div>

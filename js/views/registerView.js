@@ -43,8 +43,8 @@ class RegisterView extends View {
 </div>
 <div class="radial-container">
 <span><b>Experience:</b></span>
-<label><input type="radio" name="experience" class="radio radio-exp" value="beginner" checked/>Beginner</label>
-<label><input type="radio" name="experience" class="radio radio-exp" value="intermediate"/>Mid</label>
+<label><input type="radio" name="experience" class="radio radio-exp" value="low" checked/>Beginner</label>
+<label><input type="radio" name="experience" class="radio radio-exp" value="high"/>Mid</label>
 </div>
       <button class="btn btn-100 btn-navy reg-btn-submit">Start!</button>
     </form>`;

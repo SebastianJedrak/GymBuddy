@@ -27,7 +27,7 @@ class LoginView extends View {
       <p class="login-or"><b>or</b></p>
       <button class="btn btn-100 btn-orange btn-register">Registration</button>
       <footer>
-      <p class="login-footer">All data will be stored only locally. Any information about you will not be sent to external server.  
+      <p class="login-footer">All data will be stored only locally. Any information about you will not be sent to the external server.  
       Application created by Sebastian Jędrak for portfolio purposes.</p>
       </footer>
     </div> </div>
