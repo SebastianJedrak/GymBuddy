@@ -17,7 +17,7 @@ class RegisterView extends View {
       Please, give me some some basic information about yourself and let's
       get started.
     </h4>
-    <form action="" class="login-register-container">
+    <form action="" class="login-register-container-register">
       <input
         type="text"
         placeholder="Login"
