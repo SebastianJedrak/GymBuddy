@@ -9,13 +9,10 @@ class RegisterView extends View {
     return `<h1 class="reg-header">Welcome!</h1>
     <p class="reg-paragraph">
       I am GymBuddy, your new favorite workout app. My
-      purpose is to help you achieve your fitness goals. With my random
-      generated workout plans you will never get bored. Additional, I will
-      be keeping your progress and adjust your routine accordingly.
+      purpose is to help you achieve your fitness goals. I can randomly generate simple workout plans so you will never get bored. I will be keeping your progress and customize your routine. I believe that you and me can achieve great thing together!
     </p>
     <h4 class="reg-header-h4">
-      Please, give me some some basic information about yourself and let's
-      get started.
+    Tell me something about yourself and let's get started!
     </h4>
     <form action="" class="login-register-container-register">
       <input
