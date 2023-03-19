@@ -125,7 +125,7 @@ class UserView extends View {
       }</h4>
       <div class="dropdown-arrow"></div>
     </button>
-    <ul class="dropdown-options-list hidden">
+    <ul class="dropdown-options-list hidden dropdown-options-experience-list">
       <li class="dropdown-options-item" data-exp="beginner">beginner</li>
       <li class="dropdown-options-item" data-exp="intermediate">mid</li>
     </ul>
@@ -204,7 +204,7 @@ class UserView extends View {
       .querySelector(".dropdown-experience-current-container")
       .addEventListener("click", () => {
         document
-          .querySelector(".dropdown-options-list")
+          .querySelector(".dropdown-options-experience-list")
           .classList.toggle("hidden");
         document.querySelector(".dropdown-arrow").classList.toggle("rotate180");
       });

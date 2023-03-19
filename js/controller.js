@@ -85,6 +85,7 @@ function renderHistory() {
   historyView.deleteWorkoutListener(deleteWorkoutHandler);
   historyView.sortWorkoutsListener(sortWorkoutsHandler);
   historyView.filterWorkoutsListener(filterWorkoutsHandler);
+  historyView.openFilterDropdownListener();
 }
 
 async function renderWorkout() {

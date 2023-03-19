@@ -15,7 +15,7 @@ class HistoryView extends View {
     Filter
       <div class="dropdown-arrow"></div>
     </button>
-    <ul class="dropdown-options-list dropdown-options-list-filter">
+    <ul class="dropdown-options-list hidden dropdown-options-list-filter">
       <li class="dropdown-options-item" data-exp="body-part">Body part</li>
       <li class="dropdown-options-item" data-exp="type">Type</li>
       <li class="dropdown-options-item" data-exp="duration">Duration</li>
@@ -74,6 +74,15 @@ class HistoryView extends View {
     const btnFilter = document.querySelector(".btn-filter");
     if (!btnFilter) return;
     btnFilter.addEventListener("click", handler);
+  }
+
+  openFilterDropdownListener() {
+    document.querySelector(".btn-filter").addEventListener("click", () => {
+      document
+        .querySelector(".dropdown-options-list-filter")
+        .classList.toggle("hidden");
+      document.querySelector(".dropdown-arrow").classList.toggle("rotate180");
+    });
   }
 }
 
