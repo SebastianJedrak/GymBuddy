@@ -485,12 +485,14 @@ function sortBtnState() {
 
 function dropdownFilterListHandler() {
   // Dropdown control
-  document.querySelector(".btn-filter").textContent = this.textContent;
+  document.querySelector(".filter-text").textContent = this.textContent;
   document
     .querySelector(".dropdown-options-list-filter")
     .classList.add("hidden");
-  document.querySelector(".dropdown-arrow").classList.toggle("rotate180");
-// Filter control
+  document
+    .querySelector(".dropdown-arrow-filter")
+    .classList.toggle("rotate180");
+  // Filter control
   const filteredArray = [];
   activeUser.workoutsHistory.forEach((element) => {
     if (element.bodyPart === this.dataset.filter) filteredArray.push(element);

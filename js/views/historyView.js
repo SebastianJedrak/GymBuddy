@@ -12,8 +12,8 @@ class HistoryView extends View {
     <button class="btn btn-50 btn-sort">Latest</button>
     <div class="dropdown-filter-container">
     <button class="btn btn-navy btn-50 btn-filter">
-    Filter
-      <div class="dropdown-arrow"></div>
+    <span class="filter-text">Filter</span>
+      <div class="dropdown-arrow dropdown-arrow-filter"></div>
     </button>
     <ul class="dropdown-options-list hidden dropdown-options-list-filter">
       <li class="dropdown-options-item" data-filter="lower">Lower</li>
@@ -81,7 +81,9 @@ class HistoryView extends View {
       document
         .querySelector(".dropdown-options-list-filter")
         .classList.toggle("hidden");
-      document.querySelector(".dropdown-arrow").classList.toggle("rotate180");
+      document
+        .querySelector(".dropdown-arrow-filter")
+        .classList.toggle("rotate180");
     });
   }
 
