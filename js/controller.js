@@ -495,10 +495,11 @@ function dropdownFilterListHandler() {
   // Filter control
   const filteredArray = [];
   activeUser.workoutsHistory.forEach((element) => {
+    if (this.dataset.filter === "all") filteredArray.push(element);
     if (element.bodyPart === this.dataset.filter) filteredArray.push(element);
   });
+  // Render new list
   historyView.getDataToRender(filteredArray);
   document.querySelector(".history-list").textContent = "";
   historyView.addHistoryItems();
 }
-console.log(activeUser.workoutsHistory);

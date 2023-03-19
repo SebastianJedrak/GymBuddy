@@ -16,6 +16,7 @@ class HistoryView extends View {
       <div class="dropdown-arrow dropdown-arrow-filter"></div>
     </button>
     <ul class="dropdown-options-list hidden dropdown-options-list-filter">
+    <li class="dropdown-options-item" data-filter="all">All</li>
       <li class="dropdown-options-item" data-filter="lower">Lower</li>
       <li class="dropdown-options-item" data-filter="full">Full</li>
       <li class="dropdown-options-item" data-filter="upper">Upper</li>
