@@ -56,7 +56,7 @@ body {
   }
 }
 
-@media all and (max-width: 350px) {
+@media all and (max-width: 350px), (max-height: 550px) {
   * {
     font-size: 14px;
   }
@@ -918,6 +918,7 @@ h4 {
   align-items: center;
   height: 25vh;
   width: 100%;
+  margin-bottom: 0.5rem;
 }
 
 .error-login-text {
@@ -928,6 +929,13 @@ h4 {
 
 .login-or {
   color: var(--lightslategray);
+}
+
+.login-submit-btn {
+}
+
+.btn-register {
+  margin-top: 0.5rem;
 }
 
 .login-footer {
