@@ -16,9 +16,9 @@ class HistoryView extends View {
       <div class="dropdown-arrow"></div>
     </button>
     <ul class="dropdown-options-list hidden dropdown-options-list-filter">
-      <li class="dropdown-options-item" data-exp="body-part">Body part</li>
-      <li class="dropdown-options-item" data-exp="type">Type</li>
-      <li class="dropdown-options-item" data-exp="duration">Duration</li>
+      <li class="dropdown-options-item" data-filter="lower">Lower</li>
+      <li class="dropdown-options-item" data-filter="full">Full</li>
+      <li class="dropdown-options-item" data-filter="upper">Upper</li>
     </ul>
   </div>
   </div>
@@ -83,6 +83,11 @@ class HistoryView extends View {
         .classList.toggle("hidden");
       document.querySelector(".dropdown-arrow").classList.toggle("rotate180");
     });
+  }
+
+  dropdownFilterListListener(handler) {
+    const listItem = document.querySelectorAll(".dropdown-options-item");
+    listItem.forEach((item) => item.addEventListener("click", handler));
   }
 }
 

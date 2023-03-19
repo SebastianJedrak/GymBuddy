@@ -84,8 +84,9 @@ function renderHistory() {
   // Listeners
   historyView.deleteWorkoutListener(deleteWorkoutHandler);
   historyView.sortWorkoutsListener(sortWorkoutsHandler);
-  historyView.filterWorkoutsListener(filterWorkoutsHandler);
+  historyView.filterWorkoutsListener();
   historyView.openFilterDropdownListener();
+  historyView.dropdownFilterListListener(dropdownFilterListHandler);
 }
 
 async function renderWorkout() {
@@ -482,6 +483,19 @@ function sortBtnState() {
   }
 }
 
-function filterWorkoutsHandler() {
-  console.log(activeUser);
+function dropdownFilterListHandler() {
+  // Dropdown control
+  document.querySelector(".btn-filter").textContent = this.textContent;
+  document
+    .querySelector(".dropdown-options-list-filter")
+    .classList.add("hidden");
+  document.querySelector(".dropdown-arrow").classList.toggle("rotate180");
+// Filter control
+  const filteredArray = [];
+  activeUser.workoutsHistory.forEach((element) => {
+    if (element.bodyPart === this.dataset.filter) filteredArray.push(element);
+  });
+
+  console.log(filteredArray);
 }
+console.log(activeUser.workoutsHistory);
