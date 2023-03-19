@@ -28,7 +28,10 @@ class HistoryView extends View {
     </ul>
   </div>`;
     } else {
-      return `History empty`;
+      return `<div class="no-history-container">
+      <div class="no-history-svg"></div>
+      <h3 class="no-history-text">No workouts done yet!</h3>
+    </div>`;
     }
   }
 
@@ -78,7 +81,9 @@ class HistoryView extends View {
   }
 
   openFilterDropdownListener() {
-    document.querySelector(".btn-filter").addEventListener("click", () => {
+    const btnFilter = document.querySelector(".btn-filter");
+    if (!btnFilter) return;
+    btnFilter.addEventListener("click", () => {
       document
         .querySelector(".dropdown-options-list-filter")
         .classList.toggle("hidden");

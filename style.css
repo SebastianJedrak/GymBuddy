@@ -1049,3 +1049,23 @@ label {
 .svg-delete {
   scale: 0.8;
 }
+
+/*! No history view */
+
+.no-history-container {
+  margin: auto;
+}
+
+.no-history-svg {
+  background-image: url(src/buddyLogoFlat.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  aspect-ratio: 1/1;
+  width: 40vh;
+  opacity: 0.8;
+  transform: scale(0.8, 0.8);
+}
+
+.no-history-text {
+  color: var(--lightslategray);
+}
