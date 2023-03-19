@@ -9,8 +9,17 @@ class HistoryView extends View {
   _HTML() {
     if (this._data.length > 0) {
       return `<div class="filter-sort-container">
-    <button class="btn btn-50 btn-sort">Latest</button
-    ><button class="btn btn-white btn-50 btn-filter">Filter</button>
+    <button class="btn btn-50 btn-sort">Latest</button>
+    <div class="dropdown-filter-container">
+    <button class="btn btn-navy btn-50 btn-filter">
+    Filter
+      <div class="dropdown-arrow"></div>
+    </button>
+    <ul class="dropdown-options-list hidden">
+      <li class="dropdown-options-item" data-exp="beginner">beginner</li>
+      <li class="dropdown-options-item" data-exp="intermediate">mid</li>
+    </ul>
+  </div>
   </div>
   <div class="history-container">
     <ul class="history-list">

@@ -989,6 +989,19 @@ label {
   margin-top: 1rem;
   width: 50%;
   padding-bottom: 1rem;
+  display: flex;
+}
+
+.dropdown-filter-container {
+  width: 100%;
+}
+
+.btn-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  padding: 0 0.5rem;
 }
 
 .history-container {
@@ -996,7 +1009,6 @@ label {
   overflow: auto;
   padding-right: 0.5rem;
 }
-
 
 .history-list {
   height: fit-content;
