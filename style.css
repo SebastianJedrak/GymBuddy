@@ -741,8 +741,8 @@ h4 {
   border: 1px solid var(--lightslategray);
   border-radius: 5px;
   padding: 0.5rem;
-  width: 124px;
-  top: 48px;
+  width: 122px;
+  top: 46px;
   z-index: 5;
 }
 
@@ -1008,6 +1008,9 @@ label {
 .dropdown-options-list-filter {
   position: absolute;
   width: fit-content;
+  margin-left: 0.5%;
+  z-index: 5;
+  top: 48px;
 }
 
 .history-container {
