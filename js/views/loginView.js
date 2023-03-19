@@ -10,7 +10,7 @@ class LoginView extends View {
     <div class="svg-login-register-container">
     <div class="svg-helloagain"></div>
     <div class="login-register-container">
-    <p class="error-login-text hidden">Login and/or password are incorrect. Please try again.</p>
+    <p class="error-login-text hidden">Login and / or password are incorrect. Please try again.</p>
     <p class="test-acc-text">Test accounts: bobby 1111 , lila 2222</p>
       <form action="" method="GET" class="form-login">
         <input
