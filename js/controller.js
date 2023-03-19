@@ -29,6 +29,7 @@ function init() {
 init();
 
 function renderHome() {
+  console.log(activeUser);
   // Render HTML
   homeView.renderView(model.storageSaveData());
   // Navigation bar init

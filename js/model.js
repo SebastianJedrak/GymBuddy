@@ -4,18 +4,29 @@ import { randomize } from "./helpers.js";
 import { activeUser } from "./controller.js";
 
 export class User {
-  constructor(login, password, height, weight, gender, experience) {
+  constructor(
+    login,
+    password,
+    height,
+    weight,
+    gender,
+    experience,
+    lastSetsArray = [],
+    workoutsHistory = []
+  ) {
     this.login = login;
     this.password = password;
     this.height = height;
     this.weight = weight;
     this.gender = gender;
     this.experience = experience;
+    this.lastSetsArray = lastSetsArray;
+    this.workoutsHistory = workoutsHistory;
     this.BMI = (weight / (height / 100) ** 2).toFixed(2);
-    this.lastSetsArray = [];
-    this.workoutsHistory = [];
   }
 }
+
+//TEST ACCOUNTS
 
 export const bobby = new User(
   "bobby",
@@ -23,7 +34,27 @@ export const bobby = new User(
   "180",
   "90",
   "man",
-  "intermediate"
+  "intermediate",
+  [
+    ["Barbell front squat", 34],
+    ["Barbell front squat", 34],
+  ],
+  [
+    {
+      bodyPart: "full",
+      type: "balanced",
+      duration: "medium",
+      date: "18-03-2023",
+      index: 0,
+    },
+    {
+      bodyPart: "full",
+      type: "balanced",
+      duration: "medium",
+      date: "18-03-2023",
+      index: 0,
+    },
+  ]
 );
 const lila = new User("lila", "2222", "150", "50", "woman", "beginner");
 
@@ -225,10 +256,10 @@ export async function generateExercises() {
   if (workoutParameters.bodyPart === "full") {
     {
       await pushExercise(muscles.quadriceps, "compound");
-      // await pushExercise(muscles.chest, "compound");
-      // await pushExercise(muscles.lats, "compound");
-      // await pushExercise(muscles.hamstrings, "accessory");
-      // await pushExercise(muscles.triceps, "accessory");
+      await pushExercise(muscles.chest, "compound");
+      await pushExercise(muscles.lats, "compound");
+      await pushExercise(muscles.hamstrings, "accessory");
+      await pushExercise(muscles.triceps, "accessory");
     }
     if (
       workoutParameters.duration === "medium" ||
