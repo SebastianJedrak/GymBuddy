@@ -8,11 +8,10 @@ class RegisterView extends View {
   _HTML() {
     return `<h1 class="reg-header">Welcome!</h1>
     <p class="reg-paragraph">
-      Hello my friend. I am GymBuddy, your new favorite workout app. My
+      I am GymBuddy, your new favorite workout app. My
       purpose is to help you achieve your fitness goals. With my random
       generated workout plans you will never get bored. Additional, I will
-      be keeping your progress and adjust your routine accordingly. I
-      believe that you and me can achieve great things together!
+      be keeping your progress and adjust your routine accordingly.
     </p>
     <h4 class="reg-header-h4">
       Please, give me some some basic information about yourself and let's
@@ -48,7 +47,7 @@ class RegisterView extends View {
 <div class="radial-container">
 <span><b>Experience:</b></span>
 <label><input type="radio" name="experience" class="radio radio-exp" value="beginner" checked/>Beginner</label>
-<label><input type="radio" name="experience" class="radio radio-exp" value="intermediate"/>Intermediate</label>
+<label><input type="radio" name="experience" class="radio radio-exp" value="intermediate"/>Mid</label>
 </div>
       <button class="btn btn-100 btn-navy reg-btn-submit">Start!</button>
     </form>`;
