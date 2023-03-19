@@ -78,6 +78,11 @@ body {
   .modal-edit-acc-profile {
     min-width: 310px !important;
   }
+  .btn,
+  .input {
+    height: 32px !important;
+    min-height: 32px !important;
+  }
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -456,13 +461,15 @@ ul > .nav-tile:hover {
   justify-content: space-evenly;
   width: 100%;
   margin: 0.5rem;
-  /* align-items: center; */
+  height: 84px;
 }
 
 .exercise-name-text {
   width: 100%;
   text-align: center;
+  height: 84px;
   margin-right: calc(32px + 1rem);
+  overflow-y: auto;
 }
 
 .instruct-svg-container {
