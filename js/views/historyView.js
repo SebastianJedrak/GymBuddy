@@ -15,9 +15,10 @@ class HistoryView extends View {
     Filter
       <div class="dropdown-arrow"></div>
     </button>
-    <ul class="dropdown-options-list hidden">
-      <li class="dropdown-options-item" data-exp="beginner">beginner</li>
-      <li class="dropdown-options-item" data-exp="intermediate">mid</li>
+    <ul class="dropdown-options-list dropdown-options-list-filter">
+      <li class="dropdown-options-item" data-exp="body-part">Body part</li>
+      <li class="dropdown-options-item" data-exp="type">Type</li>
+      <li class="dropdown-options-item" data-exp="duration">Duration</li>
     </ul>
   </div>
   </div>

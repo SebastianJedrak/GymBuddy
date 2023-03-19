@@ -994,14 +994,20 @@ label {
 
 .dropdown-filter-container {
   width: 100%;
+  position: relative;
 }
 
 .btn-filter {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 48px;
   padding: 0 0.5rem;
+}
+
+.dropdown-options-list-filter {
+  position: absolute;
+  width: fit-content;
 }
 
 .history-container {
