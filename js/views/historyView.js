@@ -19,7 +19,7 @@ class HistoryView extends View {
             <button class="btn btn-50 btn-navy btn-delete-no">
               <span>No</span>
             </button>
-            <button class="btn btn-50 btn-white btn-exit-yes">
+            <button class="btn btn-50 btn-white btn-delete-yes">
               <span>Yes</span>
             </button>
           </div>
@@ -88,7 +88,7 @@ class HistoryView extends View {
       modalNo.addEventListener("click", () => {
         modal.close();
       });
-      modalYes.addEventListener("click", handler(item));
+      modalYes.addEventListener("click", () => handler(item));
     });
   }
 
