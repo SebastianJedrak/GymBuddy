@@ -782,12 +782,14 @@ h4 {
   padding: 0.5rem;
   border-radius: 5px;
   color: var(--lightslategray);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .dropdown-options-item:hover,
 .dropdown-options-item:active {
   color: var(--floralwhite);
   background-color: var(--lightslategray);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .dropdown-options-item:first-child {
