@@ -1117,7 +1117,7 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100% - 5vh);
+  height: inherit;
   width: inherit;
   opacity: 1;
 }
