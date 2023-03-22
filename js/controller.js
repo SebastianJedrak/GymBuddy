@@ -6,6 +6,7 @@ import navigatorView from "./views/navigatorView.js";
 import spinnerView from "./views/spinnerView.js";
 import loginView from "./views/loginView.js";
 import registerView from "./views/registerView.js";
+import startView from "./views/startView.js";
 import * as model from "./model.js";
 
 //! RENDER CONTROL
@@ -24,12 +25,16 @@ function init() {
   activeUser = model.sessionGetData();
   if (activeUser) renderHome();
   // Render login
-  if (!activeUser) renderLogin();
+  // if (!activeUser) renderLogin();
+  if (!activeUser) renderStart();
 }
 init();
 
+function renderStart() {
+  startView.renderView();
+}
+
 function renderHome() {
-  console.log(activeUser);
   // Render HTML
   homeView.renderView(model.storageSaveData());
   // Navigation bar init

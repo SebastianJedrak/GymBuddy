@@ -1107,3 +1107,15 @@ label {
   color: var(--lightslategray);
   text-align: center;
 }
+
+/*! START VIEW */
+
+.start-svg {
+  background-image: url(src/buddyStartLogo.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+  aspect-ratio: 1/1;
+  width: 40vh;
+  z-index: 2;
+}
