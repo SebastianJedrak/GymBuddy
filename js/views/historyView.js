@@ -8,7 +8,24 @@ class HistoryView extends View {
 
   _HTML() {
     if (this._data.length > 0) {
-      return `<div class="filter-sort-container">
+      return `
+      <dialog class="modal open modal-white modal-delete-item">
+        <div class="modal-content-wrapper">
+          <h2>Delete</h2>
+          <p class="exit-workout-content">
+            Do you really want to delete your workout? This action will be irreversible.
+          </p>
+          <div class="red-green-btn-container">
+            <button class="btn btn-50 btn-navy btn-delete-no">
+              <span>No</span>
+            </button>
+            <button class="btn btn-50 btn-white btn-exit-yes">
+              <span>Yes</span>
+            </button>
+          </div>
+        </div>
+      </dialog>
+      <div class="filter-sort-container">
     <button class="btn btn-50 btn-sort">Latest</button>
     <div class="dropdown-filter-container">
     <button class="btn btn-navy btn-50 btn-filter">
@@ -59,12 +76,19 @@ class HistoryView extends View {
 
   deleteWorkoutListener(handler) {
     const itemsList = document.querySelector(".history-list");
+    const modal = document.querySelector(".modal-delete-item");
+    const modalNo = document.querySelector(".btn-delete-no");
+    const modalYes = document.querySelector(".btn-delete-yes");
     if (!itemsList) return;
     itemsList.addEventListener("click", function (e) {
       const target = e.target.closest(".svg-delete");
       if (!target) return;
       const item = target.closest(".history-item");
-      handler(item);
+      modal.showModal();
+      modalNo.addEventListener("click", () => {
+        modal.close();
+      });
+      modalYes.addEventListener("click", handler(item));
     });
   }
 
