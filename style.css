@@ -172,6 +172,16 @@ ul {
   }
 }
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 /*! BUTTONS */
 
 .input {
@@ -1119,7 +1129,7 @@ label {
   align-items: center;
   height: inherit;
   width: inherit;
-  opacity: 1;
+  animation: fadeOut 3s cubic-bezier(1, -0.9, 0.9, 1) forwards;
 }
 
 .start-svg {
