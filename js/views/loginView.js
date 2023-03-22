@@ -7,6 +7,7 @@ class LoginView extends View {
   _headerConfig = [false, false, false, false];
   _HTML() {
     return ` 
+    <div class="start-svg"></div>
     <div class="svg-login-register-container">
     <div class="svg-helloagain"></div>
     <div class="login-register-container">

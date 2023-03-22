@@ -1111,6 +1111,10 @@ label {
 /*! START VIEW */
 
 .start-svg {
+  position: absolute;
+  height: 100vh;
+  width: 100vh;
+  background-color: black;
   background-image: url(src/buddyStartLogo.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -1118,4 +1122,5 @@ label {
   aspect-ratio: 1/1;
   width: 40vh;
   z-index: 2;
+  opacity: 1;
 }
