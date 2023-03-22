@@ -80,6 +80,12 @@ body {
     height: 32px !important;
     min-height: 32px !important;
   }
+  .dropdown-options-list {
+    top: 50px !important;
+  }
+  .dropdown-options-list-filter {
+    top: 33px !important;
+  }
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -179,15 +185,6 @@ ul {
   to {
     opacity: 0;
     visibility: hidden;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 
