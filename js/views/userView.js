@@ -196,7 +196,7 @@ class UserView extends View {
         { transform: "rotate(10deg)" },
         { transform: `rotate(${rotateTo < 180 ? rotateTo : 180}deg)` },
       ],
-      { duration: 2000, fill: "forwards" }
+      { duration: 2000, fill: "forwards", easing: "cubic-bezier(1,.4,.65,1.2)"}
     );
   }
 
