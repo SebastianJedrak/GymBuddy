@@ -134,6 +134,8 @@ function renderLogin() {
   document
     .querySelectorAll(".input")
     .forEach((input) => input.classList.remove("input-error"));
+  // Render start
+  loginView.startLogoControl();
   //Render login
   loginView.renderView(model.storageSaveData());
   // Login action

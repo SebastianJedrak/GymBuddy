@@ -45,6 +45,15 @@ class LoginView extends View {
   registerBtnListener(handler) {
     document.querySelector(".btn-register").addEventListener("click", handler);
   }
+
+  startLogoControl() {
+    document
+      .querySelector(".global-container")
+      .insertAdjacentHTML(
+        "afterbegin",
+        `<div class="start-svg-container"><div class="start-svg"></div></div>`
+      );
+  }
 }
 
 export default new LoginView();
