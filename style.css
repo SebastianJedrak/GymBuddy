@@ -30,6 +30,7 @@ html {
 
 body {
   background: linear-gradient(120deg, var(--lightblue), var(--darksalmon));
+  background-repeat: no-repeat;
   height: 100%;
 }
 
