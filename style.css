@@ -370,9 +370,6 @@ ul > .nav-tile:hover {
   justify-content: space-between;
   overflow-x: auto;
 }
-.main-content > div {
-  animation: fadeIn 0.1s;
-}
 
 /*! MAIN HOME*/
 
