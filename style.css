@@ -719,7 +719,7 @@ h4 {
 .avatar-name-experience-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   height: fit-content;
   margin-top: 2rem;
 }
