@@ -298,9 +298,19 @@ function saveEditProfileHandler() {
   // Guard clause
   if (document.querySelector(".input-error")) return;
   // Action
-  if (login.value !== "") activeUser.login = login.value;
-  if (password.value !== "") activeUser.password = password.value;
+  if (login.value !== "") {
+    findActiveUserOnArray().login = login.value;
+    activeUser.login = login.value;
+  }
+  if (password.value !== "") {
+    findActiveUserOnArray().password = login.password;
+    activeUser.password = password.value;
+  }
   renderUser();
+}
+
+function findActiveUserOnArray() {
+  return model.usersList.find((user) => user.login === activeUser.login);
 }
 
 function changePasswordValidation() {
@@ -324,10 +334,19 @@ function saveEditParametersHandler() {
   // Guard clause
   if (document.querySelector(".input-error")) return;
   // Gender
-  if (gender !== null) activeUser.gender = gender.value;
+  if (gender !== null) {
+    activeUser.gender = gender.value;
+    findActiveUserOnArray().gender = activeUser.gender;
+  }
   // Action
-  if (height.value !== "") activeUser.height = height.value;
-  if (weight.value !== "") activeUser.weight = weight.value;
+  if (height.value !== "") {
+    activeUser.height = height.value;
+    findActiveUserOnArray().height = activeUser.height;
+  }
+  if (weight.value !== "") {
+    activeUser.weight = weight.value;
+    findActiveUserOnArray().weight = activeUser.weight;
+  }
   // BMI recalculation
   if (weight.value !== "" || height.value !== "") {
     activeUser.BMI = (
