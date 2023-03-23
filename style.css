@@ -92,7 +92,7 @@ body {
   .modal,
   .modal-trophy {
     height: fit-content;
-    min-height: 90vh;
+    min-height: 95vh;
     overflow-y: auto;
   }
   .btn-close-model-home-tutorial {
@@ -590,7 +590,7 @@ ul > .nav-tile:hover {
 /*! MODAL */
 
 .modal {
-  padding: 1.5rem !important;
+  padding: 1rem !important;
   width: fit-content;
   margin: auto;
   overflow: auto;
@@ -676,7 +676,7 @@ ul > .nav-tile:hover {
 }
 
 .modal-home-tutorial-content {
-  max-height: 80vh;
+  max-height: 60vh;
   overflow-y: auto;
   padding-right: 0.5rem;
 }
@@ -877,7 +877,7 @@ h4 {
 }
 
 .modal-edit-acc-profile {
-  min-width: 370px;
+  min-width: 345px;
 }
 
 .profile-edit-label {
