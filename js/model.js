@@ -211,12 +211,15 @@ async function getMuscle(muscle) {
   // GET DATA
   try {
     const fetchJson = await fetch(url, options);
-    if (!fetchJson.ok) throw new Error(`Something goes wrong`);
+    if (!fetchJson.ok)
+      throw new Error(`${fetchJson.status}: Something goes wrong`);
     const data = await fetchJson.json();
     return data[randomize(data.length)];
   } catch (error) {
     // ERROR HANDLING
-    console.error(error);
+    const errorReject = error.message;
+    console.log(errorReject);
+    return errorReject;
   }
 }
 
