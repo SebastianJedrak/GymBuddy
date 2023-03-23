@@ -590,7 +590,7 @@ ul > .nav-tile:hover {
 /*! MODAL */
 
 .modal {
-  padding: 1.5rem;
+  padding: 1.5rem !important;
   width: fit-content;
   margin: auto;
   overflow: auto;
@@ -673,7 +673,6 @@ ul > .nav-tile:hover {
 
 .modal-home-tutorial {
   overflow-y: hidden;
-  padding: 0.5rem;
 }
 
 .modal-home-tutorial-content {
@@ -878,7 +877,6 @@ h4 {
 }
 
 .modal-edit-acc-profile {
-  width: 30vw;
   min-width: 370px;
 }
 
