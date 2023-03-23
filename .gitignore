@@ -4,3 +4,5 @@ dist
 .parcel-cache
 plans.txt
 js/API_key.js
+# Local Netlify folder
+.netlify
