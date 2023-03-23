@@ -211,6 +211,7 @@ async function getMuscle(muscle) {
   // GET DATA
   try {
     const fetchJson = await fetch(url, options);
+    if (fetchJson.status === 502) getMuscle(muscle);
     if (!fetchJson.ok)
       throw new Error(`${fetchJson.status}: Something goes wrong`);
     const data = await fetchJson.json();
