@@ -590,7 +590,7 @@ ul > .nav-tile:hover {
 /*! MODAL */
 
 .modal {
-  padding: 1rem !important;
+  padding: 0.5rem;
   width: fit-content;
   margin: auto;
   overflow: auto;
@@ -701,6 +701,7 @@ h4 {
 }
 
 .btn-close-model-home-tutorial-wrapper {
+  margin-top: 0.5rem;
   width: 100%;
   display: flex;
   justify-content: center;

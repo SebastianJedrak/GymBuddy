@@ -11,7 +11,7 @@ class LoginView extends View {
     <div class="svg-helloagain"></div>
     <div class="login-register-container">
     <p class="error-login-text hidden">Login and / or password are incorrect. Please try again.</p>
-    <p class="test-acc-text">Test accounts login: <b>bobby</b> password: <b>1111</b></p>
+    <p class="test-acc-text">Test account login: <b>bobby</b> password: <b>1111</b></p>
       <form action="" method="GET" class="form-login">
         <input
           type="text"
