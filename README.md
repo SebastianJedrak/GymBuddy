@@ -38,10 +38,10 @@ After you have completed all the exercises, a dialog box will open with a summar
 # Roadmap
 - [X] <b>Select workout parameters</b>
 - [X] <b>Generate a workout</b>
-- [ ] User registration
-- [ ] User login
-- [ ] Workouts history
-- [ ] App self-learn
+- [X] User registration
+- [X] User login
+- [X] Workouts history
+- [X] App self-learn
 
 # Contact
 
@@ -54,13 +54,13 @@ Repository: https://github.com/SebastianJedrak/GymBuddy
 # Acknowledgments
 
 User SVG
-<a href="https://pl.freepik.com/darmowe-wektory/znajdz-osobe-do-pracy_8063764.htm#query=user&position=6&from_view=search&track=aitestb">Obraz autorstwa studiogstock</a> na Freepik
+<a href="https://pl.freepik.com/darmowe-wektory/znajdz-osobe-do-pracy_8063764.htm#query=user&position=6&from_view=search&track=aitestb">studiogstock</a> na Freepik
 
 Speedmeter
-<a href="https://pl.freepik.com/darmowe-wektory/zestaw-predkosciomierza-odosobniony_14877893.htm#query=speedmeter&position=4&from_view=search&track=aitestb">Obraz autorstwa DrawingMyDiary</a> na Freepik
+<a href="https://pl.freepik.com/darmowe-wektory/zestaw-predkosciomierza-odosobniony_14877893.htm#query=speedmeter&position=4&from_view=search&track=aitestb"> DrawingMyDiary</a> na Freepik
 
 Trophy
-<a href="https://pl.freepik.com/darmowe-wektory/trofeum_34295225.htm#query=cup&position=0&from_view=search&track=sph">Obraz autorstwa juicy_fish</a> na Freepik
+<a href="https://pl.freepik.com/darmowe-wektory/trofeum_34295225.htm#query=cup&position=0&from_view=search&track=sph">juicy_fish</a> na Freepik
 
 Sound Effect 
 <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=6185">Pixabay</a>
