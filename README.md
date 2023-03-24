@@ -19,17 +19,19 @@ The goal of the application was to combine simplicity of use with a variety of e
 
 To use my program locally you will need an API key. You can get one for free from https://api-ninjas.com/
 
-# Usage
+# Usage!
+
 
 <b>Your first step will be to register or login to the application.</b>
 
-To login you can use a test account, login: bobby / password: 1111 . You can register your own account as well. Data are stored locally, there is no connection to a external server.
+To login you can use a test account, login: <b>bobby</b> / password: <b>1111</b> . You can register your own account as well. Data are stored locally, there is no connection to a external server.
 
-<img login>
+
+<img src="https://user-images.githubusercontent.com/115486676/227557338-03a516d0-4cf2-413f-90d3-9d02a1f49223.png" alt="home-view" width="250px" />
 
 Registration request of your login, passowrd, height, weight, gender and experience. After complete you can login using your data.
 
-<img registration>
+<img src="https://user-images.githubusercontent.com/115486676/227557577-de2f35c2-20b5-4e03-ae67-a01f608658b7.png" alt="home-view" width="250px" />
 
 <b>The use of the application is very simple.</b>
 
@@ -45,11 +47,11 @@ The set of each exercise is displayed individually with information about the nu
 
 After you have completed all the exercises, a dialog box will open with a summary of your training. <b>Congratulations :)</b>
 
-<b>After training</b>
+<b>Continue your progress</b>
 
 Application will be store all of your progress and customize your next workouts accordingly. You can check and modify your account a using user and history tab.
 
-<img user> <img history>
+<img src="https://user-images.githubusercontent.com/115486676/227558440-a9da8079-a7ae-4ac7-b6f3-af0321198620.png" alt="home-view" width="250px" />
 
 # Roadmap
 - [X] <b>Select workout parameters</b>
