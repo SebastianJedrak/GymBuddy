@@ -21,7 +21,17 @@ To use my program locally you will need an API key. You can get one for free fro
 
 # Usage
 
-<b>The use of the application is very simple.</b>
+<b>Your first step will be to register or login to the application.</b>
+
+<img login>
+
+To login you can use a test account, login: bobby / passowrd: 1111 . You can register your own account as well. Data are stored locally, there is not connection to external server. 
+
+<img registration>
+
+Registration request your login, passowrd, height, weight, gender and experience. After complete you can login using your data.
+
+<b>The use of an application is very simple.</b>
 
 You specify the parameters of the training you want to perform. You can choose which body part you want to focus on, decide on the type of training and its length. A built-in tutorial will walk you through the details of each option.
 
@@ -34,6 +44,12 @@ The set of each exercise is displayed individually with information about the nu
 <img src="https://user-images.githubusercontent.com/115486676/223098174-70fc9711-82e2-43d1-ab5f-f874fbf56504.png" alt="home-view" width="250px" />
 
 After you have completed all the exercises, a dialog box will open with a summary of your training. <b>Congratulations :)</b>
+
+<b>After training</b>
+
+Application will be store all of your progress and customize your next workouts accordingly. You can check and modify your account using user and history tab.
+
+<img user> <img history>
 
 # Roadmap
 - [X] <b>Select workout parameters</b>
