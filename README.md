@@ -10,7 +10,7 @@
 
 # GymBuddy
 
-GymBuddy is a project that was created out of my passion for the gym. During my adventure with the gym, I acquired a lot of knowledge about training. 
+GymBuddy is a project that was created out of my passion for the gym. During my adventure with the gym, I acquired a lot of knowledge about the training. 
 For this reason, many of my friends have turned to me for help with their training. This is how the idea for an application was born. The application will guide the user's training in a simple and quick way.
 
 The goal of the application was to combine simplicity of use with a variety of exercises and solid training plans. 
