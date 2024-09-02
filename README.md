@@ -65,7 +65,7 @@ Application will be store all of your progress and customize your next workouts 
 
 Sebastian Jędrak: jedrak.sebastian@gmail.com
 
-Project: https://workout-buddy-gen.netlify.app/ 
+Project: https://sjgymbuddy.netlify.app/
 
 Repository: https://github.com/SebastianJedrak/GymBuddy
 
